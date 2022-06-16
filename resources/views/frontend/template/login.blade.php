@@ -15,7 +15,7 @@
 @section('body-class') inner-page @stop
 @section('content')
 
-
+<link rel="stylesheet" type="text/css" href="{{ URL::to('/') }}/css/app.css">
 <section>
 
 	<div class="breadcrumbs">
@@ -29,7 +29,7 @@
 						<i class="fa fa-angle-right"></i>
 					</span>
 					<span>
-						<a href="{!! URL::to('/') !!}">Login/Register</a>
+						<a href="{!! URL::to('/') !!}">Login</a>
 					</span>
 				</div>
 			</div>
@@ -157,80 +157,7 @@
                     </div>
                 </div>
 
-				<h3 class="main-heading">Register</h3>
-				<form method="POST" action="{{ route('add_user') }}" enctype="multipart/form-data">
-				@csrf
-				<div class="form">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="field">
-								<input type="text" name="first_name" value="{{ old('first_name') }}" placeholder="First Name">
-							</div>
-							@if($errors->has('first_name'))
-								<div class="field alert alert-danger">
-									{!! $errors->first('first_name', '<span class="help-block">:message</span> ') !!}
-								</div>
-							@endif							
-						</div>
-						<div class="col-sm-6">
-							<div class="field">
-								<input type="text" name="last_name" value="{{ old('last_name') }}" placeholder="Last Name">
-							</div>
-							@if($errors->has('last_name'))
-								<div class="field alert alert-danger">
-									{!! $errors->first('last_name', '<span class="help-block">:message</span> ') !!}
-								</div>
-							@endif
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="field">
-								<input type="email" name="email" value="{{ old('email') }}" placeholder="Email">
-							</div>	
-							@if($errors->has('email'))
-								<div class="field alert alert-danger">
-									{!! $errors->first('email', '<span class="help-block">:message</span> ') !!}
-								</div>
-							@endif						
-						</div>
-						<div class="col-sm-6">
-							<div class="field">
-								<select name="user_level">
-									<option value="">Select Type</option>
-								@if( !empty( $roles ))
-									@foreach( $roles as $key => $role )
-										@if( $role->name != 'Admin' )
-											<option value="{{ $key }}">{{ $role->name }}</option>
-										@endif
-									@endforeach
-								@endif
-								</select>
-							</div>							
-						</div>
-					</div>				
-
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="field">
-								<input type="password" name="password" placeholder="Password">
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="field">
-								<input type="password" name="confirm_password" placeholder="Confirm Password">
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-sm-12">
-							<input type="submit" value="Register" name="" class="primary-btn blue lg">
-						</div>
-					</div>
-				</div>
-				</form>
+				
 			</div>
 		</div>
 

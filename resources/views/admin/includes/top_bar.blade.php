@@ -7,7 +7,7 @@
         @if( $site_setting )
         <a class="navbar-brand" href="{{ route('admin_dashboard') }}">
             <figure>
-                <img src="{{ asset( $site_setting->logo )  }}" />
+                <img src="{{ asset( 'assets/images/logo.png' )  }}" />
             </figure>
         </a>
         @endif

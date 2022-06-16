@@ -143,7 +143,7 @@ class PageRepository  extends AbstractRepository
         $insert->newsletter     =   $data->newsletter ?? 0;
         $insert->save();
 
-        $template_content       =   serialize( $this->templateContent($data) ); //Get Content for each template
+        $template_content       =   base64_encode(serialize( $this->templateContent($data) )); //Get Content for each template
 
         $template                               =   $data->template;
         $title                                  =   $data->title;

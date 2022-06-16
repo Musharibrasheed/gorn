@@ -33,7 +33,7 @@ class PageController extends Controller
     public function index()
         {
             $language_id    =   getlanguage()->id ?? 1;
-            echo $home_page      =   $this->page->getByCol('home','slug');
+            $home_page      =   $this->page->getByCol('home','slug');
             $siteSetting    =   $this->siteSetting->getByCol(1);
             
             if($home_page)

@@ -113,8 +113,8 @@ a#adobeXd:hover,a#sketch:hover {
 
                             <div class="navbar">
                                 <ul class="nav-menu">
-                                    <li class="nav-item active-solutions"><a href="https://dev.appearls.com/GO-RN/solutions.html" class="nav-link">Solutions</a></li>
-                                    <li class="nav-item active-healthcarepro"><a href="https://dev.appearls.com/GO-RN/healthcarepro.html" class="nav-link">Healthcare Professionals</a></li>
+                                    <li class="nav-item active-solutions"><a href="{{ URL('/') }}/home" class="nav-link">Solutions</a></li>
+                                    <li class="nav-item active-healthcarepro"><a href="{{ URL('/') }}/healthcare-professionals" class="nav-link">Healthcare Professionals</a></li>
                                     <li class="nav-item for-dropdown nav-link">
                                         <!-- dropdown menu -->
                                         <div class="containeraa">
@@ -123,17 +123,17 @@ a#adobeXd:hover,a#sketch:hover {
                                                 <img src="https://svgshare.com/i/8u6.svg" alt="" class="arrow">
                                             </div>
                                             <div class="dropdown">
-                                                <a href="https://dev.appearls.com/GO-RN/facilities.html" id="adobeXd">Workforce Management
+                                                <a href="{{ URL('/') }}/facilities" id="adobeXd">Workforce Management
                                                     <span class="for-dropdown-span"></span>
                                                 </a>
-                                                <a href="https://dev.appearls.com/GO-RN/staffing.html" id="sketch">Healthcare Staffing
+                                                <a href="{{ URL('/') }}/staffing" id="sketch">Healthcare Staffing
                                                     <span class="for-dropdown-span"></span>
                                                 </a>
                                             </div>
                                         </div>
                                         <!-- dropdown menu end -->
                                     </li>
-                                    <li class="nav-item active-demo"><a href="https://dev.appearls.com/GO-RN/demo.html" class="nav-link">Demo</a></li>
+                                    <li class="nav-item active-demo"><a href="javascript" class="nav-link">Demo</a></li>
                                 </ul>
                             </div>
 

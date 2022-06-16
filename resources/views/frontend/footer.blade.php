@@ -19,11 +19,11 @@
                     <div class="Our-Company">
                         <h1>Our Company</h1>
                         <ul class="all-nav">
-                            <li><a href="https://dev.appearls.com/GO-RN/home.html">Home</a></li>
-                            <li><a href="https://dev.appearls.com/GO-RN/solutions.html">Solutions</a></li>
-                            <li><a href="https://dev.appearls.com/GO-RN/healthcarepro.html">Healthcare
+                            <li><a href="{{ URL('/') }}">Home</a></li>
+                            <li><a href="{{ URL('/') }}/home">Solutions</a></li>
+                            <li><a href="{{ URL('/') }}/healthcare-professionals">Healthcare
                                     Professionals</a></li>
-                            <li><a href="https://dev.appearls.com/GO-RN/facilities.html">Facilities</a></li>
+                            <li><a href="{{ URL('/') }}/facilities">Facilities</a></li>
                         </ul>
                     </div>
                 </div>
