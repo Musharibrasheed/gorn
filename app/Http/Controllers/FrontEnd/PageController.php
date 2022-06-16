@@ -56,7 +56,7 @@ class PageController extends Controller
         $data       =   array();
         $template   =   'default';
         $pageContent    =   $this->page->getFrontPageBySlug($slug);
-        $page_meta      =   $pageContent->template_content ? unserialize( $pageContent->template_content) : '';
+        $page_meta      =   $pageContent->template_content ? unserialize( urldecode($pageContent->template_content)) : '';
         if( $pageContent )
         {
             if( $pageContent->template == 'about' ) {
