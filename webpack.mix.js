@@ -33,3 +33,4 @@ mix.copy('resources/js/mousewheel.js', 'public/js');
 mix.copy('resources/js/mCustomScrollbar.js', 'public/js');
 mix.copy('resources/js/custom.js', 'public/js');
 mix.copyDirectory('resources/admin_assets', 'public/admin_assets');
+mix.copyDirectory('resources/assets', 'public/assets');

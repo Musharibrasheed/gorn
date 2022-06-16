@@ -33,16 +33,16 @@ class PageController extends Controller
     public function index()
         {
             $language_id    =   getlanguage()->id ?? 1;
-            $home_page      =   $this->page->getByCol('home','slug');
+            echo $home_page      =   $this->page->getByCol('home','slug');
             $siteSetting    =   $this->siteSetting->getByCol(1);
-
+            
             if($home_page)
             {
                 $pageContent    =   $this->page->getFrontPageBySlug($home_page->slug);
-
+                $page_meta      =   $pageContent->template_content ? unserialize( $pageContent->template_content) : '';
                 if($pageContent)
                 {
-                    return view('frontend.template.'.$home_page->slug,compact('pageContent','siteSetting'));
+                    return view('frontend.template.'.$home_page->slug,compact('pageContent','page_meta'));
                 }
                 else
                     return page_404();
@@ -55,15 +55,14 @@ class PageController extends Controller
     {
         $data       =   array();
         $template   =   'default';
-
         $pageContent    =   $this->page->getFrontPageBySlug($slug);
-
+        $page_meta      =   $pageContent->template_content ? unserialize( $pageContent->template_content) : '';
         if( $pageContent )
         {
             if( $pageContent->template == 'about' ) {
                 $template = $pageContent->template;
             }
-            return view('frontend.template.'.$template,compact('pageContent'));
+            return view('frontend.template.'.$slug,compact('pageContent','page_meta'));
         } else {
             return page_404();
         }

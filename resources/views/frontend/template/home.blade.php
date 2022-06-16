@@ -15,234 +15,452 @@
 @section('body-class') home-page @stop
 @section('content')
 
+@push('styles')
+    <link rel="stylesheet" href="assets/css/style.css" />
+   
+@endpush
+<div class="for-hero-section-bg">
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="for-hero-main-section">
+                                    <div class="for-hero-inner-section">
 
-<section>
+                                        <div class="for-hero-section-content">
+                                            <div class="for-hero-section-heading">
+                                                <h3 class="for-hero-section-h3">
+                                                    {{ $pageContent->title ?? '' }}
+                                                </h3>
+                                            </div>
+                                            <div class="for-hero-section-pera">
+                                                <p class="for-hero-section-p">
+												{{ $pageContent->content ? strip_tags($pageContent->content) : '' }}
+                                                </p>
+                                            </div>
+                                        </div>
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-6 plpx-0">
-				{{ HTML::image('images/map-home.jpg', 'Safina Bay', array( 'class' => 'img-fluid' )) }}
-			</div>
-			<div class="col-sm-6">
-				<div class="search">
-					<div class="srch-fld">
-						<input type="text" name="search" placeholder="Dallas, TX">
-						<button>
-							<i class="fa fa-search"></i>
-						</button>
-					</div>
-					<div class="srch-filters addCheckbox">
-						<ul>
-							<li><input type="checkbox" name="filter"> Area</li>
-							<li><input type="checkbox" name="filter"> People</li>
-							<li><input type="checkbox" name="filter"> Community</li>
-							<li><input type="checkbox" name="filter"> Market</li>
-							<li><input type="checkbox" name="filter"> Mosque</li>
-							<li><input type="checkbox" name="filter"> Halal Shops</li>
-							<li><input type="checkbox" name="filter"> Events</li>
-							<li><input type="checkbox" name="filter"> Halal Entertainment </li>
-						</ul>
-					</div>
-					<div class="results-info">
-						<div class="row">
-							<div class="col-sm-6">
-								<p>76 Results Found (Showing 1-25)</p>
-							</div>
-							<div class="col-sm-6 text-right addSelect">
-								<select>
-									<option>Sort by</option>
-								</select>
-							</div>
-						</div>
-					</div>
-					<div class="results-listing">
-						<div class="row">
-							<div class="col-sm-4">
-								<div class="bx featured">
-									<figure>
-										{{ HTML::image('images/results-listing-featured.jpg', 'Safina Bay') }}
-									</figure>
-									<figcaption>
-										<h6>Featured</h6>
-										<h3>Phasellus fringilla et <span>New York, USA</span></h3>
-									</figcaption>
-								</div>
-							</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-							<div class="col-sm-4">
-								<div class="bx featured">
-									<figure>
-										{{ HTML::image('images/results-listing-featured.jpg', 'Safina Bay') }}
-									</figure>
-									<figcaption>
-										<h6>Featured</h6>
-										<h3>Phasellus fringilla et <span>New York, USA</span></h3>
-									</figcaption>
-								</div>
-							</div>
+            <!-- hero section End -->
 
-							<div class="col-sm-4">
-								<div class="bx featured">
-									<figure>
-										{{ HTML::image('images/results-listing-featured.jpg', 'Safina Bay') }}
-									</figure>
-									<figcaption>
-										<h6>Featured</h6>
-										<h3>Phasellus fringilla et <span>New York, USA</span></h3>
-									</figcaption>
-								</div>
-							</div>
+            <!-- About-GORN section -->
 
-							<div class="col-sm-4">
-								<div class="bx">
-									<figure>
-										{{ HTML::image('images/results-img.jpg', 'Safina Bay') }}
-									</figure>
-									<figcaption>
-										<h3>Lorem phasellus</h3>
-										<h5>Market <span>464 Harvest Grv Desoto, TX</span></h5>
-									</figcaption>
-								</div>
-							</div>
+            <div class="for-About-GORN-section-bg">
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 for-about-GORN-bg-img">
+                                <div class="for-About-GORN-main-section">
+                                    <div class="for-About-GORN-inner-section">
 
-							<div class="col-sm-4">
-								<div class="bx">
-									<figure>
-										{{ HTML::image('images/results-img-1.jpg', 'Safina Bay') }}
-									</figure>
-									<figcaption>
-										<h3>Donec tempor tortor</h3>
-										<h5>Halal Shops <span>464 Harvest Grv Desoto, TX</span></h5>
-									</figcaption>
-								</div>
-							</div>
+                                        <div class="for-About-GORN-section-content">
+                                            <div class="for-About-GORN-section-heading">
+                                                <h3 class="for-About-GORN-section-h3 for-all-headings">
+                                                    {{ $page_meta['about_gorn_heading'] ?? '' }}
+                                                </h3>
+                                            </div>
+                                            <div class="for-About-GORN-section-pera">
+                                                <p class="for-About-GORN-section-p for-pera-style">
+													{{ $page_meta['about_gorn_text'] ? strip_tags($page_meta['about_gorn_text']) : '' }}
+                                                </p>
+                                            </div>
+                                            <div class="for-icon-box-button btn">
+                                                <a class="for-about-GORN-button for-purple-button" href="https://dev.appearls.com/GO-RN/apply-form.html">Apply
+                                                    here</a>
+                                            </div>
+                                        </div>
 
-							<div class="col-sm-4">
-								<div class="bx">
-									<figure>
-										{{ HTML::image('images/results-img-2.jpg', 'Safina Bay') }}
-									</figure>
-									<figcaption>
-										<h3>Maecenas bibendum</h3>
-										<h5>Community <span>464 Harvest Grv Desoto, TX</span></h5>
-									</figcaption>
-								</div>
-							</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="for-About-GORN-section-video">
+                                    <div class="for-video-popup-image-secion">
+                                        <img src="assets/images/video-image.png" alt="">
+                                    </div>
+                                    <div class="for-video-popup-secion">
+                                        <div class="vpop" data-type="youtube" data-id="6xcG6ttMDVY"
+                                            data-autoplay='true'><img src="assets/images/play-button-img.png" alt="">
+                                        </div>
 
-							<div class="col-sm-4">
-								<div class="bx">
-									<figure>
-										{{ HTML::image('images/results-img-3.jpg', 'Safina Bay') }}
-									</figure>
-									<figcaption>
-										<h3>Suspendisse</h3>
-										<h5>People <span>464 Harvest Grv Desoto, TX</span></h5>
-									</figcaption>
-								</div>
-							</div>
+                                        <!-- copy this stuff and down -->
+                                        <div id="video-popup-overlay"></div>
 
-							<div class="col-sm-4">
-								<div class="bx">
-									<figure>
-										{{ HTML::image('images/results-img-4.jpg', 'Safina Bay') }}
-									</figure>
-									<figcaption>
-										<h3>Maecenas pulvinar</h3>
-										<h5>Halal Entertainment <span>464 Harvest Grv Desoto, TX</span></h5>
-									</figcaption>
-								</div>
-							</div>
+                                        <div id="video-popup-container">
+                                            <div id="video-popup-close" class="fade">&#10006;</div>
+                                            <div id="video-popup-iframe-container">
+                                                <iframe id="video-popup-iframe" src="" width="100%" height="100%"
+                                                    frameborder="0"></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-							<div class="col-sm-4">
-								<div class="bx">
-									<figure>
-										{{ HTML::image('images/results-img-5.jpg', 'Safina Bay') }}
-									</figure>
-									<figcaption>
-										<h3>Curabitur a nunc</h3>
-										<h5>Mosque <span>464 Harvest Grv Desoto, TX</span></h5>
-									</figcaption>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="paginate">
-									<ul>
-										<li class="prev"><a href="javascript:;"><i class="fa fa-angle-left"></i></a></li>
-										<li class="active"><a href="javascript:;">1</a></li>
-										<li><a href="javascript:;">2</a></li>
-										<li><a href="javascript:;">3</a></li>
-										<li><a href="javascript:;">4</a></li>
-										<li><a href="javascript:;">5</a></li>
-										<li><a href="javascript:;">6</a></li>
-										<li class="next"><a href="javascript:;"><i class="fa fa-angle-right"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            <!-- About-GORN section End -->
 
-	@if( $siteSetting->newsletter_status == "Active" )
-		@include('frontend.includes.newsletter').
-	@endif
 
-</section>
+            <!-- icon section -->
 
-@if( $site_setting->popup_status == "Active" )
-<div class="overlay"></div>
-<div class="text-center popup home-pop">
-	<div class="pop-cont">
-		<div class="close-pop">
-			<i class="fa fa-times" aria-hidden="true"></i>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					@if( $site_setting->popup_logo )
-					<figure><img src="{{ asset($site_setting->popup_logo) }}" /></figure>
-					@else
-					<figure><img src="{{ asset('images/logo.png') }}" /></figure>
-					@endif
-					<p>{{ $site_setting->popup_text ?? ''  }}</p>
-					<div class="btns">
-						<div class="row">
-							@if( $site_setting->popup_button_status == 'Active' && $site_setting->popup_button_text)
-							<div class="col-sm-3">
-								<a href="{{ $site_setting->popup_button_link ?? 'javascript:;' }}" class="primary-btn">{{ $site_setting->popup_button_text ?? '' }}</a>
-							</div>
-							@endif
 
-							@if( $site_setting->popup_button2_status == 'Active' && $site_setting->popup_button2_text )
-							<div class="col-sm-3">
-								<a href="{{ $site_setting->popup_button2_link ?? 'javascript:;' }}" class="primary-btn">{{ $site_setting->popup_button2_text ?? '' }}</a>
-							</div>
-							@endif
+            <div class="for-icon-section-bg">
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="for-icon-heading-main-section">
+                                    <div class="for-icon-inner-heading-section">
+                                        <div class="for-icon-section-heading">
+                                            <h3 class="for-icon-section-h3 for-all-headings">{{ $page_meta['section2_heading'] ?? '' }}</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
 
-							@if( $site_setting->popup_button3_status == 'Active' && $site_setting->popup_button3_text )
-							<div class="col-sm-3">
-								<a href="{{ $site_setting->popup_button3_link ?? 'javascript:;' }}" class="primary-btn">{{ $site_setting->popup_button3_text ?? '' }}</a>
-							</div>
-							@endif
+                            <!-- icon 1 -->
 
-							@if( $site_setting->popup_button4_status == 'Active' && $site_setting->popup_button4_text )
-							<div class="col-sm-3">
-								<a href="{{ $site_setting->popup_button4_link ?? 'javascript:;' }}" class="primary-btn">{{ $site_setting->popup_button4_text ?? '' }}</a>
-							</div>
-							@endif
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-@endif
+                            <div class="col-md-4">
+                                <div class="for-icon-main-section">
+                                    <div class="for-icon-inner-section">
+                                        <div class="for-icon-section-content">
+                                            <div class="for-icon-box box for-icon-box-1">
+                                                <div class="for-icon-box-img">
+                                                    <div class="box-wrap">
+                                                        <div class="box-wrap-image">
+                                                            <div class="img">
+                                                                <img src="assets/images/human-setting-purple.png"
+                                                                    alt="hover effect">
+                                                                <img src="assets/images/human-setting.png"
+                                                                    alt="hover effect">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- contant main -->
+
+                                                <div class="contant-main-icon-box">
+                                                    <div class="for-icon-box-heading">
+                                                        <h6 class="for-icon-box-h6">{{ $page_meta['section2_bx1_heading'] ?? '' }}</h6>
+                                                    </div>
+                                                    <div class="for-icon-box-pera">
+                                                        <p class="for-icon-box-p">{{ $page_meta['section2_bx1_text'] ? strip_tags($page_meta['section2_bx1_text']) : '' }}</p>
+                                                    </div>
+                                                    <div class="for-icon-box-button btn">
+                                                        <a class="for-icon-box-a" href="#">Read More</a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- contant main End -->
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- icon 1 End -->
+
+                            <!-- icon 2 -->
+
+                            <div class="col-md-4">
+                                <div class="for-icon-main-section">
+                                    <div class="for-icon-inner-section">
+                                        <div class="for-icon-section-content">
+                                            <div class="for-icon-box box for-icon-box-2">
+                                                <div class="for-icon-box-img">
+                                                    <div class="box-wrap">
+                                                        <div class="box-wrap-image">
+                                                            <div class="img">
+                                                                <img src="assets/images/world-service-purple.png"
+                                                                    alt="hover effect">
+                                                                <img src="assets/images/world-service-white.png"
+                                                                    alt="hover effect">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- contant main -->
+
+                                                <div class="contant-main-icon-box">
+                                                    <div class="for-icon-box-heading">
+                                                        <h6 class="for-icon-box-h6">{{ $page_meta['section2_bx2_heading'] ?? '' }}</h6>
+                                                    </div>
+                                                    <div class="for-icon-box-pera">
+                                                        <p class="for-icon-box-p">{{ $page_meta['section2_bx2_text'] ? strip_tags($page_meta['section2_bx2_text']) : '' }}</p>
+                                                    </div>
+                                                    <div class="for-icon-box-button btn">
+                                                        <a class="for-icon-box-a" href="#">Read More</a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- contant main End -->
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- icon 2 End -->
+
+                            <!-- icon 3 -->
+
+                            <div class="col-md-4">
+                                <div class="for-icon-main-section">
+                                    <div class="for-icon-inner-section">
+                                        <div class="for-icon-section-content">
+                                            <div class="for-icon-box box for-icon-box-3">
+                                                <div class="for-icon-box-img">
+                                                    <div class="box-wrap">
+                                                        <div class="box-wrap-image">
+                                                            <div class="img">
+                                                                <img src="assets/images/Dollar-man-purple.png"
+                                                                    alt="hover effect">
+                                                                <img src="assets/images/Dollar-man-white.png"
+                                                                    alt="hover effect">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- contant main -->
+
+                                                <div class="contant-main-icon-box">
+                                                    <div class="for-icon-box-heading">
+                                                        <h6 class="for-icon-box-h6">{{ $page_meta['section2_bx3_heading'] ?? '' }}</h6>
+                                                    </div>
+                                                    <div class="for-icon-box-pera">
+                                                        <p class="for-icon-box-p">{{ $page_meta['section2_bx3_text'] ? strip_tags($page_meta['section2_bx3_text']) : '' }}</p>
+                                                    </div>
+                                                    <div class="for-icon-box-button btn">
+                                                        <a class="for-icon-box-a" href="#">Read More</a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- contant main End -->
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- icon 3 End -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- icon section End -->
+
+            <!-- Nurses section -->
+
+            <div class="for-Nurses-section-bg">
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="for-Nurses-main-section">
+                                    <div class="for-Nurses-inner-section">
+
+                                        <div class="for-Nurses-section-content">
+                                            <div class="for-Nurses-section-heading">
+                                                <h3 class="for-Nurses-section-h3 for-all-headings">
+                                                    {{ $page_meta['section3_heading'] ?? '' }}
+                                                </h3>
+                                            </div>
+                                            <div class="for-Nurses-section-pera">
+                                                <p class="for-Nurses-section-p for-pera-style">
+												{{ $page_meta['section3_text'] ? strip_tags($page_meta['section3_text']) : '' }}
+                                                </p>
+                                            </div>
+                                            <div class="for-icon-box-button btn">
+                                                <a class="for-purple-button for-Nurses-button" href="https://dev.appearls.com/GO-RN/apply-form.html">Apply here</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="for-Nurses-image-section">
+                                    <img src="assets/images/Nurses-section-bg.png" alt="">
+                                </div>
+                                <div class="for-main-social-media-button">
+                                    <div class="for-icon-box-button btn">
+                                        <a class="for-purple-button for-Nurses-button" href="#"><i
+                                                class="fa-brands fa-google-play">&nbsp;Google Play</i></a>
+                                    </div>
+                                    <div class="for-icon-box-button btn">
+                                        <a class="for-purple-button for-Nurses-button" href="#"><i
+                                                class="fa-brands fa-apple">&nbsp;App Store</i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nurses section End -->
+
+
+
+            <!-- tastimonial -->
+
+            <!-- section 5 start -->
+
+            <div class="section-5-hcare">
+                <div class="container">
+                    <div class="content-slider">
+                        <h1>Testimonials From Our Clients</h1>
+                        <p class="plorem">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        </p>
+                        <div class="slider single-item">
+                            <div class="slider-1">
+                                <div class="slider-inner">
+                                    <h5>Great Quality!</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                                        aliquam erat volutpat.
+                                    </p>
+                                    <div class="image-avatar">
+                                        <img src="assets/images/avatar.png" alt="" />
+                                    </div>
+                                    <h5>James Nolan</h5>
+                                    <p>Consultant</p>
+                                </div>
+                            </div>
+
+                            <div class="slider-1">
+                                <div class="slider-inner">
+                                    <h5>Great Quality!</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                                        aliquam erat volutpat.
+                                    </p>
+                                    <div class="image-avatar">
+                                        <img src="assets/images/avatar.png" alt="" />
+                                    </div>
+                                    <h5>James Nolan</h5>
+                                    <p>Consultant</p>
+                                </div>
+                            </div>
+
+                            <div class="slider-1">
+                                <div class="slider-inner">
+                                    <h5>Great Quality!</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                                        aliquam erat volutpat.
+                                    </p>
+                                    <div class="image-avatar">
+                                        <img src="assets/images/avatar.png" alt="" />
+                                    </div>
+                                    <h5>James Nolan</h5>
+                                    <p>Consultant</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- section 5 end -->
+
+
+
+            <!-- testimonial End -->
+
+            <!-- Award section -->
+
+            <div class="for-Award-section-bg">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="for-Award-main-section">
+                                <div class="for-Award-inner-section">
+
+                                    <div class="for-Award-section-content">
+                                        <div class="for-Award-image-section">
+                                            <img src="assets/images/Awards-img.png" alt="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 for-award-section-style">
+                            <div class="for-Award-section-slider">
+                                <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet'
+                                    type='text/css'>
+                                <link rel="stylesheet"
+                                    href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+                                <link rel="stylesheet"
+                                    href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+                                <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+                                <script
+                                    src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+                                <div class="carousel slide" id="myCarousel" data-ride="carousel">
+
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    </ol>
+
+                                    <div class="carousel-inner">
+
+                                        <div class="item active">
+                                            <img src="assets/images/stamp1.png" alt="">
+                                            <img src="assets/images/stamp2.png" alt="">
+                                            <img src="assets/images/stamp3.png" alt="">
+                                            <img src="assets/images/stamp4.png" alt="">
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="assets/images/stamp1.png" alt="">
+                                            <img src="assets/images/stamp2.png" alt="">
+                                            <img src="assets/images/stamp3.png" alt="">
+                                            <img src="assets/images/stamp4.png" alt="">
+
+                                        </div>
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                                        <span class="fas fa-angle-left"></span>
+                                    </a>
+                                    <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                                        <span class="fas fa-angle-right"></span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 @endsection
 
 

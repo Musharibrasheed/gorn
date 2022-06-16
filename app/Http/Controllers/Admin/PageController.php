@@ -53,7 +53,8 @@ class PageController extends Controller
         {
             $getpage = $this->page;
             $pageDescription = $this->page->getDescriptionById($id);
-            return View('admin.page.edit',compact('page','pageDescription','id','page_repo'));
+            $page_meta = $pageDescription->template_content ? unserialize( $pageDescription->template_content) : '';
+            return View('admin.page.edit',compact('page','pageDescription','id','page_repo','page_meta'));
         }
         else
         {

@@ -177,12 +177,107 @@ class PageRepository  extends AbstractRepository
     public function templateContent($data) //Set fields as per template
     {
         // print_r($data->all());
+        // print_r($data->about_gorn_heading);
         // exit;
         $template_content = array();
         
         if($data->template == 'home')
         {
-            $template_content['page_video_test-']        = $data->page_video_test;
+            $template_content['about_gorn_heading'] = $data->about_gorn_heading;
+            $template_content['about_gorn_text']    = $data->about_gorn_text;
+
+            $template_content['section2_heading']    = $data->section2_heading;
+            $template_content['section2_bx1_heading']    = $data->section2_bx1_heading;
+            $template_content['section2_bx1_text']    = $data->section2_bx1_text;
+
+            $template_content['section2_bx2_heading']    = $data->section2_bx2_heading;
+            $template_content['section2_bx2_text']    = $data->section2_bx2_text;
+
+            $template_content['section2_bx3_heading']    = $data->section2_bx3_heading;
+            $template_content['section2_bx3_text']    = $data->section2_bx3_text;
+
+            $template_content['section3_heading']    = $data->section3_heading;
+            $template_content['section3_text']    = $data->section3_text;
+        }
+
+        if($data->template == 'healthcare-professionals')
+        {
+            $template_content['hc_sec1_heading'] = $data->hc_sec1_heading;
+            $template_content['hc_sec1_text']    = $data->hc_sec1_text;
+            
+            $template_content['hc_sec2_tagline'] = $data->hc_sec2_tagline;
+            $template_content['hc_sec2_heading']    = $data->hc_sec2_heading;
+            $template_content['hc_sec2_text']    = $data->hc_sec2_text;
+            
+            $template_content['hc_sec3_heading'] = $data->hc_sec3_heading;
+            $template_content['hc_sec3_text']    = $data->hc_sec3_text;
+
+            $template_content['hc_sec4_heading']    = $data->hc_sec4_heading;
+            $template_content['hc_sec4_tagline']    = $data->hc_sec4_tagline;
+            $template_content['hc_sec4_bx1_heading']    = $data->hc_sec4_bx1_heading;
+            $template_content['hc_sec4_bx1_text']    = $data->hc_sec4_bx1_text;
+
+            $template_content['hc_sec4_bx2_heading']    = $data->hc_sec4_bx2_heading;
+            $template_content['hc_sec4_bx2_text']    = $data->hc_sec4_bx2_text;
+
+            $template_content['hc_sec4_bx3_heading']    = $data->hc_sec4_bx3_heading;
+            $template_content['hc_sec4_bx3_text']    = $data->hc_sec4_bx3_text;
+
+        }
+
+        if($data->template == 'facilities')
+        {
+            $template_content['fac_sec1_tagline'] = $data->fac_sec1_tagline;
+            $template_content['fac_sec1_heading']    = $data->fac_sec1_heading;            
+            $template_content['fac_sec1_bx1_heading'] = $data->fac_sec1_bx1_heading;
+            $template_content['fac_sec1_bx1_text'] = $data->fac_sec1_bx1_text;
+            $template_content['fac_sec1_bx2_heading'] = $data->fac_sec1_bx2_heading;
+            $template_content['fac_sec1_bx2_text'] = $data->fac_sec1_bx2_text;
+            $template_content['fac_sec1_bx3_heading'] = $data->fac_sec1_bx3_heading;
+            $template_content['fac_sec1_bx3_text'] = $data->fac_sec1_bx3_text;
+            $template_content['fac_sec1_bx4_heading'] = $data->fac_sec1_bx4_heading;
+            $template_content['fac_sec1_bx4_text'] = $data->fac_sec1_bx4_text;
+            $template_content['fac_sec1_bx5_heading'] = $data->fac_sec1_bx5_heading;
+            $template_content['fac_sec1_bx5_text'] = $data->fac_sec1_bx5_text;
+            $template_content['fac_sec1_bx6_heading'] = $data->fac_sec1_bx6_heading;
+            $template_content['fac_sec1_bx6_text'] = $data->fac_sec1_bx6_text;
+
+            $template_content['fac_sec2_heading'] = $data->fac_sec2_heading;
+            $template_content['fac_sec2_text'] = $data->fac_sec2_text;
+
+            $template_content['fac_sec3_text'] = $data->fac_sec3_text;
+
+            $template_content['fac_sec4_heading'] = $data->fac_sec4_heading;
+            $template_content['fac_sec4_text'] = $data->fac_sec4_text;
+
+            $template_content['fac_sec5_heading'] = $data->fac_sec2_heading;
+
+            
+
+        }
+
+        if($data->template == 'staffing')
+        {
+            $template_content['staff_sec1_heading']    = $data->staff_sec1_heading;            
+            $template_content['staff_sec1_bx1_heading'] = $data->staff_sec1_bx1_heading;
+            $template_content['staff_sec1_bx1_text'] = $data->staff_sec1_bx1_text;
+            $template_content['staff_sec1_bx2_heading'] = $data->staff_sec1_bx2_heading;
+            $template_content['staff_sec1_bx2_text'] = $data->staff_sec1_bx2_text;
+            $template_content['staff_sec1_bx3_heading'] = $data->staff_sec1_bx3_heading;
+            $template_content['staff_sec1_bx3_text'] = $data->staff_sec1_bx3_text;
+
+            $template_content['staff_sec2_bx1_heading'] = $data->staff_sec2_bx1_heading;
+            $template_content['staff_sec2_bx1_text'] = $data->staff_sec2_bx1_text;
+            $template_content['staff_sec2_bx2_heading'] = $data->staff_sec2_bx2_heading;
+            $template_content['staff_sec2_bx2_text'] = $data->staff_sec2_bx2_text;
+
+            $template_content['staff_sec3_text'] = $data->staff_sec3_text;
+
+            $template_content['staff_sec4_text'] = $data->staff_sec4_text;
+           
+
+            
+
         }
         /*
         if($data->{'template-'.$language_id} == 'list-your-hotel')

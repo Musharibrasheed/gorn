@@ -26,5 +26,8 @@ class DatabaseSeeder extends Seeder
             StatesTableSeeder::class,
         ]);
         $this->command->info('Admin User created with username admin@admin.com and password admin0101');
+        $this->call(PagesTableSeeder::class);
+        $this->call(PagesDescriptionTableSeeder::class);
+        $this->call(UsersTableSeeder::class);
     }
 }

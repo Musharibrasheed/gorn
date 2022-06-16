@@ -84,11 +84,11 @@ $(document).mouseup(function(e)
     }
 });
 
-$(window).on("load",function(){
-    $("#scr-content, .scrl-cont").mCustomScrollbar({
-        theme:"minimal"
-    });
-});
+// $(window).on("load",function(){
+//     $("#scr-content, .scrl-cont").mCustomScrollbar({
+//         theme:"minimal"
+//     });
+// });
 
 function cCheckbox(tgt){
     $(tgt+' input[type=checkbox]').each(function(){

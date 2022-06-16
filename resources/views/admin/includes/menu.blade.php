@@ -17,50 +17,20 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin_menus') }}" data-toggle="collapse" aria-expanded="false" data-target="#submenu-100" aria-controls="submenu-1"><i class="fas fa-fw fa-file"></i> Talents </a>
+                        <a class="nav-link" href="{{ route('admin_pages') }}" data-toggle="collapse" aria-expanded="false" data-target="#submenu-100" aria-controls="submenu-1"><i class="fas fa-fw fa-file"></i> Pages </a>
                         <div id="submenu-100" class="collapse submenu" style="">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('admin_menus') }}">List</a>
+                                    <a class="nav-link" href="{{ route('admin_pages') }}">List</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('admin_menu_add') }}">Add New</a>
+                                    <a class="nav-link" href="{{ route('admin_page_add') }}">Add New</a>
                                 </li>
                             </ul>
                         </div>
                     </li> 
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin_testimonials') }}" data-toggle="collapse" aria-expanded="false" data-target="#submenu-101" aria-controls="submenu-101"><i class="fas fa-fw fa-file"></i> Projects </a>
-                        <div id="submenu-101" class="collapse submenu" style="">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('admin_testimonials') }}">List</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('admin_add_testimonial') }}">Add New</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin_manage_users') }}" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fas fa-fw fa-users"></i> Users </a>
-                        <div id="submenu-2" class="collapse submenu" style="">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('admin_manage_users') }}">List</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('admin_add_user_get') }}">Add New</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="nav-item ">
-                        <a class="nav-link @if(Route::currentRouteName() == 'site_settings') active @endif" href="{{ route('site_settings') }}"><i class="fa fa-fw fa-cog"></i>Site Settings</a>
-                    </li>
+                   
 
                 </ul>
             </div>
