@@ -143,7 +143,7 @@ class PageRepository  extends AbstractRepository
         $insert->newsletter     =   $data->newsletter ?? 0;
         $insert->save();
 
-        $template_content       =   base64_encode(serialize( $this->templateContent($data) )); //Get Content for each template
+        $template_content       =   serialize( $this->templateContent($data) ); //Get Content for each template
 
         $template                               =   $data->template;
         $title                                  =   $data->title;
@@ -274,10 +274,37 @@ class PageRepository  extends AbstractRepository
             $template_content['staff_sec3_text'] = $data->staff_sec3_text;
 
             $template_content['staff_sec4_text'] = $data->staff_sec4_text;
-           
+        }
 
+        if($data->template == 'request-demo')
+        {
+            // print_r($data->all());
+            // exit;
+            $template_content['rd_sec1_tagline']    = $data->rd_sec1_tagline;            
+            $template_content['rd_sec1_heading'] = $data->rd_sec1_heading;
+            $template_content['rd_sec1_text'] = $data->rd_sec1_text;
             
+            $template_content['rd_sec2_heading'] = $data->rd_sec2_heading;
+            $template_content['rd_sec2_bx1_heading'] = $data->rd_sec2_bx1_heading;
+            $template_content['rd_sec2_bx2_heading'] = $data->rd_sec2_bx2_heading;
+            $template_content['rd_sec2_bx3_heading'] = $data->rd_sec2_bx3_heading;
+            $template_content['rd_sec2_bx4_heading'] = $data->rd_sec2_bx4_heading;
+            $template_content['rd_sec2_bx5_heading'] = $data->rd_sec2_bx5_heading;
+            $template_content['rd_sec2_bx6_heading'] = $data->rd_sec2_bx6_heading;
 
+            $template_content['rd_sec2_bx1_text'] = $data->rd_sec2_bx1_text;
+            $template_content['rd_sec2_bx2_text'] = $data->rd_sec2_bx2_text;
+            $template_content['rd_sec2_bx3_text'] = $data->rd_sec2_bx3_text;
+            $template_content['rd_sec2_bx4_text'] = $data->rd_sec2_bx4_text;
+            $template_content['rd_sec2_bx5_text'] = $data->rd_sec2_bx5_text;
+            $template_content['rd_sec2_bx6_text'] = $data->rd_sec2_bx6_text;
+
+            $template_content['rd_sec3_heading'] = $data->rd_sec3_heading;
+            $template_content['rd_sec3_subheading'] = $data->rd_sec3_subheading;
+            $template_content['rd_sec3_text'] = $data->rd_sec3_text;
+
+            $template_content['rd_sec4_tagline'] = $data->rd_sec4_tagline;
+            $template_content['rd_sec4_heading'] = $data->rd_sec4_heading;
         }
         /*
         if($data->{'template-'.$language_id} == 'list-your-hotel')

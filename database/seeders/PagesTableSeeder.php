@@ -215,6 +215,20 @@ class PagesTableSeeder extends Seeder
                 'created_at' => '2022-06-16 18:05:35',
                 'updated_at' => '2022-06-16 18:10:22',
             ),
+            14 => 
+            array (
+                'id' => 15,
+                'slug' => 'request-demo',
+                'order' => 12,
+                'image' => '/',
+                'status' => 'Active',
+                'created_by' => 1,
+                'social_links' => 0,
+                'newsletter' => 0,
+                'deleted_at' => NULL,
+                'created_at' => '2022-06-17 17:15:45',
+                'updated_at' => '2022-06-17 17:16:08',
+            ),
         ));
         
         

@@ -453,6 +453,118 @@
 
                                 </div>
                                 <!-- staffing end -->
+
+
+                                <!-- Request Demo -->
+                                <div class="row request-demotemplate template_attributes">
+                                    <div class="col-sm-12">
+                                        <h3>Section 1</h3>                        
+                                        <div class="field">
+                                            <label>Tag Line</label>
+                                            <input type="text" value="{{ old('rd_sec1_tagline',$page_meta['rd_sec1_tagline'] ?? '') }}" name="rd_sec1_tagline" placeholder="Heading..." class="form-control form-control-lg" />
+                                        </div>                              
+                                        <div class="field">
+                                            <label>Heading</label>
+                                            <input type="text" value="{{ old('rd_sec1_heading',$page_meta['rd_sec1_heading'] ?? '') }}" name="rd_sec1_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                            <textarea rows="10" name="rd_sec1_text" class="form-control form-control-lg my-editor">{{ old('title',$page_meta['rd_sec1_text'] ?? '') }}</textarea>
+                                        </div>
+                                
+                                    </div>
+                               
+
+                                <div class="col-sm-12"> 
+                                       
+                                    <h3>Section 2</h3>  
+                                    <input type="text" value="{{ old('rd_sec2_heading',$page_meta['rd_sec2_heading'] ?? '') }}" name="rd_sec2_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                    <div class="field">
+                                            <label>Box 1</label>
+                                            <input type="text" value="{{ old('rd_sec2_bx1_heading',$page_meta['rd_sec2_bx1_heading'] ?? '') }}" name="rd_sec2_bx1_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                            <textarea rows="5" name="rd_sec2_bx1_text" class="form-control form-control-lg my-editor">{{ old('rd_sec2_bx1_text',$page_meta['rd_sec2_bx1_text'] ?? '') }}</textarea>
+                                        </div>
+                                
+                                    </div>
+
+                                    <div class="col-sm-12">
+                              
+                                        <div class="field">
+                                            <label>Box 2</label>
+                                            <input type="text" value="{{ old('rd_sec2_bx2_heading',$page_meta['rd_sec2_bx2_heading'] ?? '') }}" name="rd_sec2_bx2_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                            <textarea rows="5" name="rd_sec2_bx2_text" class="form-control form-control-lg my-editor">{{ old('rd_sec2_bx2_text',$page_meta['rd_sec2_bx2_text'] ?? '') }}</textarea>
+                                        </div>
+                                
+                                    </div>
+
+                                    <div class="col-sm-12">
+                              
+                                        <div class="field">
+                                            <label>Box 3</label>
+                                            <input type="text" value="{{ old('rd_sec2_bx3_heading',$page_meta['rd_sec2_bx3_heading'] ?? '') }}" name="rd_sec2_bx3_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                            <textarea rows="5" name="rd_sec2_bx3_text" class="form-control form-control-lg my-editor">{{ old('rd_sec2_bx3_text',$page_meta['rd_sec2_bx3_text'] ?? '') }}</textarea>
+                                        </div>
+                                
+                                    </div>
+
+                                    <div class="col-sm-12">
+                              
+                                        <div class="field">
+                                            <label>Box 4</label>
+                                            <input type="text" value="{{ old('rd_sec2_bx4_heading',$page_meta['rd_sec2_bx4_heading'] ?? '') }}" name="rd_sec2_bx4_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                            <textarea rows="5" name="rd_sec2_bx4_text" class="form-control form-control-lg my-editor">{{ old('rd_sec2_bx4_text',$page_meta['rd_sec2_bx4_text'] ?? '') }}</textarea>
+                                        </div>
+                                
+                                    </div>
+
+                                    <div class="col-sm-12">
+                              
+                                        <div class="field">
+                                            <label>Box 5</label>
+                                            <input type="text" value="{{ old('rd_sec2_bx5_heading',$page_meta['rd_sec2_bx5_heading'] ?? '') }}" name="rd_sec2_bx5_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                            <textarea rows="5" name="rd_sec2_bx5_text" class="form-control form-control-lg my-editor">{{ old('rd_sec2_bx5_text',$page_meta['rd_sec2_bx5_text'] ?? '') }}</textarea>
+                                        </div>
+                                
+                                    </div>
+
+                                    <div class="col-sm-12">
+                              
+                                        <div class="field">
+                                            <label>Box 6</label>
+                                            <input type="text" value="{{ old('rd_sec2_bx6_heading',$page_meta['rd_sec2_bx6_heading'] ?? '') }}" name="rd_sec2_bx6_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                            <textarea rows="5" name="rd_sec2_bx6_text" class="form-control form-control-lg my-editor">{{ old('rd_sec2_bx6_text',$page_meta['rd_sec2_bx6_text'] ?? '') }}</textarea>
+                                        </div>
+                                
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <h3>Section 3</h3>                        
+                                                                   
+                                        <div class="field">
+                                            <label>Heading</label>
+                                            <input type="text" value="{{ old('rd_sec3_heading',$page_meta['rd_sec3_heading'] ?? '') }}" name="rd_sec3_heading" placeholder="Heading..." class="form-control form-control-lg" />
+
+                                            <label>Sub Heading</label>
+                                            <input type="text" value="{{ old('rd_sec3_subheading',$page_meta['rd_sec3_subheading'] ?? '') }}" name="rd_sec3_subheading" placeholder="Sub Heading..." class="form-control form-control-lg" />
+
+                                            <textarea rows="10" name="rd_sec3_text" class="form-control form-control-lg my-editor">{{ old('title',$page_meta['rd_sec3_text'] ?? '') }}</textarea>
+                                        </div>
+                                
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <h3>Section 4</h3>                        
+                                        <div class="field">
+                                            <label>Tag Line</label>
+                                            <input type="text" value="{{ old('rd_sec4_tagline',$page_meta['rd_sec4_tagline'] ?? '') }}" name="rd_sec4_tagline" placeholder="Heading..." class="form-control form-control-lg" />
+                                        </div>                              
+                                        <div class="field">
+                                            <label>Heading</label>
+                                            <input type="text" value="{{ old('rd_sec4_heading',$page_meta['rd_sec4_heading'] ?? '') }}" name="rd_sec4_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                        </div>
+                                
+                                    </div>
+
+                                </div>
+                                    
+                                <!-- Request Demo end -->
                                 
                                 
                                 <div class="row field form-group">

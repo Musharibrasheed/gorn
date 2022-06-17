@@ -318,6 +318,25 @@ class PagesDescriptionTableSeeder extends Seeder
                 'created_at' => '2022-06-16 18:05:35',
                 'updated_at' => '2022-06-16 19:37:56',
             ),
+            14 => 
+            array (
+                'id' => 15,
+                'page_id' => 15,
+                'language_id' => 1,
+                'template' => 'request-demo',
+                'title' => 'Request Demo',
+                'short_title' => 'Request Demo',
+                'content' => NULL,
+                'short_content' => NULL,
+                'meta_title' => NULL,
+                'meta_keywords' => NULL,
+                'meta_description' => NULL,
+                'page_video' => NULL,
+                'template_content' => 'a:21:{s:15:"rd_sec1_tagline";s:22:"Hire Faster & Smarter!";s:15:"rd_sec1_heading";s:65:"Spending too much on Travel and Per Diem Nursing/Allied Staffing?";s:12:"rd_sec1_text";s:272:"<p>No worries! We are here to help. Our platform will help you create and manage your own internal flow pool. We can also help you manage the compliance requirements for your core staff and float pool clinicians. So you can save more and leave the heavy lifting to us.</p>";s:15:"rd_sec2_heading";s:41:"Let us help you improve your bottom line!";s:19:"rd_sec2_bx1_heading";s:10:"Mobile App";s:19:"rd_sec2_bx2_heading";s:10:"Scheduling";s:19:"rd_sec2_bx3_heading";s:11:"Cloud based";s:19:"rd_sec2_bx4_heading";s:12:"24/7 Support";s:19:"rd_sec2_bx5_heading";s:13:"Amazing Tools";s:19:"rd_sec2_bx6_heading";s:14:"Build to scale";s:16:"rd_sec2_bx1_text";s:73:"<p>We are just an app away. Manage everything on your Android or iOS.</p>";s:16:"rd_sec2_bx2_text";s:78:"<p>Be smarter and manage the existing workforce and decrease agency spent.</p>";s:16:"rd_sec2_bx3_text";s:60:"<p>So you don&rsquo;t have to worry about moving around.</p>";s:16:"rd_sec2_bx4_text";s:109:"<p>You read that right, we give you a dedicated account manager so there is always help when you need it.</p>";s:16:"rd_sec2_bx5_text";s:104:"<p>Stuck with traditional tools that limit your productivity, we understand each client is different</p>";s:16:"rd_sec2_bx6_text";s:109:"<p>Hooked on Go RN, we don&rsquo;t blame you. We are addictive. Get our Enterprise solution and stand out</p>";s:15:"rd_sec3_heading";s:20:"We have you covered!";s:18:"rd_sec3_subheading";s:66:"Let Go RN assist you with maximizing your float pool & core staff.";s:12:"rd_sec3_text";s:247:"<p>No problem! Go RN&rsquo;s staffing platform can improve your bottom line by adding efficiencies that will help you form, manage, and efficiently staff your float pool and core staff, in turn decreasing your travel and per diem agency usage.</p>";s:15:"rd_sec4_tagline";s:28:"WE’RE ALWAYS HAPPY TO HELP";s:15:"rd_sec4_heading";s:25:"Schedule your demo today!";}',
+                'deleted_at' => NULL,
+                'created_at' => '2022-06-17 17:15:45',
+                'updated_at' => '2022-06-17 18:42:44',
+            ),
         ));
         
         

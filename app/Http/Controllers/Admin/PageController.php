@@ -53,7 +53,17 @@ class PageController extends Controller
         {
             $getpage = $this->page;
             $pageDescription = $this->page->getDescriptionById($id);
-            $page_meta = $pageDescription->template_content ? unserialize( $pageDescription->template_content) : '';
+            // $page_meta = $pageDescription->template_content ? unserialize( $pageDescription->template_content) : '';
+            $page_meta = $pageDescription->template_content = preg_replace_callback('!s:\d+:"(.*?)";!s', 
+                function($m) {
+                    return "s:" . strlen($m[1]) . ':"'.$m[1].'";'; 
+                }, urldecode($pageDescription->template_content)
+            );
+            $page_meta = $pageDescription->template_content ? unserialize( $page_meta ) : ''; 
+            // echo '<pre>';
+            // print_r($page_meta);
+            // exit;
+
             return View('admin.page.edit',compact('page','pageDescription','id','page_repo','page_meta'));
         }
         else
