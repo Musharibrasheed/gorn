@@ -565,6 +565,33 @@
                                 </div>
                                     
                                 <!-- Request Demo end -->
+
+                                <!-- about -->
+                                
+                                <div class="row abouttemplate template_attributes">
+                                    <div class="col-sm-12">
+                                        <h3>Section 1</h3>  
+                                        <div class="field">
+                                            <input type="text" value="{{ old('abt_sec1_heading',$page_meta['abt_sec1_heading'] ?? '') }}" name="abt_sec1_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                        </div>
+                                        <div class="field">                                            
+                                            <textarea rows="10" name="abt_sec1_text" class="form-control form-control-lg my-editor">{{ old('title',$page_meta['abt_sec1_text'] ?? '') }}</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <h3>Section 2</h3>  
+                                        <div class="field">
+                                            <input type="text" value="{{ old('abt_sec2_heading',$page_meta['abt_sec2_heading'] ?? '') }}" name="abt_sec2_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                        </div>
+                                        <div class="field">                                            
+                                            <textarea rows="10" name="abt_sec2_text" class="form-control form-control-lg my-editor">{{ old('title',$page_meta['abt_sec2_text'] ?? '') }}</textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- about end -->
                                 
                                 
                                 <div class="row field form-group">

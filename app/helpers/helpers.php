@@ -53,13 +53,13 @@ if (!function_exists('getCities')) {
     }
 }
 function meta_title() {
-    return 'Talents';
+    return 'GORN';
 }
 function meta_keywords() {
-    return 'Talents';
+    return 'GORN';
 }
 function meta_description() {
-    return 'Talents';
+    return 'GORN';
 }
 
 function getTemplates() {

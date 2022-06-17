@@ -278,8 +278,6 @@ class PageRepository  extends AbstractRepository
 
         if($data->template == 'request-demo')
         {
-            // print_r($data->all());
-            // exit;
             $template_content['rd_sec1_tagline']    = $data->rd_sec1_tagline;            
             $template_content['rd_sec1_heading'] = $data->rd_sec1_heading;
             $template_content['rd_sec1_text'] = $data->rd_sec1_text;
@@ -305,6 +303,15 @@ class PageRepository  extends AbstractRepository
 
             $template_content['rd_sec4_tagline'] = $data->rd_sec4_tagline;
             $template_content['rd_sec4_heading'] = $data->rd_sec4_heading;
+        }
+
+        if($data->template == 'about')
+        {
+            $template_content['abt_sec1_heading']    = $data->abt_sec1_heading;            
+            $template_content['abt_sec1_text']    = $data->abt_sec1_text;
+
+            $template_content['abt_sec2_heading']    = $data->abt_sec2_heading;            
+            $template_content['abt_sec2_text']    = $data->abt_sec2_text;            
         }
         /*
         if($data->{'template-'.$language_id} == 'list-your-hotel')
