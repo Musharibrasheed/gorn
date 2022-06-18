@@ -97,14 +97,14 @@
                                 </div>
                                  
                                 
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-sm-12">                               
-                                        <div class="field">
+                                        <div class="field form-group">
                                             <label>Page Video (Youtube Embeded URL like: https://www.youtube.com/embed/3h-1h168Blo)</label>
                                             <input type="text" value="{{ old('title',$pageDescription->page_video ?? '') }}" name="page_video" placeholder="https://www.youtube.com/embed/3h-1h168Blo" class="form-control form-control-lg" />
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="row hometemplate template_attributes">
                                     <div class="col-sm-12 form-group">
@@ -592,6 +592,46 @@
                                 </div>
 
                                 <!-- about end -->
+
+                                <!-- contact -->
+
+                                <div class="row contacttemplate template_attributes">
+                                    <div class="col-sm-12">
+                                          
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_heading',$page_meta['contact_heading'] ?? '') }}" name="contact_heading" placeholder="Heading" class="form-control form-control-lg" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_ci',$page_meta['contact_ci'] ?? '') }}" name="contact_ci" placeholder="Contact Information" class="form-control form-control-lg" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_add',$page_meta['contact_add'] ?? '') }}" name="contact_add" placeholder="Address" class="form-control form-control-lg" />
+                                        </div>                                        
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_email',$page_meta['contact_email'] ?? '') }}" name="contact_email" placeholder="Email" class="form-control form-control-lg" />
+                                        </div>                                        
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_phn',$page_meta['contact_phn'] ?? '') }}" name="contact_phn" placeholder="Phone" class="form-control form-control-lg" />
+                                        </div>                                        
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_line',$page_meta['contact_line'] ?? '') }}" name="contact_line" placeholder="Contact Line" class="form-control form-control-lg" />
+                                        </div>                   
+                                        
+                                        
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_bx1_head',$page_meta['contact_bx1_head'] ?? '') }}" name="contact_bx1_head" placeholder="Heading" class="form-control form-control-lg" />
+                                        </div>                                        
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_bx2_head',$page_meta['contact_bx2_head'] ?? '') }}" name="contact_bx2_head" placeholder="Heading" class="form-control form-control-lg" />
+                                        </div>                                        
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_bx3_head',$page_meta['contact_bx3_head'] ?? '') }}" name="contact_bx3_head" placeholder="Heading" class="form-control form-control-lg" />
+                                        </div>                                        
+                                    </div>
+
+                                </div>
+
+                                <!-- contact end -->
                                 
                                 
                                 <div class="row field form-group">

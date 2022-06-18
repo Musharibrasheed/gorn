@@ -313,6 +313,19 @@ class PageRepository  extends AbstractRepository
             $template_content['abt_sec2_heading']    = $data->abt_sec2_heading;            
             $template_content['abt_sec2_text']    = $data->abt_sec2_text;            
         }
+
+        if($data->template == 'contact')
+        {
+            $template_content['contact_heading']    = $data->contact_heading;            
+            $template_content['contact_ci']         = $data->contact_ci;
+            $template_content['contact_add']        = $data->contact_add;            
+            $template_content['contact_email']      = $data->contact_email;            
+            $template_content['contact_phn']        = $data->contact_phn;            
+            $template_content['contact_line']       = $data->contact_line;            
+            $template_content['contact_bx1_head']       = $data->contact_bx1_head;            
+            $template_content['contact_bx2_head']       = $data->contact_bx2_head;            
+            $template_content['contact_bx3_head']       = $data->contact_bx3_head;            
+        }
         /*
         if($data->{'template-'.$language_id} == 'list-your-hotel')
         {

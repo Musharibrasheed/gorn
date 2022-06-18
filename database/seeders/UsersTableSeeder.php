@@ -28,11 +28,11 @@ class UsersTableSeeder extends Seeder
                 'phone_number' => NULL,
                 'image' => NULL,
                 'password' => '$2y$10$gclg8VX2lLmQ9HV1aLypsuh.ZD2AX2QhHaZxQsK6P3UjLavTRJHIa',
-                'last_login' => '2022-06-17 17:00:40',
+                'last_login' => '2022-06-18 21:37:54',
                 'permissions' => NULL,
                 'account_type' => 'Admin',
                 'created_at' => '2022-06-12 20:04:22',
-                'updated_at' => '2022-06-17 17:00:40',
+                'updated_at' => '2022-06-18 21:37:54',
                 'deleted_at' => NULL,
             ),
             1 => 

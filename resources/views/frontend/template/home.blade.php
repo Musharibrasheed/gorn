@@ -68,7 +68,7 @@
                                             </div>
                                             <div class="for-About-GORN-section-pera">
                                                 <p class="for-About-GORN-section-p for-pera-style">
-													{{ $page_meta['about_gorn_text'] ? strip_tags($page_meta['about_gorn_text']) : '' }}
+													{{ isset($page_meta['about_gorn_text']) ? strip_tags($page_meta['about_gorn_text']) : '' }}
                                                 </p>
                                             </div>
                                             <div class="for-icon-box-button btn">
@@ -157,7 +157,7 @@
                                                         <h6 class="for-icon-box-h6">{{ $page_meta['section2_bx1_heading'] ?? '' }}</h6>
                                                     </div>
                                                     <div class="for-icon-box-pera">
-                                                        <p class="for-icon-box-p">{{ $page_meta['section2_bx1_text'] ? strip_tags($page_meta['section2_bx1_text']) : '' }}</p>
+                                                        <p class="for-icon-box-p">{{ isset($page_meta['section2_bx1_text']) ? strip_tags($page_meta['section2_bx1_text']) : '' }}</p>
                                                     </div>
                                                     <div class="for-icon-box-button btn">
                                                         <a class="for-icon-box-a" href="#">Read More</a>
@@ -201,7 +201,7 @@
                                                         <h6 class="for-icon-box-h6">{{ $page_meta['section2_bx2_heading'] ?? '' }}</h6>
                                                     </div>
                                                     <div class="for-icon-box-pera">
-                                                        <p class="for-icon-box-p">{{ $page_meta['section2_bx2_text'] ? strip_tags($page_meta['section2_bx2_text']) : '' }}</p>
+                                                        <p class="for-icon-box-p">{{ isset($page_meta['section2_bx2_text']) ? strip_tags($page_meta['section2_bx2_text']) : '' }}</p>
                                                     </div>
                                                     <div class="for-icon-box-button btn">
                                                         <a class="for-icon-box-a" href="#">Read More</a>
@@ -245,7 +245,7 @@
                                                         <h6 class="for-icon-box-h6">{{ $page_meta['section2_bx3_heading'] ?? '' }}</h6>
                                                     </div>
                                                     <div class="for-icon-box-pera">
-                                                        <p class="for-icon-box-p">{{ $page_meta['section2_bx3_text'] ? strip_tags($page_meta['section2_bx3_text']) : '' }}</p>
+                                                        <p class="for-icon-box-p">{{ isset($page_meta['section2_bx3_text']) ? strip_tags($page_meta['section2_bx3_text']) : '' }}</p>
                                                     </div>
                                                     <div class="for-icon-box-button btn">
                                                         <a class="for-icon-box-a" href="#">Read More</a>
@@ -287,7 +287,7 @@
                                             </div>
                                             <div class="for-Nurses-section-pera">
                                                 <p class="for-Nurses-section-p for-pera-style">
-												{{ $page_meta['section3_text'] ? strip_tags($page_meta['section3_text']) : '' }}
+												{{ isset($page_meta['section3_text']) ? strip_tags($page_meta['section3_text']) : '' }}
                                                 </p>
                                             </div>
                                             <div class="for-icon-box-button btn">
