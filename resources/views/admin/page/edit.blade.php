@@ -632,6 +632,55 @@
                                 </div>
 
                                 <!-- contact end -->
+
+                                <!-- faqs -->
+
+                                <div class="row faqstemplate template_attributes">
+                                    <div class="col-sm-12">              
+                                        <div class="form-group">
+                                            <label>Question 1:</label>
+                                            <input type="text" value="{{ old('faqs_q1',$page_meta['faqs_q1'] ?? '') }}" name="faqs_q1" placeholder="Question" class="form-control form-control-lg" />
+                                        </div>                              
+                                        <div class="form-group">
+                                            <label>Answer:</label>
+                                            <textarea rows="10" name="faqs_ans1" class="form-control form-control-lg my-editor">{{ old('faqs_ans1',$page_meta['faqs_ans1'] ?? '') }}</textarea>
+                                        </div>                                
+                                    </div>
+
+                                    <div class="col-sm-12">              
+                                        <div class="form-group">
+                                            <label>Question 2:</label>
+                                            <input type="text" value="{{ old('faqs_q2',$page_meta['faqs_q2'] ?? '') }}" name="faqs_q2" placeholder="Question" class="form-control form-control-lg" />
+                                        </div>                              
+                                        <div class="form-group">
+                                            <label>Answer:</label>
+                                            <textarea rows="10" name="faqs_ans2" class="form-control form-control-lg my-editor">{{ old('faqs_ans2',$page_meta['faqs_ans2'] ?? '') }}</textarea>
+                                        </div>                                
+                                    </div>
+
+                                    <div class="col-sm-12">              
+                                        <div class="form-group">
+                                            <label>Question 3:</label>
+                                            <input type="text" value="{{ old('faqs_q3',$page_meta['faqs_q3'] ?? '') }}" name="faqs_q3" placeholder="Question" class="form-control form-control-lg" />
+                                        </div>                              
+                                        <div class="form-group">
+                                            <label>Answer:</label>
+                                            <textarea rows="10" name="faqs_ans3" class="form-control form-control-lg my-editor">{{ old('faqs_ans3',$page_meta['faqs_ans3'] ?? '') }}</textarea>
+                                        </div>                                
+                                    </div>
+
+                                    <div class="col-sm-12">              
+                                        <div class="form-group">
+                                            <label>Question 4:</label>
+                                            <input type="text" value="{{ old('faqs_q4',$page_meta['faqs_q4'] ?? '') }}" name="faqs_q4" placeholder="Question" class="form-control form-control-lg" />
+                                        </div>                              
+                                        <div class="form-group">
+                                            <label>Answer:</label>
+                                            <textarea rows="10" name="faqs_ans4" class="form-control form-control-lg my-editor">{{ old('faqs_ans4',$page_meta['faqs_ans4'] ?? '') }}</textarea>
+                                        </div>                                
+                                    </div>
+                                </div>
+                                <!-- faqs end -->
                                 
                                 
                                 <div class="row field form-group">

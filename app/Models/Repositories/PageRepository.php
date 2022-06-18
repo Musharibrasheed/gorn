@@ -326,6 +326,19 @@ class PageRepository  extends AbstractRepository
             $template_content['contact_bx2_head']       = $data->contact_bx2_head;            
             $template_content['contact_bx3_head']       = $data->contact_bx3_head;            
         }
+
+        if($data->template == 'faqs')
+        {
+            $template_content['faqs_q1']    = $data->faqs_q1;            
+            $template_content['faqs_q2']    = $data->faqs_q2;            
+            $template_content['faqs_q3']    = $data->faqs_q3;            
+            $template_content['faqs_q4']    = $data->faqs_q4;   
+
+            $template_content['faqs_ans1']    = $data->faqs_ans1;    
+            $template_content['faqs_ans2']    = $data->faqs_ans2;    
+            $template_content['faqs_ans3']    = $data->faqs_ans3;    
+            $template_content['faqs_ans4']    = $data->faqs_ans4;              
+        }
         /*
         if($data->{'template-'.$language_id} == 'list-your-hotel')
         {

@@ -338,6 +338,45 @@ class PagesDescriptionTableSeeder extends Seeder
                 'created_at' => '2022-06-17 17:15:45',
                 'updated_at' => '2022-06-17 20:10:33',
             ),
+            15 => 
+            array (
+                'id' => 16,
+                'page_id' => 16,
+                'language_id' => 1,
+                'template' => 'apply-now',
+                'title' => 'Apply Now',
+                'short_title' => 'Apply Now',
+                'content' => '<h1>Go RN App</h1>
+<p>Please fill out the form to the best of your ability</p>',
+                'short_content' => NULL,
+                'meta_title' => NULL,
+                'meta_keywords' => NULL,
+                'meta_description' => NULL,
+                'page_video' => NULL,
+                'template_content' => 'a:0:{}',
+                'deleted_at' => NULL,
+                'created_at' => '2022-06-18 22:21:44',
+                'updated_at' => '2022-06-18 22:23:46',
+            ),
+            16 => 
+            array (
+                'id' => 17,
+                'page_id' => 17,
+                'language_id' => 1,
+                'template' => 'faqs',
+                'title' => 'Frequently Asked Questions',
+                'short_title' => 'FAQS',
+                'content' => NULL,
+                'short_content' => NULL,
+                'meta_title' => NULL,
+                'meta_keywords' => NULL,
+                'meta_description' => NULL,
+                'page_video' => NULL,
+                'template_content' => 'a:8:{s:7:"faqs_q1";s:32:"Why won`t my payment go through?";s:7:"faqs_q2";s:22:"How do I get a refund?";s:7:"faqs_q3";s:25:"How do I redeem a coupon?";s:7:"faqs_q4";s:21:"Changing account name";s:9:"faqs_ans1";s:554:"<p>Pharetra nulla ullamcorper sit lectus. Fermentum mauris pellentesque nec nibh sed et, vel diam, massa. Placerat quis vel fames interdum urna lobortis sagittis sed pretium.Aliquam eget posuere sit enim elementum nulla vulputate magna. Morbi sed arcu proin quis tortor non risus.<br />Elementum lectus a porta commodo suspendisse arcu, aliquam lectus faucibus. Nisl malesuada tortor, ligula aliquet felis vitae enim. Mi augue aliquet mauris non elementum tincidunt eget facilisi. Pellentesque massa ipsum tempus vel aliquam massa eu pulvinar eget.</p>";s:9:"faqs_ans2";s:143:"<p>Aliquam cursus vitae nulla non rhoncus. Nunc condimentum erat nec dictum tempus. Suspendisse aliquam erat hendrerit vehicula vestibulum.</p>";s:9:"faqs_ans3";s:136:"<p>Pellentesque aliquam ligula libero, vitae imperdiet diam porta vitae. sed do eiusmod tempor incididunt ut labore et dolore magna.</p>";s:9:"faqs_ans4";s:120:"<p>Donec tincidunt consectetur orci at dignissim. Proin auctor aliquam justo, vitae luctus odio pretium scelerisque.</p>";}',
+                'deleted_at' => NULL,
+                'created_at' => '2022-06-18 22:37:30',
+                'updated_at' => '2022-06-18 22:56:29',
+            ),
         ));
         
         
