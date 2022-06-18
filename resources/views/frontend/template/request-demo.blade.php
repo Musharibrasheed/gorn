@@ -9,6 +9,19 @@ $pageContent->meta_description : meta_description() !!} @stop
 @push('styles')
     <link rel="stylesheet" href="assets/css/demo.css">
     <style>
+        .for-About-GORN-section-heading {
+            background-color: transparent;
+            position: relative;
+            color: #3d1152;
+            padding: 0;
+            text-align:left;
+            top:0;
+            right:0;
+            width: auto;
+        }
+        .for-video-popup-image-secion img {
+            box-shadow: none;
+        }
         body {
             font-family: 'Roboto', sans-serif !important;
         }
@@ -106,7 +119,7 @@ $pageContent->meta_description : meta_description() !!} @stop
                                         </div>
                                         <div class="for-About-GORN-section-heading">
                                             <h3 class="for-About-GORN-section-h3 for-all-headings">
-                                                {{ $page_meta['rd_sec1_tagline'] ?? '' }}
+                                                {{ $page_meta['rd_sec1_heading'] ?? '' }}
                                             </h3>
                                         </div>
                                         <div class="for-About-GORN-section-pera">
