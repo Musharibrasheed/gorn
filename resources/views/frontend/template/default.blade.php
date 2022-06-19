@@ -1,4 +1,4 @@
-{{-- * Template Name : About * --}}
+{{-- * Template Name : Default * --}}
 @extends('frontend.master') @section('page-title') {!!
 ($pageContent->meta_title) ? $pageContent->title : meta_title() !!} @stop
 @section('meta-keywords') {!! ($pageContent->meta_keywords) ?
