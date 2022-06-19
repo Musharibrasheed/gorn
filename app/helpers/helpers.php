@@ -17,29 +17,6 @@ if (!function_exists('upload_image')) {
         return $safeName;
     }
 }
-//get countries list
-if (!function_exists('getCountries')) {
-    
-    function getCountries(){
-        $countries = array();
-        $countries_list = DB::table('countries')->get();
-        return $countries_list;
-    }
-}
-
-//get states list
-if (!function_exists('getStates')) {
-    
-    function getStates($country_id){
-        $states = array();
-        $states_list = DB::table('states')->select('id','name')->where('country_id','=',$country_id)->get();
-        // foreach ($states_list as $key => $state) {
-        //     $states[$state->id] = $state->name;
-        // }
-        return $states_list;
-    }
-}
-
 
 function meta_title() {
     return 'GORN';
