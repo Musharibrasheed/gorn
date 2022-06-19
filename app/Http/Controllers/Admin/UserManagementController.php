@@ -5,12 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Repositories\UserRepository;
-use App\Models\Repositories\SiteSettingRepository;
-use App\Http\Requests\UserRegistrationRequest;
 use Illuminate\Support\Str;
 use Yajra\DataTables\DataTables;
+use App\Http\Requests\UserRegistrationRequest;
 // use App\Models\EmailTemplate;
-// use App\Models\SiteSetting;
 use Mail;
 use File;
 use Lang;
@@ -21,12 +19,11 @@ use Sentinel;
 class UserManagementController extends Controller
 {
     protected $users;
-    protected $site_setting;
 
-   public function __construct( UserRepository $users, SiteSettingRepository $site_setting)
+
+   public function __construct( UserRepository $users)
     {
         $this->users        =   $users;
-        $this->site_setting =   $site_setting;
     }
 
     /**
@@ -34,47 +31,23 @@ class UserManagementController extends Controller
      *
      * @return View
      */
-    public function index()
-    {
-        return View('admin.users.list');
-    }
-
-    public function add() {
-        $countries      =   getCountries();
-        return View('admin.users.add', compact('countries'));
-    }
-
-    public function addUser(UserRegistrationRequest $request)
-    {
-        $credentials = $request->all();
-        $user = Sentinel::registerAndActivate($credentials);
-
-        if( $user)
-            $user = $this->users->userUpdate($request, $user->id);
-
-        return redirect()->route('admin_manage_users')->with('success','User added successfully!');
-    }
-
     public function edit($id)
     {     
         $user           =   $this->users->getByCol($id);
         if( !$user )
             abort(404);   
 
-        $countries      =   getCountries();
-        $states         =   getStates($user->country);
-        $cities         =   getCities($user->state);
         $user_details   =   Sentinel::findById($id);
 
         $activation     =   Activation::completed($user_details);
 
-        return View('admin.users.edit', compact('user','activation','countries','states','cities'));
+        return View('admin.users.edit', compact('user'));
     }
 
     public function update(UserRegistrationRequest $request, $id)
     {
         $user = $this->users->userUpdate($request, $id);
-        return redirect()->route('admin_manage_users')->with('success','User updated successfully!');
+        return redirect()->route('admin_edit_user',['id'=>1])->with('success','User updated successfully!');
     }
 
     public function getData()
@@ -94,36 +67,5 @@ class UserManagementController extends Controller
             ->rawColumns(['actions','full_name'])
             ->make(true);
     }
-
-    public function delete($id)
-    {
-        $remove = $this->users->remove($id);
-        if($remove)
-        {
-            return redirect()->route('admin_manage_users')->with('success','User deleted successfully!');
-        }
-        else
-        {
-            back()->withInput()->with('error','Ops Something went wrong!');
-        }
-    }
-
-    public function banUser($id, $type) {
-        echo $userdetails    =   $this->users->getByCol($id);
-        echo $site_setting   =   $this->site_setting->getByCol(1);
-        // exit;
-        $message = '';
-        // $app_env = env('APP_ENV');
-
-        if ($type == "unban") {
-            $message = "User Account Activated Successfully!";                
-        } elseif ($type == "ban") {
-            $message = "User Account Deactivated Successfully!";               
-        }
-    
-        $this->users->ban_UnbanUser($id, $type);
-        return back()->with('success',$message);
-    }
-
 
 }

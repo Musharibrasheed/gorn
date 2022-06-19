@@ -60,10 +60,6 @@ class PageController extends Controller
                 }, urldecode($pageDescription->template_content)
             );
             $page_meta = $pageDescription->template_content ? unserialize( $page_meta ) : ''; 
-            // echo '<pre>';
-            // print_r($page_meta);
-            // exit;
-
             return View('admin.page.edit',compact('page','pageDescription','id','page_repo','page_meta'));
         }
         else
@@ -103,7 +99,7 @@ class PageController extends Controller
                             @else
                                 Disable
                             @endif')
-            ->editColumn('created_at','{{ date("M d Y",strtotime($created_at)) }}')
+            // ->editColumn('created_at','{{ date("M d Y",strtotime($created_at)) }}')
             ->addColumn('actions',function($pages){
                 return '<a class="tab-btn edit" href="'. route("admin_page_update", ["id"=>$pages->id]) .'"><i class="fa fa-edit" aria-hidden="true"></i></a>
                                     <a class="trigger_popup_fricc tab-btn delete" href="javascript:;" data-href="'. route("admin_page_delete", ["id"=>$pages->id]) .'"><i class="fa fa-trash" aria-hidden="true"></i></a>';

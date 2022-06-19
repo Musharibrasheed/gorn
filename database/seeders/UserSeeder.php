@@ -26,6 +26,10 @@ class UserSeeder extends Seeder
             'admin_dashboard'       => true,
             'site_settings'         => true,
             'site_settings_update'  => true,
+            //users
+            'admin_edit_user'  => true,
+            'admin_post_edit_user'  => true,
+        
             //filemanager
             'unisharp.lfm.*'        => true,
         );

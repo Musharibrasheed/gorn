@@ -3,10 +3,10 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Models\Repositories\SiteSettingRepository;
+// use App\Models\Repositories\SiteSettingRepository;
 use App\Models\Menu;
 use App\Models\MenuDescription;
-use App\Models\SiteSetting;
+// use App\Models\SiteSetting;
 use View;
 
 class AppServiceProvider extends ServiceProvider
@@ -28,10 +28,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (\Schema::hasTable('site_settings')){
-            $site_setting = new SiteSettingRepository(new SiteSetting);
-            View::share('site_setting', $site_setting->getByCol(1));
-        }
+        // if (\Schema::hasTable('site_settings')){
+        //     $site_setting = new SiteSettingRepository(new SiteSetting);
+        //     View::share('site_setting', $site_setting->getByCol(1));
+        // }
 
         view()->composer('*', function($view){
           $view->with('menu_header', $this->getmenu('Primary'));
@@ -44,8 +44,7 @@ class AppServiceProvider extends ServiceProvider
     }
 
     public function getmenu($type){ 
-        $language_id = getlanguage()->id ?? 1;
-        $menu = Menu::where('menu_description.language_id',$language_id)
+        $menu = Menu::where('menu_description.language_id',1)
         ->leftJoin('pages', 'menu.page_id', '=', 'pages.id')
         ->leftJoin('menu_description', 'menu.id', '=', 'menu_description.menu_id')
         ->where('menu.menu_type',$type)

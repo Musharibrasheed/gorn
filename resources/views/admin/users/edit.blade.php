@@ -88,134 +88,23 @@
                                     <div class="col-sm-6">
                                         <div class="field">
                                             <label>Email</label>
-                                            <input type="email" value="{{ old('email',$user->email ?? '') }}" name="email" placeholder="Email here... (Eg: abc@example.com)" class="form-control form-control-lg" />
+                                            <input type="email" value="{{ old('email',$user->email ?? '') }}" name="email" placeholder="Email here... (Eg: abc@example.com)" class="form-control form-control-lg" readonly />
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <div class="field">
-                                            <label>Phone Number</label>
-                                            <input type="text" value="{{ old('phone_number',$user->phone_number ?? '') }}" name="phone_number" placeholder="Phone Number" class="form-control form-control-lg" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row form-group">
-                                    <div class="col-sm-6">
-                                        <div class="field">
-                                            <label>Profession</label>
-                                            <input type="profession" value="{{ old('profession',$user->profession ?? '') }}" name="profession" placeholder="Profession" class="form-control form-control-lg" />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="field">
-                                            <label>Company</label>
-                                            <input type="text" value="{{ old('company',$user->company ?? '') }}" name="company" placeholder="Company" class="form-control form-control-lg" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row form-group">
-                                    <div class="col-sm-12">
-                                        <div class="field">
-                                            <label>Address</label>
-                                            <input type="profession" value="{{ old('address',$user->address ?? '') }}" name="address" placeholder="Address" id="locationTextField" class="form-control form-control-lg" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row form-group">
-                                    <div class="col-sm-6">
-                                        <div class="field">
-                                            <label>Country</label>
-                                            @if( !empty($countries) ) 
-                                                <select name="country" class="form-control form-control-lg" id="mcountry">
-                                                    @foreach( $countries as $country)
-                                                        <option value="{{ $country->id }}" @if($country->id == $user->country) selected="selected" @endif>{{ $country->name }}</option>
-                                                    @endforeach
-                                                </select>
-                                            @endif                                        
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="field">
-                                            <label>State</label>
-                                            @if( !empty($states) ) 
-                                                <select name="state" class="form-control form-control-lg" id="mstates">
-                                                    @foreach( $states as $state)
-                                                        <option value="{{ $state->id }}" @if($state->id == $user->state) selected="selected" @endif>{{ $state->name }}</option>
-                                                    @endforeach
-                                                </select>
-                                            @endif    
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row form-group">
-                                    <div class="col-sm-6">
-                                        <div class="field">
-                                            <label>City</label>
-                                            @if( !empty($cities) ) 
-                                                <select name="city" class="form-control form-control-lg" id="mcities">
-                                                    @foreach( $cities as $city)
-                                                        <option value="{{ $city->id }}" @if($city->id == $user->city) selected="selected" @endif>{{ $city->name }}</option>
-                                                    @endforeach
-                                                </select>
-                                            @endif                                                
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="field">
-
-                                            <label>Zip Code</label>
-                                            <input type="text" value="{{ old('zip_code',$user->zip_code ?? '') }}" name="zip_code" placeholder="Zip Code (e.g 10007)" class="form-control form-control-lg" />
-                                        </div>
-                                    </div>                                    
-                                </div>
-
-                                <div class="row form-group">
-                                    <div class="col-sm-6">
-                                        <div class="field">
-                                            <label>Image</label>
-                                            <input type="file" name="image" accept="image/*" class="form-control form-control-lg" id="thumbnail" />
-                                            <input type="hidden" name="uploaded_image" value="{{ $user->image ?? '' }}">
-    
-                                            <div class="image-preview">
-                                                @if( $user->image )
-                                                <div class="col-sm-12">
-                                                    <div class="field">
-                                                       <img src="{{ asset('/uploads/users/'.$user->image) }}" width="80%" />
-                                                    </div>
-                                                </div>
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    
-
                                     <div class="col-sm-6">
                                         <div class="field">
                                             <label>Password</label>
                                             <input type="password" name="password" placeholder="****" class="form-control form-control-lg" />
                                         </div>
-                                    </div>                                    
+                                    </div>
                                 </div>
                                 
                                 <div class="row field form-group">
-                                    <div class="col-sm-3">
-                                        <a href="{{ route('admin_testimonials') }}" class="btn btn-block btn-primary">@lang('admin/testimonial.cancel')</a>
-                                    </div>
+                                    
                                     <div class="col-sm-3">
                                        <input type="submit" class="btn btn-block btn-primary" value="@lang('admin/testimonial.update')">
                                     </div>
-                                    <div class="col-sm-3">
-                                        @if( $activation )
-                                            <a onclick="return confirm('Are you sure?')" class="btn btn-block btn-primary" href={{ route("admin_ban_user", ["id"=>$user->id,'type'=>'ban']) }}>Ban</a>
-                                        @else
-                                            <a onclick="return confirm('Are you sure?')" class="btn btn-block btn-primary" href={{ route("admin_ban_user", ["id"=>$user->id,'type'=>'unban']) }}>Unban</a>
-                                        @endif
-                                    </div>
+                                    
                                 </div>
                             </div>
 

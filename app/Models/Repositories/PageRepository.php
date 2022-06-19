@@ -2,7 +2,6 @@
 namespace App\Models\Repositories;
 use App\Models\Page;
 use App\Models\PageDescription;
-use App\Models\Languages;
 
 class PageRepository  extends AbstractRepository
 {
@@ -30,11 +29,6 @@ class PageRepository  extends AbstractRepository
     public function getDescriptionById($id,$language_id=1)
     {
 
-        if($language_id == 0)
-        {
-            $language_id = getlanguage()->id;
-        }
-
         $page_description = PageDescription::where('page_id',$id)
             ->where('language_id',$language_id)
             ->first();
@@ -43,7 +37,7 @@ class PageRepository  extends AbstractRepository
 
     public function getPagesList()
     {
-        $language_id = getlanguage()->id ?? 1;
+        $language_id =  1;
 
         $joinParm   = $this->description_table.'.'.$this->foriegn_key;
         $joinParm2  = $this->table.'.'.$this->primary_key;
@@ -60,7 +54,7 @@ class PageRepository  extends AbstractRepository
 
     public function getFrontPageBySlug($slug)
     {
-        $language_id = getlanguage()->id;
+        $language_id = 1;
 
         $joinParm   = $this->description_table.'.'.$this->foriegn_key;
         $joinParm2  = $this->table.'.'.$this->primary_key;
@@ -80,7 +74,6 @@ class PageRepository  extends AbstractRepository
 
     public function add($data)
     {
-        $language               =   getlanguage();
         $language_id            =   $language->id ?? 1;
         $slug                   =   $this->createSlug($data->short_title);
         $user                   =   isUserLoggedIn();
@@ -132,7 +125,6 @@ class PageRepository  extends AbstractRepository
 
     public function update($data,$page_id)
     {
-        $languages = Languages::where('status','Active')->get();
         $language_id            =   $language->id ?? 1;        
 
         $insert                 =   $this->model::find($page_id);

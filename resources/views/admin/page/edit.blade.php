@@ -696,7 +696,7 @@
                             <div class="col-sm-4">
                                 <div class="row">
                                     
-                                    <div class="col-sm-12">
+                                    <!-- <div class="col-sm-12">
                                         <div class="upload-bx">
                                             <div class="field file_manager_field">
                                                 <h4>Image</h4>
@@ -705,7 +705,7 @@
                                                 <i class="fa fa-image" aria-hidden="true" id="lfm" data-input="thumbnail" data-preview="holder"></i>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="col-sm-12">
                                         <div class="form-group">
@@ -766,7 +766,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-sm-12">
+                                    <!-- <div class="col-sm-12">
                                         <div class="field">
                                             <h4>Social Setting</h4>
                                             <input type="checkbox" name="social_links"  @if( $page->social_links == 1 ) checked @endif value="1" class="form-control-lg" />
@@ -774,7 +774,7 @@
                                              <input type="checkbox" name="newsletter" @if( $page->newsletter == 1 ) checked @endif value="1" class="form-control-lg" />
                                              <span>Newsletter </span>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                 </div><!-- show-amm mbpx-20 -->
                             </div>

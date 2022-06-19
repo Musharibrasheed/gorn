@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\PageRequest;
 use App\Models\Repositories\PageRepository;
-use App\Models\Repositories\SiteSettingRepository;
 use Illuminate\Support\Str;
 use Yajra\DataTables\DataTables;
 
@@ -14,15 +13,12 @@ use Yajra\DataTables\DataTables;
 class PageController extends Controller
 {
     protected $page;
-    protected $siteSetting;
    
     public function __construct(
-        PageRepository          $page, 
-        SiteSettingRepository   $siteSetting
+        PageRepository          $page
         )
     {
         $this->page         = $page;
-        $this->siteSetting  = $siteSetting;
     }
 
     /**
@@ -32,9 +28,8 @@ class PageController extends Controller
      */
     public function index()
         {
-            $language_id    =   getlanguage()->id ?? 1;
+            $language_id    =   1;
             $home_page      =   $this->page->getByCol('home','slug');
-            $siteSetting    =   $this->siteSetting->getByCol(1);
             $page_meta      =   '';
 
             if($home_page)

@@ -110,7 +110,7 @@
                                                 <th>@lang('admin/page.short_title')</th>
                                                 <th>@lang('admin/page.slug')</th>
                                                 <th>@lang('admin/page.status')</th>
-                                                <th>@lang('admin/page.created_at')</th>
+                                                <!-- <th>@lang('admin/page.created_at')</th> -->
                                                 <th>@lang('admin/page.action')</th>
                                             </tr>
                                         </thead>
@@ -161,7 +161,7 @@
                         { data: 'short_title', name: 'short_title', searchable: true },
                         { data: 'slug', name: 'slug', searchable: true },
                         { data: 'status', name: 'status', searchable: true },
-                        { data: 'created_at', name: 'created_at' },
+                        // { data: 'created_at', name: 'created_at' },
                         { data: 'actions', name: 'actions', orderable: false, searchable: false }
                     ],
                     searching: true,
