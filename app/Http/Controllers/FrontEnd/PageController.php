@@ -71,12 +71,11 @@ class PageController extends Controller
             );
             $page_meta = $pageContent->template_content ? unserialize( $page_meta ) : '';
         }
+        
         if( $pageContent )
         {
-            if( $pageContent->template == 'about' ) {
-                $template = $pageContent->template;
-            }
-            return view('frontend.template.'.$slug,compact('pageContent','page_meta'));
+            $template = $pageContent->template;
+            return view('frontend.template.'.$template,compact('pageContent','page_meta'));
         } else {
             return page_404();
         }

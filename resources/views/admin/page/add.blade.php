@@ -120,7 +120,7 @@
                                 <div class="row">
 
                                     
-                                                                          <div class="col-sm-12">
+                                                                          <!-- <div class="col-sm-12">
                                             <div class="upload-bx">
                                                 <div class="field file_manager_field">
                                                     <h4>Image</h4>
@@ -129,7 +129,7 @@
                                                     <i class="fa fa-image" aria-hidden="true" id="lfm" data-input="thumbnail" data-preview="holder"></i>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     
                                    
 

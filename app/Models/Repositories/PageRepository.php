@@ -108,7 +108,7 @@ class PageRepository  extends AbstractRepository
 
         $insert_description                     =   new $this->description_model;
         $insert_description->page_id            =   $page_id;
-        $insert_description->language_id        =   $language->id;
+        $insert_description->language_id        =   $language_id;
         $insert_description->template           =   $template;
         $insert_description->title              =   $title;
         $insert_description->short_title        =   $short_title;
