@@ -7,6 +7,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Models\Menu;
 use App\Models\MenuDescription;
 // use App\Models\SiteSetting;
+use Illuminate\Support\Facades\Schema;
 use View;
 
 class AppServiceProvider extends ServiceProvider
@@ -28,6 +29,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191);
         // if (\Schema::hasTable('site_settings')){
         //     $site_setting = new SiteSettingRepository(new SiteSetting);
         //     View::share('site_setting', $site_setting->getByCol(1));
