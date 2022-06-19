@@ -2,15 +2,15 @@
 @extends('admin.master')
 
 @section('page-title')
-    {!! isset($pageContent->meta_title) ? $pageContent->meta_title : 'Link Meeting' !!}
+    {!! isset($pageContent->meta_title) ? $pageContent->meta_title : meta_title() !!}
 @stop
 
 @section('meta-keywords')
-    {!! isset($pageContent->meta_keywords) ? $pageContent->meta_keywords : 'Link Meeting' !!}
+    {!! isset($pageContent->meta_keywords) ? $pageContent->meta_keywords : meta_keywords() !!}
 @stop
 
 @section('meta-description')
-    {!! isset($pageContent->meta_description) ? $pageContent->meta_description : 'Link Meeting' !!}
+    {!! isset($pageContent->meta_description) ? $pageContent->meta_description : meta_description() !!}
 @stop
 @section('body-class') @stop
 @section('content')

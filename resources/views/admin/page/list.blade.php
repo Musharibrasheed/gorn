@@ -1,15 +1,15 @@
 @extends('admin.master')
 
 @section('page-title')
-    {!! isset($pageContent->meta_title) ? $pageContent->meta_title : 'Safina Bay' !!}
+    {!! isset($pageContent->meta_title) ? $pageContent->meta_title : meta_title() !!}
 @stop
 
 @section('meta-keywords')
-    {!! isset($pageContent->meta_keywords) ? $pageContent->meta_keywords : 'Safina Bay' !!}
+    {!! isset($pageContent->meta_keywords) ? $pageContent->meta_keywords : meta_keywords() !!}
 @stop
 
 @section('meta-description')
-    {!! isset($pageContent->meta_description) ? $pageContent->meta_description : 'Safina Bay' !!}
+    {!! isset($pageContent->meta_description) ? $pageContent->meta_description : meta_description() !!}
 @stop
 @section('body-class') dashboard admin-pg @stop
 
