@@ -3,13 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <?php
-            $language = getlanguage();
-            $language_iso = $language->{'iso_639-1'};
-            $site_title = isset(unserialize($site_setting->site_title)['site_title_'.$language_iso]) ? unserialize($site_setting->site_title)['site_title_'.$language_iso] . ' | 404' : "Link Meetings | 404";
-        ?>
+       
 
-        <title>{{ $site_title }}</title>
+        <title>GORN</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">

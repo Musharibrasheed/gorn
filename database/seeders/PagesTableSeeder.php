@@ -121,15 +121,15 @@ class PagesTableSeeder extends Seeder
             array (
                 'id' => 8,
                 'slug' => 'login',
-                'order' => 8,
-                'image' => '/',
+                'order' => 12,
+                'image' => '',
                 'status' => 'Active',
                 'created_by' => 1,
                 'social_links' => 0,
                 'newsletter' => 0,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2022-06-19 10:28:11',
             ),
             8 => 
             array (
@@ -169,9 +169,9 @@ class PagesTableSeeder extends Seeder
                 'created_by' => 1,
                 'social_links' => 0,
                 'newsletter' => 0,
-                'deleted_at' => NULL,
+                'deleted_at' => '2022-06-19 09:12:47',
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2022-06-19 09:12:47',
             ),
             11 => 
             array (

@@ -128,11 +128,11 @@ class PagesDescriptionTableSeeder extends Seeder
                 'meta_keywords' => NULL,
                 'meta_description' => NULL,
                 'page_video' => NULL,
-                'template_content' => 'a:4:{s:16:"abt_sec1_heading";s:11:"About Go RN";s:13:"abt_sec1_text";s:449:"<p>We are a company formed by nursing, healthcare, and technology professionals, who are constantly looking to improve the healthcare system</p>
-<p>Staffing a hospital is a difficult and constant challenge. Finding the right staff at the last minute &ndash; and having them arrive in time for the shift &ndash; is a costly and time consuming process. Our platform reduces the uncertainty, cost, and time involved to get registry nurses on shift</p>";s:16:"abt_sec2_heading";s:17:"Mission Statement";s:13:"abt_sec2_text";s:135:"<p>Make yourself available for shifts today or in the future. No need to wait for a registry to give you a call at the last minute.</p>";}',
+                'template_content' => 'a:4:{s:16:"abt_sec1_heading";s:11:"About Go RN";s:13:"abt_sec1_text";s:455:"<p>We are a company formed by nursing, healthcare, and technology professionals, who are constantly looking to improve the healthcare system</p>
+<p>Staffing a hospital is a difficult and constant challenge. Finding the right staff at the last minute &ndash; and having them arrive in time for the shift &ndash; is a costly and time consuming process. Our platform reduces the uncertainty, cost, and time involved to get registry nurses on shift&nbsp;</p>";s:16:"abt_sec2_heading";s:17:"Mission Statement";s:13:"abt_sec2_text";s:135:"<p>Make yourself available for shifts today or in the future. No need to wait for a registry to give you a call at the last minute.</p>";}',
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => '2022-06-17 20:22:03',
+                'updated_at' => '2022-06-19 10:26:12',
             ),
             6 => 
             array (
@@ -161,16 +161,16 @@ class PagesDescriptionTableSeeder extends Seeder
                 'template' => 'login',
                 'title' => 'Login',
                 'short_title' => 'Login',
-                'content' => '',
+                'content' => NULL,
                 'short_content' => '',
-                'meta_title' => '',
-                'meta_keywords' => '',
-                'meta_description' => '',
-                'page_video' => '',
+                'meta_title' => NULL,
+                'meta_keywords' => NULL,
+                'meta_description' => NULL,
+                'page_video' => NULL,
                 'template_content' => 'a:0:{}',
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2022-06-19 10:28:11',
             ),
             8 => 
             array (
@@ -225,9 +225,9 @@ class PagesDescriptionTableSeeder extends Seeder
                 'meta_description' => '',
                 'page_video' => '',
                 'template_content' => 'a:0:{}',
-                'deleted_at' => NULL,
+                'deleted_at' => '2022-06-19 09:12:47',
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2022-06-19 09:12:47',
             ),
             11 => 
             array (
