@@ -35,11 +35,21 @@ class PageController extends Controller
             $language_id    =   getlanguage()->id ?? 1;
             $home_page      =   $this->page->getByCol('home','slug');
             $siteSetting    =   $this->siteSetting->getByCol(1);
-            
+            $page_meta      =   '';
+
             if($home_page)
             {
                 $pageContent    =   $this->page->getFrontPageBySlug($home_page->slug);
-                $page_meta      =   $pageContent->template_content ? unserialize( $pageContent->template_content) : '';
+                // $page_meta      =   $pageContent->template_content ? unserialize( $pageContent->template_content) : '';
+                if( !empty($pageContent->template_content) ) {
+                    $page_meta = $pageContent->template_content = preg_replace_callback('!s:\d+:"(.*?)";!s', 
+                        function($m) {
+                            return "s:" . strlen($m[1]) . ':"'.$m[1].'";'; 
+                        }, urldecode($pageContent->template_content)
+                    );
+                    $page_meta = $pageContent->template_content ? unserialize( $page_meta ) : '';
+                }
+ 
                 if($pageContent)
                 {
                     return view('frontend.template.'.$home_page->slug,compact('pageContent','page_meta'));
@@ -55,8 +65,17 @@ class PageController extends Controller
     {
         $data       =   array();
         $template   =   'default';
+        $page_meta  =   '';
         $pageContent    =   $this->page->getFrontPageBySlug($slug);
-        $page_meta      =   $pageContent->template_content ? unserialize( urldecode($pageContent->template_content)) : '';
+        // $page_meta      =   $pageContent->template_content ? unserialize( urldecode($pageContent->template_content)) : '';
+        if( !empty($pageContent->template_content) ) {
+            $page_meta = $pageContent->template_content = preg_replace_callback('!s:\d+:"(.*?)";!s', 
+                function($m) {
+                    return "s:" . strlen($m[1]) . ':"'.$m[1].'";'; 
+                }, urldecode($pageContent->template_content)
+            );
+            $page_meta = $pageContent->template_content ? unserialize( $page_meta ) : '';
+        }
         if( $pageContent )
         {
             if( $pageContent->template == 'about' ) {

@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-6 col-sm-3 for-address section">
                     <div class="logo footer-logo">
-                        <a href="https://dev.appearls.com/GO-RN/home.html">
+                        <a href="{{ URL::to('/') }}">
                             <img src="assets/images/footer-logo.png">
                         </a>
                     </div>
@@ -30,17 +30,17 @@
 
                 <div class="col-md-2 col-sm-3 for-ul-style">
                     <ul class="all-nav-two">
-                        <li><a href="https://dev.appearls.com/GO-RN/faq.html">FAQs</a></li>
-                        <li><a href="https://dev.appearls.com/GO-RN/about.html">About</a></li>
-                        <li><a href="https://dev.appearls.com/GO-RN/contact-us.html">Contact</a></li>
-                        <li><a href="https://dev.appearls.com/GO-RN/demo.html">Demo</a></li>
+                        <li><a href="{{ URL('/') }}/faqs">FAQs</a></li>
+                        <li><a href="{{ URL('/') }}/about">About</a></li>
+                        <li><a href="{{ URL('/') }}/contact">Contact</a></li>
+                        <li><a href="{{ URL('/') }}/request-demo">Demo</a></li>
                     </ul>
                 </div>
 
                 <div class="col-md-2 col-sm-3 for-go-button">
                     <div class="GO">
                         <h2>Go RN App</h2>
-                        <a href="https://dev.appearls.com/GO-RN/apply-form.html" class="hvr-sweep-to-bottom">Apply
+                        <a href="{{ URL('/') }}/apply-now" class="hvr-sweep-to-bottom">Apply
                             Now</a>
                     </div>
                 </div>

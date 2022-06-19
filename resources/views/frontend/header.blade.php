@@ -109,7 +109,7 @@ a#adobeXd:hover,a#sketch:hover {
                 <div class="for-hero-section-inner">
                     <div class="header-menu">
                         <nav class="for-header-nav">
-                            <div class="logo"><a href="https://dev.appearls.com/GO-RN"><img src="assets/images/logo.png"></a></div>
+                            <div class="logo"><a href="{{ URL::to('/') }}"><img src="assets/images/logo.png"></a></div>
 
                             <div class="navbar">
                                 <ul class="nav-menu">
@@ -133,12 +133,12 @@ a#adobeXd:hover,a#sketch:hover {
                                         </div>
                                         <!-- dropdown menu end -->
                                     </li>
-                                    <li class="nav-item active-demo"><a href="javascript" class="nav-link">Demo</a></li>
+                                    <li class="nav-item active-demo"><a href="{{ URL('/') }}/request-demo" class="nav-link">Demo</a></li>
                                 </ul>
                             </div>
 
                             <div class="applynow">
-                                <a href="https://dev.appearls.com/GO-RN/apply-form.html">Apply Now</a>
+                                <a href="{{ URL('/') }}/apply-now">Apply Now</a>
                             </div>
 
                             <div class="hamburger">

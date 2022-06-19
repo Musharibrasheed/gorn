@@ -38,9 +38,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function() {
 // Route::get('/', function () {
 //     return view('frontend.page.home');
 // });
-Route::get('contact', function () {
-    return view('frontend.page.contact');
-});
+// Route::get('contact', function () {
+//     return view('frontend.page.contact');
+// });
 // Route::get('edit_profile', function () {
 //     return view('frontend.page.edit_profile');
 // })->name('edit_profile');
