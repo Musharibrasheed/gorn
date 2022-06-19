@@ -22,9 +22,8 @@ class AuthController extends Controller
             $redirect = RedirectLoggedUser();
             return redirect($redirect);
         }
-        $countries = getCountries();
         // Show the page
-        return View('frontend.template.login',compact('countries'));
+        return View('frontend.template.login');
     }
 
     /**
