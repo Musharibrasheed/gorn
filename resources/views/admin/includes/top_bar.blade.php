@@ -4,13 +4,7 @@
 <div class="dashboard-header">
     <nav class="navbar navbar-expand-lg bg-white fixed-top">
     <?php //echo $file = basename($site_setting->logo);  ?>
-        @if( $site_setting )
-        <a class="navbar-brand" href="{{ route('admin_dashboard') }}">
-            <figure>
-                <img src="{{ asset( 'assets/images/logo.png' )  }}" />
-            </figure>
-        </a>
-        @endif
+       
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,8 +17,7 @@
                             <h5 class="mb-0 text-white nav-user-name">{{ $user['full_name'] }} </h5>
                             {{--<span class="status"></span><span class="ml-2">Available</span>--}}
                         </div>
-                        <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
-                        <a class="dropdown-item" href="{{ route('site_settings') }}"><i class="fas fa-cog mr-2"></i>Setting</a>
+                        <a class="dropdown-item" href="{{ route('admin_edit_user', ['id' => 1]) }}"><i class="fas fa-user mr-2"></i>Account</a>
                         <a class="dropdown-item" href="{{ route('logout') }}"><i class="fas fa-power-off mr-2"></i>Logout</a>
                     </div>
                 </li>

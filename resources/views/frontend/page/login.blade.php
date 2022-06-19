@@ -18,7 +18,7 @@
 
 <section>
 
-	<div class="breadcrumbs">
+	<!-- <div class="breadcrumbs">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -34,7 +34,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 
 	<div class="container ptpx-66 pbpx-66 contact-pg-sec login-func">

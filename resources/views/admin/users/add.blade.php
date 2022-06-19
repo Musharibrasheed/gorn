@@ -195,14 +195,14 @@
                                     </div>                                    
                                 </div>
                                 
-                                <div class="row field form-group">
+                                <!-- <div class="row field form-group">
                                     <div class="col-sm-3">
                                         <a href="{{ route('admin_testimonials') }}" class="btn btn-block btn-primary">@lang('admin/testimonial.cancel')</a>
                                     </div>
                                     <div class="col-sm-3">
                                        <input type="submit" class="btn btn-block btn-primary" value="@lang('admin/testimonial.update')">
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
 
                             

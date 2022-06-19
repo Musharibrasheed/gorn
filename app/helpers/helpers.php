@@ -40,26 +40,15 @@ if (!function_exists('getStates')) {
     }
 }
 
-//get cities list
-if (!function_exists('getCities')) {
-    
-    function getCities($state_id){
-        $cities = array();
-        $cities_list = DB::table('cities')->where('state_id','=',$state_id)->get();
-        // foreach ($cities_list as $key => $city) {
-        //     $cities[$city->id] = $city->name;
-        // }
-        return $cities_list;
-    }
-}
+
 function meta_title() {
-    return 'Talents';
+    return 'GORN';
 }
 function meta_keywords() {
-    return 'Talents';
+    return 'GORN';
 }
 function meta_description() {
-    return 'Talents';
+    return 'GORN';
 }
 
 function getTemplates() {
@@ -99,13 +88,6 @@ function echo_b($data)
 {
     echo $data . "<hr />";
 }
-
-function getlanguage()
-{
-    $code = (Session::get('applocale') != "") ? Session::get('applocale') : 'en';
-    return \App\Models\Languages::where('iso_639-1',$code)->where('status','Active')->first();
-}
-
 
 function isUserLoggedIn()
 {

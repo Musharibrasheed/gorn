@@ -93,7 +93,7 @@ class PagesTableSeeder extends Seeder
             array (
                 'id' => 6,
                 'slug' => 'about',
-                'order' => 6,
+                'order' => 12,
                 'image' => '/images/about-img.png',
                 'status' => 'Active',
                 'created_by' => 1,
@@ -101,21 +101,21 @@ class PagesTableSeeder extends Seeder
                 'newsletter' => 0,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2022-06-17 20:19:52',
             ),
             6 => 
             array (
                 'id' => 7,
                 'slug' => 'contact',
-                'order' => 7,
-                'image' => NULL,
+                'order' => 11,
+                'image' => '/',
                 'status' => 'Active',
                 'created_by' => 1,
                 'social_links' => 0,
                 'newsletter' => 0,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2022-06-17 21:16:27',
             ),
             7 => 
             array (
@@ -155,9 +155,9 @@ class PagesTableSeeder extends Seeder
                 'created_by' => 1,
                 'social_links' => 0,
                 'newsletter' => 0,
-                'deleted_at' => NULL,
+                'deleted_at' => '2022-06-17 21:08:53',
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2022-06-17 21:08:53',
             ),
             10 => 
             array (
@@ -214,6 +214,48 @@ class PagesTableSeeder extends Seeder
                 'deleted_at' => NULL,
                 'created_at' => '2022-06-16 18:05:35',
                 'updated_at' => '2022-06-16 18:10:22',
+            ),
+            14 => 
+            array (
+                'id' => 15,
+                'slug' => 'request-demo',
+                'order' => 12,
+                'image' => '/',
+                'status' => 'Active',
+                'created_by' => 1,
+                'social_links' => 0,
+                'newsletter' => 0,
+                'deleted_at' => NULL,
+                'created_at' => '2022-06-17 17:15:45',
+                'updated_at' => '2022-06-17 17:16:08',
+            ),
+            15 => 
+            array (
+                'id' => 16,
+                'slug' => 'apply-now',
+                'order' => 12,
+                'image' => '/',
+                'status' => 'Active',
+                'created_by' => 1,
+                'social_links' => 0,
+                'newsletter' => 0,
+                'deleted_at' => NULL,
+                'created_at' => '2022-06-18 22:21:44',
+                'updated_at' => '2022-06-18 22:22:12',
+            ),
+            16 => 
+            array (
+                'id' => 17,
+                'slug' => 'faqs',
+                'order' => 13,
+                'image' => '/',
+                'status' => 'Active',
+                'created_by' => 1,
+                'social_links' => 0,
+                'newsletter' => 0,
+                'deleted_at' => NULL,
+                'created_at' => '2022-06-18 22:37:30',
+                'updated_at' => '2022-06-18 22:42:50',
             ),
         ));
         

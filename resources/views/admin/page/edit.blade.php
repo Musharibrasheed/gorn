@@ -97,14 +97,14 @@
                                 </div>
                                  
                                 
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-sm-12">                               
-                                        <div class="field">
+                                        <div class="field form-group">
                                             <label>Page Video (Youtube Embeded URL like: https://www.youtube.com/embed/3h-1h168Blo)</label>
                                             <input type="text" value="{{ old('title',$pageDescription->page_video ?? '') }}" name="page_video" placeholder="https://www.youtube.com/embed/3h-1h168Blo" class="form-control form-control-lg" />
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="row hometemplate template_attributes">
                                     <div class="col-sm-12 form-group">
@@ -453,6 +453,234 @@
 
                                 </div>
                                 <!-- staffing end -->
+
+
+                                <!-- Request Demo -->
+                                <div class="row request-demotemplate template_attributes">
+                                    <div class="col-sm-12">
+                                        <h3>Section 1</h3>                        
+                                        <div class="field">
+                                            <label>Tag Line</label>
+                                            <input type="text" value="{{ old('rd_sec1_tagline',$page_meta['rd_sec1_tagline'] ?? '') }}" name="rd_sec1_tagline" placeholder="Heading..." class="form-control form-control-lg" />
+                                        </div>                              
+                                        <div class="field">
+                                            <label>Heading</label>
+                                            <input type="text" value="{{ old('rd_sec1_heading',$page_meta['rd_sec1_heading'] ?? '') }}" name="rd_sec1_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                            <textarea rows="10" name="rd_sec1_text" class="form-control form-control-lg my-editor">{{ old('title',$page_meta['rd_sec1_text'] ?? '') }}</textarea>
+                                        </div>
+                                
+                                    </div>
+                               
+
+                                <div class="col-sm-12"> 
+                                       
+                                    <h3>Section 2</h3>  
+                                    <input type="text" value="{{ old('rd_sec2_heading',$page_meta['rd_sec2_heading'] ?? '') }}" name="rd_sec2_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                    <div class="field">
+                                            <label>Box 1</label>
+                                            <input type="text" value="{{ old('rd_sec2_bx1_heading',$page_meta['rd_sec2_bx1_heading'] ?? '') }}" name="rd_sec2_bx1_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                            <textarea rows="5" name="rd_sec2_bx1_text" class="form-control form-control-lg my-editor">{{ old('rd_sec2_bx1_text',$page_meta['rd_sec2_bx1_text'] ?? '') }}</textarea>
+                                        </div>
+                                
+                                    </div>
+
+                                    <div class="col-sm-12">
+                              
+                                        <div class="field">
+                                            <label>Box 2</label>
+                                            <input type="text" value="{{ old('rd_sec2_bx2_heading',$page_meta['rd_sec2_bx2_heading'] ?? '') }}" name="rd_sec2_bx2_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                            <textarea rows="5" name="rd_sec2_bx2_text" class="form-control form-control-lg my-editor">{{ old('rd_sec2_bx2_text',$page_meta['rd_sec2_bx2_text'] ?? '') }}</textarea>
+                                        </div>
+                                
+                                    </div>
+
+                                    <div class="col-sm-12">
+                              
+                                        <div class="field">
+                                            <label>Box 3</label>
+                                            <input type="text" value="{{ old('rd_sec2_bx3_heading',$page_meta['rd_sec2_bx3_heading'] ?? '') }}" name="rd_sec2_bx3_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                            <textarea rows="5" name="rd_sec2_bx3_text" class="form-control form-control-lg my-editor">{{ old('rd_sec2_bx3_text',$page_meta['rd_sec2_bx3_text'] ?? '') }}</textarea>
+                                        </div>
+                                
+                                    </div>
+
+                                    <div class="col-sm-12">
+                              
+                                        <div class="field">
+                                            <label>Box 4</label>
+                                            <input type="text" value="{{ old('rd_sec2_bx4_heading',$page_meta['rd_sec2_bx4_heading'] ?? '') }}" name="rd_sec2_bx4_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                            <textarea rows="5" name="rd_sec2_bx4_text" class="form-control form-control-lg my-editor">{{ old('rd_sec2_bx4_text',$page_meta['rd_sec2_bx4_text'] ?? '') }}</textarea>
+                                        </div>
+                                
+                                    </div>
+
+                                    <div class="col-sm-12">
+                              
+                                        <div class="field">
+                                            <label>Box 5</label>
+                                            <input type="text" value="{{ old('rd_sec2_bx5_heading',$page_meta['rd_sec2_bx5_heading'] ?? '') }}" name="rd_sec2_bx5_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                            <textarea rows="5" name="rd_sec2_bx5_text" class="form-control form-control-lg my-editor">{{ old('rd_sec2_bx5_text',$page_meta['rd_sec2_bx5_text'] ?? '') }}</textarea>
+                                        </div>
+                                
+                                    </div>
+
+                                    <div class="col-sm-12">
+                              
+                                        <div class="field">
+                                            <label>Box 6</label>
+                                            <input type="text" value="{{ old('rd_sec2_bx6_heading',$page_meta['rd_sec2_bx6_heading'] ?? '') }}" name="rd_sec2_bx6_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                            <textarea rows="5" name="rd_sec2_bx6_text" class="form-control form-control-lg my-editor">{{ old('rd_sec2_bx6_text',$page_meta['rd_sec2_bx6_text'] ?? '') }}</textarea>
+                                        </div>
+                                
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <h3>Section 3</h3>                        
+                                                                   
+                                        <div class="field">
+                                            <label>Heading</label>
+                                            <input type="text" value="{{ old('rd_sec3_heading',$page_meta['rd_sec3_heading'] ?? '') }}" name="rd_sec3_heading" placeholder="Heading..." class="form-control form-control-lg" />
+
+                                            <label>Sub Heading</label>
+                                            <input type="text" value="{{ old('rd_sec3_subheading',$page_meta['rd_sec3_subheading'] ?? '') }}" name="rd_sec3_subheading" placeholder="Sub Heading..." class="form-control form-control-lg" />
+
+                                            <textarea rows="10" name="rd_sec3_text" class="form-control form-control-lg my-editor">{{ old('title',$page_meta['rd_sec3_text'] ?? '') }}</textarea>
+                                        </div>
+                                
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <h3>Section 4</h3>                        
+                                        <div class="field">
+                                            <label>Tag Line</label>
+                                            <input type="text" value="{{ old('rd_sec4_tagline',$page_meta['rd_sec4_tagline'] ?? '') }}" name="rd_sec4_tagline" placeholder="Heading..." class="form-control form-control-lg" />
+                                        </div>                              
+                                        <div class="field">
+                                            <label>Heading</label>
+                                            <input type="text" value="{{ old('rd_sec4_heading',$page_meta['rd_sec4_heading'] ?? '') }}" name="rd_sec4_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                        </div>
+                                
+                                    </div>
+
+                                </div>
+                                    
+                                <!-- Request Demo end -->
+
+                                <!-- about -->
+                                
+                                <div class="row abouttemplate template_attributes">
+                                    <div class="col-sm-12">
+                                        <h3>Section 1</h3>  
+                                        <div class="field">
+                                            <input type="text" value="{{ old('abt_sec1_heading',$page_meta['abt_sec1_heading'] ?? '') }}" name="abt_sec1_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                        </div>
+                                        <div class="field">                                            
+                                            <textarea rows="10" name="abt_sec1_text" class="form-control form-control-lg my-editor">{{ old('title',$page_meta['abt_sec1_text'] ?? '') }}</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <h3>Section 2</h3>  
+                                        <div class="field">
+                                            <input type="text" value="{{ old('abt_sec2_heading',$page_meta['abt_sec2_heading'] ?? '') }}" name="abt_sec2_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                        </div>
+                                        <div class="field">                                            
+                                            <textarea rows="10" name="abt_sec2_text" class="form-control form-control-lg my-editor">{{ old('title',$page_meta['abt_sec2_text'] ?? '') }}</textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- about end -->
+
+                                <!-- contact -->
+
+                                <div class="row contacttemplate template_attributes">
+                                    <div class="col-sm-12">
+                                          
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_heading',$page_meta['contact_heading'] ?? '') }}" name="contact_heading" placeholder="Heading" class="form-control form-control-lg" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_ci',$page_meta['contact_ci'] ?? '') }}" name="contact_ci" placeholder="Contact Information" class="form-control form-control-lg" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_add',$page_meta['contact_add'] ?? '') }}" name="contact_add" placeholder="Address" class="form-control form-control-lg" />
+                                        </div>                                        
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_email',$page_meta['contact_email'] ?? '') }}" name="contact_email" placeholder="Email" class="form-control form-control-lg" />
+                                        </div>                                        
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_phn',$page_meta['contact_phn'] ?? '') }}" name="contact_phn" placeholder="Phone" class="form-control form-control-lg" />
+                                        </div>                                        
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_line',$page_meta['contact_line'] ?? '') }}" name="contact_line" placeholder="Contact Line" class="form-control form-control-lg" />
+                                        </div>                   
+                                        
+                                        
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_bx1_head',$page_meta['contact_bx1_head'] ?? '') }}" name="contact_bx1_head" placeholder="Heading" class="form-control form-control-lg" />
+                                        </div>                                        
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_bx2_head',$page_meta['contact_bx2_head'] ?? '') }}" name="contact_bx2_head" placeholder="Heading" class="form-control form-control-lg" />
+                                        </div>                                        
+                                        <div class="form-group">
+                                            <input type="text" value="{{ old('contact_bx3_head',$page_meta['contact_bx3_head'] ?? '') }}" name="contact_bx3_head" placeholder="Heading" class="form-control form-control-lg" />
+                                        </div>                                        
+                                    </div>
+
+                                </div>
+
+                                <!-- contact end -->
+
+                                <!-- faqs -->
+
+                                <div class="row faqstemplate template_attributes">
+                                    <div class="col-sm-12">              
+                                        <div class="form-group">
+                                            <label>Question 1:</label>
+                                            <input type="text" value="{{ old('faqs_q1',$page_meta['faqs_q1'] ?? '') }}" name="faqs_q1" placeholder="Question" class="form-control form-control-lg" />
+                                        </div>                              
+                                        <div class="form-group">
+                                            <label>Answer:</label>
+                                            <textarea rows="10" name="faqs_ans1" class="form-control form-control-lg my-editor">{{ old('faqs_ans1',$page_meta['faqs_ans1'] ?? '') }}</textarea>
+                                        </div>                                
+                                    </div>
+
+                                    <div class="col-sm-12">              
+                                        <div class="form-group">
+                                            <label>Question 2:</label>
+                                            <input type="text" value="{{ old('faqs_q2',$page_meta['faqs_q2'] ?? '') }}" name="faqs_q2" placeholder="Question" class="form-control form-control-lg" />
+                                        </div>                              
+                                        <div class="form-group">
+                                            <label>Answer:</label>
+                                            <textarea rows="10" name="faqs_ans2" class="form-control form-control-lg my-editor">{{ old('faqs_ans2',$page_meta['faqs_ans2'] ?? '') }}</textarea>
+                                        </div>                                
+                                    </div>
+
+                                    <div class="col-sm-12">              
+                                        <div class="form-group">
+                                            <label>Question 3:</label>
+                                            <input type="text" value="{{ old('faqs_q3',$page_meta['faqs_q3'] ?? '') }}" name="faqs_q3" placeholder="Question" class="form-control form-control-lg" />
+                                        </div>                              
+                                        <div class="form-group">
+                                            <label>Answer:</label>
+                                            <textarea rows="10" name="faqs_ans3" class="form-control form-control-lg my-editor">{{ old('faqs_ans3',$page_meta['faqs_ans3'] ?? '') }}</textarea>
+                                        </div>                                
+                                    </div>
+
+                                    <div class="col-sm-12">              
+                                        <div class="form-group">
+                                            <label>Question 4:</label>
+                                            <input type="text" value="{{ old('faqs_q4',$page_meta['faqs_q4'] ?? '') }}" name="faqs_q4" placeholder="Question" class="form-control form-control-lg" />
+                                        </div>                              
+                                        <div class="form-group">
+                                            <label>Answer:</label>
+                                            <textarea rows="10" name="faqs_ans4" class="form-control form-control-lg my-editor">{{ old('faqs_ans4',$page_meta['faqs_ans4'] ?? '') }}</textarea>
+                                        </div>                                
+                                    </div>
+                                </div>
+                                <!-- faqs end -->
                                 
                                 
                                 <div class="row field form-group">
@@ -468,7 +696,7 @@
                             <div class="col-sm-4">
                                 <div class="row">
                                     
-                                    <div class="col-sm-12">
+                                    <!-- <div class="col-sm-12">
                                         <div class="upload-bx">
                                             <div class="field file_manager_field">
                                                 <h4>Image</h4>
@@ -477,7 +705,7 @@
                                                 <i class="fa fa-image" aria-hidden="true" id="lfm" data-input="thumbnail" data-preview="holder"></i>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="col-sm-12">
                                         <div class="form-group">
@@ -538,7 +766,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-sm-12">
+                                    <!-- <div class="col-sm-12">
                                         <div class="field">
                                             <h4>Social Setting</h4>
                                             <input type="checkbox" name="social_links"  @if( $page->social_links == 1 ) checked @endif value="1" class="form-control-lg" />
@@ -546,7 +774,7 @@
                                              <input type="checkbox" name="newsletter" @if( $page->newsletter == 1 ) checked @endif value="1" class="form-control-lg" />
                                              <span>Newsletter </span>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                 </div><!-- show-amm mbpx-20 -->
                             </div>
