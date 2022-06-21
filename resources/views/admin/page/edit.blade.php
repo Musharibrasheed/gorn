@@ -97,14 +97,14 @@
                                 </div>
                                  
                                 
-                                <!-- <div class="row">
+                                <div class="row">
                                     <div class="col-sm-12">                               
                                         <div class="field form-group">
-                                            <label>Page Video (Youtube Embeded URL like: https://www.youtube.com/embed/3h-1h168Blo)</label>
-                                            <input type="text" value="{{ old('title',$pageDescription->page_video ?? '') }}" name="page_video" placeholder="https://www.youtube.com/embed/3h-1h168Blo" class="form-control form-control-lg" />
+                                            <label>Page Video (Youtube Id like: 6xcG6ttMDVY)</label>
+                                            <input type="text" value="{{ old('title',$pageDescription->page_video ?? '') }}" name="page_video" placeholder="6xcG6ttMDVY" class="form-control form-control-lg" />
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
 
                                 <div class="row hometemplate template_attributes">
                                     <div class="form-group">
@@ -165,10 +165,75 @@
                                     <div class="col-sm-12 form-group">
                                         <h3>Section 3</h3> 
                                         <div class="field">
+                                            <input type="text"  id="thumbnail-homes3" name="section3_image" value="{{ old('section3_image',(isset($page_meta['section3_image']) ? asset($page_meta['section3_image']) : '') )  }}" class="form-control form-control-lg" />
+                                                <i class="fa fa-image" aria-hidden="true" id="lfm-homes3" data-input="thumbnail-homes3" data-preview="holder"></i>
                                             <input type="text" value="{{ old('section3_heading',$page_meta['section3_heading'] ?? '') }}" name="section3_heading" placeholder="Heading..." class="form-control form-control-lg" />
                                             <textarea rows="10" name="section3_text" class="form-control form-control-lg my-editor">{{ old('title',$page_meta['section3_text'] ?? '') }}</textarea>
                                         </div>
                                 
+                                    </div>
+
+                                    <div class="col-sm-12 form-group">
+                                        <h3>Section 4</h3> 
+                                        <div class="field">
+                                            <div class="col-sm-10 form-group float-left p-0">
+                                                <input type="text" id="thumbnail_sec4_left" name="section_left1" value="{{ old('section_left1',(isset($page_meta['section_left1']) ? asset($page_meta['section_left1']) : '') )  }}" class="form-control form-control-lg" />
+                                            </div>
+                                            <div class="col-sm-2 form-group float-left display-7">
+                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm_sec4_left" data-input="thumbnail_sec4_left" data-preview="holder"></i>
+                                            </div>
+                                                
+                                        </div>
+
+                                        <div class="field">
+                                            <div class="col-sm-10 form-group float-left p-0">
+                                                <input type="text" id="thumbnail_sec4_right1" name="section_right1" value="{{ old('section_right1',(isset($page_meta['section_right1']) ? asset($page_meta['section_right1']) : '') )  }}" class="form-control form-control-lg" />
+                                            </div>
+                                            <div class="col-sm-2 form-group float-left display-7">
+                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm_sec4_right1" data-input="thumbnail_sec4_right1" data-preview="holder"></i>
+                                            </div>
+                                                
+                                        </div>
+
+                                        <div class="field">
+                                            <div class="col-sm-10 form-group float-left p-0">
+                                                <input type="text" id="thumbnail_sec4_right2" name="section_right2" value="{{ old('section_right2',(isset($page_meta['section_right2']) ? asset($page_meta['section_right2']) : '') )  }}" class="form-control form-control-lg" />
+                                            </div>
+                                            <div class="col-sm-2 form-group float-left display-7">
+                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm_sec4_right2" data-input="thumbnail_sec4_right2" data-preview="holder"></i>
+                                            </div>
+                                                
+                                        </div>
+
+                                        <div class="field">
+                                            <div class="col-sm-10 form-group float-left p-0">
+                                                <input type="text" id="thumbnail_sec4_right2" name="section_right2" value="{{ old('section_right2',(isset($page_meta['section_right2']) ? asset($page_meta['section_right2']) : '') )  }}" class="form-control form-control-lg" />
+                                            </div>
+                                            <div class="col-sm-2 form-group float-left display-7">
+                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm_sec4_right2" data-input="thumbnail_sec4_right2" data-preview="holder"></i>
+                                            </div>
+                                                
+                                        </div>
+
+                                        <div class="field">
+                                            <div class="col-sm-10 form-group float-left p-0">
+                                                <input type="text" id="thumbnail_sec4_right3" name="section_right3" value="{{ old('section_right3',(isset($page_meta['section_right3']) ? asset($page_meta['section_right3']) : '') )  }}" class="form-control form-control-lg" />
+                                            </div>
+                                            <div class="col-sm-2 form-group float-left display-7">
+                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm_sec4_right3" data-input="thumbnail_sec4_right3" data-preview="holder"></i>
+                                            </div>
+                                                
+                                        </div>
+
+                                        <div class="field">
+                                            <div class="col-sm-10 form-group float-left p-0">
+                                                <input type="text" id="thumbnail_sec4_right4" name="section_right4" value="{{ old('section_right4',(isset($page_meta['section_right4']) ? asset($page_meta['section_right4']) : '') )  }}" class="form-control form-control-lg" />
+                                            </div>
+                                            <div class="col-sm-2 form-group float-left display-7">
+                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm_sec4_right4" data-input="thumbnail_sec4_right4" data-preview="holder"></i>
+                                            </div>
+                                                
+                                        </div>
                                     </div>
                                     
                                 </div>
@@ -703,16 +768,16 @@
                             <div class="col-sm-4">
                                 <div class="row">
                                     
-                                    <!-- <div class="col-sm-12">
+                                    <div class="col-sm-12">
                                         <div class="upload-bx">
                                             <div class="field file_manager_field">
                                                 <h4>Image</h4>
                                                 <label>Page Image</label>
-                                                <input type="text" id="thumbnail" name="page_image" value="{{ old('page_image',(isset($page->image) ? asset($page->image) : '') )  }}" class="form-control form-control-lg" />
-                                                <i class="fa fa-image" aria-hidden="true" id="lfm" data-input="thumbnail" data-preview="holder"></i>
+                                                    <input type="text" id="thumbnail" name="page_image" value="{{ old('page_image',(isset($page->image) ? asset($page->image) : '') )  }}" class="form-control form-control-lg" />
+                                                    <i class="fa fa-image" aria-hidden="true" id="lfm" data-input="thumbnail" data-preview="holder"></i>
                                             </div>
                                         </div>
-                                    </div> -->
+                                    </div>
 
                                     <div class="col-sm-12">
                                         <div class="form-group">
@@ -859,6 +924,11 @@
     <script>
         var route_prefix = "{{ url('laravel-filemanager') }}";        
         $('#lfm').filemanager('image', {prefix: route_prefix});
+        $('#lfm-homes3').filemanager('image', {prefix: route_prefix}); //home section 3
+        $('.lfm').click(function(){
+            // alert( $(this ).attr('id'));
+            $( '#'+$(this ).attr('id') ).filemanager('image', {prefix: route_prefix});
+        })
 
         $(document).ready(function(){
             $('.template_attributes').hide();

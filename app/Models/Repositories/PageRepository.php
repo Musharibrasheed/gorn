@@ -168,9 +168,6 @@ class PageRepository  extends AbstractRepository
 
     public function templateContent($data) //Set fields as per template
     {
-        // print_r($data->all());
-        // print_r($data->about_gorn_heading);
-        // exit;
         $template_content = array();
         
         if($data->template == 'home')
@@ -179,17 +176,28 @@ class PageRepository  extends AbstractRepository
             $template_content['about_gorn_text']    = $data->about_gorn_text;
 
             $template_content['section2_heading']    = $data->section2_heading;
+            $template_content['section2_bx1_image']    = str_replace( env('APP_URL').'/','',$data->section2_bx1_image);
             $template_content['section2_bx1_heading']    = $data->section2_bx1_heading;
             $template_content['section2_bx1_text']    = $data->section2_bx1_text;
-
+            
+            $template_content['section2_bx2_image']    = str_replace( env('APP_URL').'/','',$data->section2_bx2_image);
             $template_content['section2_bx2_heading']    = $data->section2_bx2_heading;
             $template_content['section2_bx2_text']    = $data->section2_bx2_text;
-
-            $template_content['section2_bx3_heading']    = $data->section2_bx3_heading;
+            
+            $template_content['section2_bx3_image']    = str_replace( env('APP_URL').'/','',$data->section3_bx3_image);
+            $template_content['section3_image']    = str_replace( env('APP_URL').'/','',$data->section3_image);
             $template_content['section2_bx3_text']    = $data->section2_bx3_text;
-
+            
+            $template_content['section2_bx3_heading']    = $data->section2_bx3_heading;
             $template_content['section3_heading']    = $data->section3_heading;
             $template_content['section3_text']    = $data->section3_text;
+
+            $template_content['section_left1']    = $data->section_left1;
+            $template_content['section_right1']    = $data->section_right1;
+            $template_content['section_right2']    = $data->section_right2;
+            $template_content['section_right3']    = $data->section_right3;
+            $template_content['section_right4']    = $data->section_right4;
+
         }
 
         if($data->template == 'healthcare-professionals')

@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
    
 @endpush
-<div class="for-hero-section-bg">
+<div class="for-hero-section-bg" style="background-image: url({{ $pageContent->image ? asset($pageContent->image) : '' }}) !important;">
                 <div class="container-fluid">
                     <div class="container">
                         <div class="row">
@@ -72,7 +72,7 @@
                                                 </p>
                                             </div>
                                             <div class="for-icon-box-button btn">
-                                                <a class="for-about-GORN-button for-purple-button" href="https://dev.appearls.com/GO-RN/apply-form.html">Apply
+                                                <a class="for-about-GORN-button for-purple-button" href="{{ URL::to('/') }}/apply-now">Apply
                                                     here</a>
                                             </div>
                                         </div>
@@ -86,7 +86,7 @@
                                         <img src="assets/images/video-image.png" alt="">
                                     </div>
                                     <div class="for-video-popup-secion">
-                                        <div class="vpop" data-type="youtube" data-id="6xcG6ttMDVY"
+                                        <div class="vpop" data-type="youtube" data-id="{{ $pageContent->page_video ?? '' }}"
                                             data-autoplay='true'><img src="assets/images/play-button-img.png" alt="">
                                         </div>
 
@@ -300,7 +300,11 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="for-Nurses-image-section">
-                                    <img src="assets/images/Nurses-section-bg.png" alt="">
+                                   
+                                    @if( isset($page_meta['section3_image'] ))
+                                        <img src="{{ asset($page_meta['section3_image']) }}" alt="">
+                                    @endif
+                                    <!-- <img src="assets/images/Nurses-section-bg.png" alt=""> -->
                                 </div>
                                 <div class="for-main-social-media-button">
                                     <div class="for-icon-box-button btn">
@@ -403,7 +407,9 @@
 
                                     <div class="for-Award-section-content">
                                         <div class="for-Award-image-section">
-                                            <img src="assets/images/Awards-img.png" alt="">
+                                            @if( isset($page_meta['section_left1']) )
+                                                <img src="{{ asset($page_meta['section_left1']) }}" alt="">
+                                            @endif
                                         </div>
                                     </div>
 
@@ -432,18 +438,33 @@
                                     <div class="carousel-inner">
 
                                         <div class="item active">
-                                            <img src="assets/images/stamp1.png" alt="">
-                                            <img src="assets/images/stamp2.png" alt="">
-                                            <img src="assets/images/stamp3.png" alt="">
-                                            <img src="assets/images/stamp4.png" alt="">
+                                            @if( isset($page_meta['section_right1']) )
+                                                <img src="{{ asset($page_meta['section_right1']) }}" alt="">
+                                            @endif
+                                            @if( isset($page_meta['section_right2']) )
+                                                <img src="{{ asset($page_meta['section_right2']) }}" alt="">
+                                            @endif
+                                            @if( isset($page_meta['section_right3']) )
+                                                <img src="{{ asset($page_meta['section_right3']) }}" alt="">
+                                            @endif
+                                            @if( isset($page_meta['section_right4']) )
+                                                <img src="{{ asset($page_meta['section_right4']) }}" alt="">
+                                            @endif
                                         </div>
 
                                         <div class="item">
-                                            <img src="assets/images/stamp1.png" alt="">
-                                            <img src="assets/images/stamp2.png" alt="">
-                                            <img src="assets/images/stamp3.png" alt="">
-                                            <img src="assets/images/stamp4.png" alt="">
-
+                                        @if( isset($page_meta['section_right1']) )
+                                                <img src="{{ asset($page_meta['section_right1']) }}" alt="">
+                                            @endif
+                                            @if( isset($page_meta['section_right2']) )
+                                                <img src="{{ asset($page_meta['section_right2']) }}" alt="">
+                                            @endif
+                                            @if( isset($page_meta['section_right3']) )
+                                                <img src="{{ asset($page_meta['section_right3']) }}" alt="">
+                                            @endif
+                                            @if( isset($page_meta['section_right4']) )
+                                                <img src="{{ asset($page_meta['section_right4']) }}" alt="">
+                                            @endif
                                         </div>
                                     </div>
                                     <!-- Carousel nav -->

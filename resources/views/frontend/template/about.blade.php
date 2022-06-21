@@ -18,7 +18,7 @@ $pageContent->meta_description : meta_description() !!} @stop
 </style>
 @endpush
 
-<div class="for-hero-section-bg">
+<div class="for-hero-section-bg" style="background-image: url({{ $pageContent->image ? asset($pageContent->image) : '' }}) !important;">
     <div class="container-fluid">
         <div class="container">
             <div class="row">

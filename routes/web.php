@@ -71,3 +71,7 @@ Route::group(['namespace' => 'App\Http\Controllers', /*'prefix' => 'admin','midd
     Route::get('/', 'FrontEnd\PageController@index')->name('home_page');
     Route::get('/{name?}', 'FrontEnd\PageController@page')->name('page_view');
 });
+
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['roles']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
