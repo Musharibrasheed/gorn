@@ -207,16 +207,6 @@
 
                                         <div class="field">
                                             <div class="col-sm-10 form-group float-left p-0">
-                                                <input type="text" id="thumbnail_sec4_right2" name="section_right2" value="{{ old('section_right2',(isset($page_meta['section_right2']) ? asset($page_meta['section_right2']) : '') )  }}" class="form-control form-control-lg" />
-                                            </div>
-                                            <div class="col-sm-2 form-group float-left display-7">
-                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm_sec4_right2" data-input="thumbnail_sec4_right2" data-preview="holder"></i>
-                                            </div>
-                                                
-                                        </div>
-
-                                        <div class="field">
-                                            <div class="col-sm-10 form-group float-left p-0">
                                                 <input type="text" id="thumbnail_sec4_right3" name="section_right3" value="{{ old('section_right3',(isset($page_meta['section_right3']) ? asset($page_meta['section_right3']) : '') )  }}" class="form-control form-control-lg" />
                                             </div>
                                             <div class="col-sm-2 form-group float-left display-7">
