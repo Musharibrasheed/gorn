@@ -452,20 +452,7 @@
                                             @endif
                                         </div>
 
-                                        <div class="item">
-                                        @if( isset($page_meta['section_right1']) )
-                                                <img src="{{ asset($page_meta['section_right1']) }}" alt="">
-                                            @endif
-                                            @if( isset($page_meta['section_right2']) )
-                                                <img src="{{ asset($page_meta['section_right2']) }}" alt="">
-                                            @endif
-                                            @if( isset($page_meta['section_right3']) )
-                                                <img src="{{ asset($page_meta['section_right3']) }}" alt="">
-                                            @endif
-                                            @if( isset($page_meta['section_right4']) )
-                                                <img src="{{ asset($page_meta['section_right4']) }}" alt="">
-                                            @endif
-                                        </div>
+                                        
                                     </div>
                                     <!-- Carousel nav -->
                                     <a class="carousel-control left" href="#myCarousel" data-slide="prev">
