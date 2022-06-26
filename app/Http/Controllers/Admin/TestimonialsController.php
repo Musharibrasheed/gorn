@@ -92,9 +92,7 @@ class TestimonialsController extends Controller
     {
         $testimonials = $this->testimonials->all();
         return Datatables::of($testimonials)
-            ->editColumn('status','@if($status == "Active") '.Lang::get("admin/testimonial.enable").'
-                                   @else '.Lang::get("admin/testimonial.disable").'
-                                   @endif')
+           
             ->editColumn('created_at','{{ date("M d, Y",strtotime($created_at)) }}')
             ->addColumn('actions',function($testimonials){
                 return '<a class="tab-btn edit" href="'. route("admin_edit_testimonial", ["id"=>$testimonials->id]) .'"><i class="fa fa-edit" data-name="edit" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="'.Lang::get("admin/testimonial.edit_title").'"></i></a>

@@ -139,7 +139,7 @@
                                                 <th>@lang('admin/testimonial.id')</th>
                                                 <th>@lang('admin/testimonial.name')</th>
                                                 <th>@lang('admin/testimonial.profession')</th>
-                                                <th>@lang('admin/testimonial.status')</th>
+                                                
                                                 <th>@lang('admin/testimonial.created_at')</th>
                                                 <th>@lang('admin/testimonial.actions')</th>
                                             </tr>
@@ -189,7 +189,6 @@
                         { data: 'id', name: 'id' },
                         { data: 'client_name', name: 'client_name', searchable: true },
                         { data: 'client_profession', name: 'client_profession', searchable: true },
-                        { data: 'status', name: 'status', searchable: true },
                         { data: 'created_at', name: 'created_at' },
                         { data: 'actions', name: 'actions', orderable: false, searchable: false }
                     ],
