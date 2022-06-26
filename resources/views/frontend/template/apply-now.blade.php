@@ -39,67 +39,96 @@ $pageContent->meta_description : meta_description() !!} @stop
             <span>"*" indicates required fields</span>
         </div>
         <div class="main-form">
-            <form action="/action_page.php">
+
+            @if (count($errors) > 0)
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <div class="error">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    
+                </div>
+            @endif
+
+            @if(session()->has('success'))
+                <div class="alert alert-success alert-dismissable custom-success-box" style="margin: 15px;">
+                    @if(is_array(session()->get('success')))
+                        <ul>
+                            @foreach (session()->get('success') as $message)
+                                <li>{{ $message }}</li>
+                            @endforeach
+                        </ul>
+                    @else
+                        {{ session()->get('success') }}
+                    @endif
+                </div>
+            @endif
+            
+            <form action="{{ route('apply_now') }}" method="post" enctype="multipart/form-data">
+                @csrf
                 <div class="name">
-                    <p>Name</p>
+                    <p>{{$page_meta['ap_name'] ?? ''}}</p>
                     <div class="row-name">
                         <div class="first">
-                            <input type="text" id="fname" name="firstname" />
-                            <label for="fname">First</label>
+                            <input type="text" id="fname" name="first_name" />
+                            <label for="fname">{{$page_meta['ap_first'] ?? ''}}</label>
                         </div>
 
                         <div class="last">
-                            <input type="text" id="lname" name="lastname" />
-                            <label for="lname">Last</label>
+                            <input type="text" id="lname" name="last_name" />
+                            <label for="lname">{{$page_meta['ap_last'] ?? ''}}</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="email-1-1">
-                    <label for="email">Email</label>
+                    <label for="email">{{$page_meta['ap_email'] ?? ''}}</label>
                     <input type="email" id="email" name="email" />
                 </div>
 
                 <div class="email-1 number">
-                    <label for="email">Mobile Number</label>
-                    <input type="number" id="email" name="email" />
+                    <label for="email">{{$page_meta['ap_mobile'] ?? ''}}</label>
+                    <input type="number" id="email" name="mobile_number" />
                 </div>
 
                 <div class="email-1 adress">
-                    <label for="email">Address</label>
-                    <input type="text" id="email" name="email" />
+                    <label for="email">{{$page_meta['address'] ?? ''}}</label>
+                    <input type="text" id="email" name="address" />
                 </div>
 
                 <div class="email-1 name adress mt-top-city">
+                    <label for="fname">{{$page_meta['ap_city'] ?? ''}}</label>
                     <div class="row-name">
                         <div class="first">
-                            <input type="text" id="fname" name="firstname" />
-                            <label for="fname">City</label>
+                            <input type="text" id="fname" name="city" />
                         </div>
 
                         <div class="last">
-                            <select id="state" name="country">
-                                <option value="australia">Australia</option>
-                                <option value="canada">Canada</option>
-                                <option value="usa">USA</option>
+                            <select id="state" name="state">
+                                <option value="australia">Alaska</option>
+                                <option value="canada">New York</option>
+                                <option value="usa">Alabma</option>
                             </select>
-                            <label for="state">State</label>
+                            <label for="state">{{$page_meta['ap_state'] ?? ''}}</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="name">
-                    <p>Zip Code</p>
+                    <p>{{$page_meta['ap_zip'] ?? ''}}</p>
                     <div class="row-name">
                         <div class="first">
-                            <input type="text" id="fname" name="firstname" />
+                            <input type="text" id="fname" name="zip_code" />
                             <label for="fname"></label>
                         </div>
                     </div>
                 </div>
 
                 <div class="name">
-                    <p>Zip Code</p>
+                    <p>{{$page_meta['ap_country'] ?? ''}}</p>
                     <div class="row-name">
                         <div class="first">
                             <select id="state" name="country">
@@ -112,74 +141,58 @@ $pageContent->meta_description : meta_description() !!} @stop
                 </div>
 
                 <div class="para-mix">
-                    <p>
-                        Emergency Department Patient Care Tech : ( EMT License 6
-                        Months Previous PCT Experience Required)
-                    </p>
-                    <p>
-                        Bridge Program : (Required completion of “Intro to Med
-                        Surg” clinical rotation or equivalent in Nursing School)
-                    </p>
-                    <p>Safety Attendant : (BLS / CNA Certificate Required)</p>
+                    {{$page_meta['ap_text'] ?? ''}}
                 </div>
 
                 <div class="email-1 upload">
-                    <h5>Upload Resume (Optional)</h5>
-                    <input type="file" id="myFile" name="filename" />
+                    <h5>{{$page_meta['ap_upload'] ?? ''}}</h5>
+                    <input type="file" id="myFile" name="filename" accept="doc,.docx,.pdf" />
                     <label for="myFile" class="uploadf">
                         Choose File
                     </label>
-                    <h5 class="nfchsn">
-                        No File Choosen
-                    </h5>
+                    
                     <span>Max. file size:32 MB.</span>
                 </div>
 
                 <div class="email-1 info">
-                    <label for="email">How many years acute experience?</label>
-                    <input type="number" id="email" name="email" />
+                    <label for="email">{{$page_meta['ap_experience'] ?? ''}}</label>
+                    <input type="number" id="email" name="experience" />
                 </div>
 
                 <div class="checkbox-sec">
-                    <p>Emergency Response Team (ERT)</p>
+                    <p>{{$page_meta['ap_ert'] ?? ''}}</p>
                     <input
                         type="checkbox"
                         id="vehicle1"
-                        name="vehicle1"
-                        value="Bike"
+                        name="ert"
+                        value="Yes"
                     />
                     <label for="vehicle1"
-                        >Add me to the Emergency Response Team</label
+                        >{{$page_meta['ap_ertop1'] ?? ''}}</label
                     ><br />
                     <input
                         type="checkbox"
                         id="vehicle1"
-                        name="vehicle1"
-                        value="Bike"
+                        name="rt"
+                        value="Yes"
                     />
                     <label for="vehicle1" class="chkbx"
-                        >Add me for the Volunteer Position</label
+                        >{{$page_meta['ap_ertop2'] ?? ''}}</label
                     ><br />
                 </div>
 
                 <div class="name fb-add">
-                    <p>How Did You Hear About Go RN</p>
+                    <p>{{$page_meta['ap_abtus'] ?? ''}}</p>
                     <div class="row-name">
                         <div class="first">
-                            <select id="state" name="country">
-                                <option value="australia">Facebook Ad</option>
-                                <option value="canada">Twitter Ad</option>
-                                <option value="usa">Youtube Ad</option>
+                            <select id="state" name="about_go_rn">
+                                <option value="Facebook">Facebook Ad</option>
+                                <option value="Twitter">Twitter Ad</option>
+                                <option value="Youtube">Youtube Ad</option>
                             </select>
                         </div>
                     </div>
                 </div>
-
-                <div
-                    class="g-recaptcha"
-                    data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"
-                ></div>
-
                 <div class="submit-btn">
                     <input type="submit" value="Submit" />
                 </div>

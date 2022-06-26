@@ -206,7 +206,7 @@ class PageRepository  extends AbstractRepository
             $template_content['hc_section1_image'] = str_replace( env('APP_URL').'/','',$data->hc_section1_image);
             $template_content['hc_sec1_text']    = $data->hc_sec1_text;
             
-            $template_content['hc_section2_image'] = str_replace( env('APP_URL').'/','',$data->hc_section2_image);;
+            $template_content['hc_section2_image'] = str_replace( env('APP_URL').'/','',$data->hc_section2_image);
             $template_content['hc_sec2_tagline'] = $data->hc_sec2_tagline;
             $template_content['hc_sec2_heading']    = $data->hc_sec2_heading;
             $template_content['hc_sec2_text']    = $data->hc_sec2_text;
@@ -244,15 +244,18 @@ class PageRepository  extends AbstractRepository
             $template_content['fac_sec1_bx6_heading'] = $data->fac_sec1_bx6_heading;
             $template_content['fac_sec1_bx6_text'] = $data->fac_sec1_bx6_text;
 
+            $template_content['fac_sec2_image'] = $data->fac_sec2_image;
             $template_content['fac_sec2_heading'] = $data->fac_sec2_heading;
             $template_content['fac_sec2_text'] = $data->fac_sec2_text;
 
+            $template_content['fac_sec3_image'] = $data->fac_sec3_image;
             $template_content['fac_sec3_text'] = $data->fac_sec3_text;
 
             $template_content['fac_sec4_heading'] = $data->fac_sec4_heading;
             $template_content['fac_sec4_text'] = $data->fac_sec4_text;
 
-            $template_content['fac_sec5_heading'] = $data->fac_sec2_heading;
+            $template_content['fac_sec5_heading'] = $data->fac_sec5_heading;
+            $template_content['fac_sec5_text'] = $data->fac_sec5_text;
 
             
 
@@ -268,18 +271,23 @@ class PageRepository  extends AbstractRepository
             $template_content['staff_sec1_bx3_heading'] = $data->staff_sec1_bx3_heading;
             $template_content['staff_sec1_bx3_text'] = $data->staff_sec1_bx3_text;
 
+            $template_content['staff_sec2_image_bx1'] = str_replace( env('APP_URL').'/','',$data->staff_sec2_image_bx1);
             $template_content['staff_sec2_bx1_heading'] = $data->staff_sec2_bx1_heading;
             $template_content['staff_sec2_bx1_text'] = $data->staff_sec2_bx1_text;
+            $template_content['staff_sec2_image_bx2'] = str_replace( env('APP_URL').'/','',$data->staff_sec2_image_bx2);
             $template_content['staff_sec2_bx2_heading'] = $data->staff_sec2_bx2_heading;
             $template_content['staff_sec2_bx2_text'] = $data->staff_sec2_bx2_text;
-
+            
+            $template_content['staff_sec3_image'] = str_replace( env('APP_URL').'/','',$data->staff_sec3_image);
             $template_content['staff_sec3_text'] = $data->staff_sec3_text;
-
+            
+            $template_content['staff_sec4_image'] = str_replace( env('APP_URL').'/','',$data->staff_sec4_image);
             $template_content['staff_sec4_text'] = $data->staff_sec4_text;
         }
 
         if($data->template == 'request-demo')
         {
+            $template_content['rd_sec1_image']    = $data->rd_sec1_image;            
             $template_content['rd_sec1_tagline']    = $data->rd_sec1_tagline;            
             $template_content['rd_sec1_heading'] = $data->rd_sec1_heading;
             $template_content['rd_sec1_text'] = $data->rd_sec1_text;
@@ -291,22 +299,23 @@ class PageRepository  extends AbstractRepository
             $template_content['rd_sec2_bx4_heading'] = $data->rd_sec2_bx4_heading;
             $template_content['rd_sec2_bx5_heading'] = $data->rd_sec2_bx5_heading;
             $template_content['rd_sec2_bx6_heading'] = $data->rd_sec2_bx6_heading;
-
+            
             $template_content['rd_sec2_bx1_text'] = $data->rd_sec2_bx1_text;
             $template_content['rd_sec2_bx2_text'] = $data->rd_sec2_bx2_text;
             $template_content['rd_sec2_bx3_text'] = $data->rd_sec2_bx3_text;
             $template_content['rd_sec2_bx4_text'] = $data->rd_sec2_bx4_text;
             $template_content['rd_sec2_bx5_text'] = $data->rd_sec2_bx5_text;
             $template_content['rd_sec2_bx6_text'] = $data->rd_sec2_bx6_text;
-
+            
+            $template_content['rd_sec3_image']    = $data->rd_sec3_image;            
             $template_content['rd_sec3_heading'] = $data->rd_sec3_heading;
             $template_content['rd_sec3_subheading'] = $data->rd_sec3_subheading;
             $template_content['rd_sec3_text'] = $data->rd_sec3_text;
-
+            
             $template_content['rd_sec4_tagline'] = $data->rd_sec4_tagline;
             $template_content['rd_sec4_heading'] = $data->rd_sec4_heading;
         }
-
+        
         if($data->template == 'about')
         {
             $template_content['abt_sec1_heading']    = $data->abt_sec1_heading;            
@@ -340,6 +349,27 @@ class PageRepository  extends AbstractRepository
             $template_content['faqs_ans2']    = $data->faqs_ans2;    
             $template_content['faqs_ans3']    = $data->faqs_ans3;    
             $template_content['faqs_ans4']    = $data->faqs_ans4;              
+        }
+        if($data->template == 'apply-now')
+        {
+            $template_content['ap_name']    = $data->ap_name;            
+            $template_content['ap_first']    = $data->ap_first;            
+            $template_content['ap_last']    = $data->ap_last;            
+            $template_content['ap_email']    = $data->ap_email;   
+
+            $template_content['ap_mobile']    = $data->ap_mobile;    
+            $template_content['ap_address']    = $data->ap_address;    
+            $template_content['ap_city']    = $data->ap_city;    
+            $template_content['ap_state']    = $data->ap_state;              
+            $template_content['ap_zip']    = $data->ap_zip;              
+            $template_content['ap_exp']    = $data->ap_exp;              
+            $template_content['ap_ert']    = $data->ap_ert;              
+            $template_content['ap_ertop1']    = $data->ap_ertop1;              
+            $template_content['ap_ertop2']    = $data->ap_ertop2;              
+            $template_content['ap_abtus']    = $data->ap_abtus;              
+            $template_content['ap_country']    = $data->ap_country;              
+            $template_content['ap_upload']    = $data->ap_upload;              
+            $template_content['ap_text']    = $data->ap_text;              
         }
         /*
         if($data->{'template-'.$language_id} == 'list-your-hotel')

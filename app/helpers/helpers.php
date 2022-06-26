@@ -253,12 +253,17 @@ if (!function_exists('sendEmail')) {
         $toemail = $emaildata['toemail'];
         $toname = $emaildata['toname'];
         $fromemail = $emaildata['fromemail'];
+        $fromname = $emaildata['fromname'];
         $emailSubject = $emaildata['emailSubject'];
         $emailContent = $emaildata['emailContent'];
-      Mail::send('emails.emailbase', ['emailContent' => $emailContent], function ($m) use ($toemail, $toname, $fromemail, $emailSubject) {
+        $file = $emaildata['attachment'];
+        $emailContent['type'] = $emaildata['type'];
+        // echo 'this';dd($emailContent);
+      Mail::send('emails.emailbase', ['emailContent' => $emailContent], function ($m) use ($toemail, $toname, $fromemail, $emailSubject, $fromname, $file) {
             $m->to($toemail, $toname);
-            $m->from($fromemail, 'Admin');
+            $m->from($fromemail, $fromname);
             $m->subject($emailSubject);
+            $m->attach($file);
         });
     }
 

@@ -5,12 +5,14 @@ namespace App\Http\Controllers\FrontEnd;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\PageRequest;
+use App\Http\Requests\DemoRequest;
+use App\Http\Requests\ApplyNowRequest;
 use App\Models\Repositories\PageRepository;
 use App\Models\Repositories\TestimonialsRepository;
 use App\Models\Repositories\ArticlesRepository;
 use Illuminate\Support\Str;
 use Yajra\DataTables\DataTables;
-
+use File;
 
 class PageController extends Controller
 {
@@ -114,6 +116,52 @@ class PageController extends Controller
                                    ')
             ->rawColumns(['slug','actions'])
             ->make(true);
+    }
+
+    public function demoRequest(DemoRequest $request)
+    {
+        $data = array(
+                'toemail'=> env('ADMIN_EMAIL'),'toname'=> env('ADMIN_EMAIL'),
+                'fromemail'=> $request->email,'fromname'=> $request->first_name.' '.$request->last_name ?? '',
+                'emailSubject'=>'Request a demo', 'type'=>'demo',
+                'emailContent'=> $request->all()
+        );
+        // dd($data['emailContent']['first_name']);
+        sendEmail($data);
+        // echo 'sdfsdf';
+        return back()->with('success', 'Your response successfully recorded!');
+
+    }
+
+    public function applyNow(ApplyNowRequest $request)
+    {
+        $path = public_path('uploads/files');
+        $attachment = $request->file('filename');
+
+        // dd($request->all());
+        $name = time().'.'.$attachment->getClientOriginalExtension();;
+
+        // create folder
+        if(!File::exists($path)) {
+            File::makeDirectory($path, $mode = 0777, true, true);
+        }
+        $attachment->move($path, $name);
+
+        $filename = $path.'/'.$name;
+
+        $data = array(
+                'toemail'=> env('ADMIN_EMAIL'),'toname'=> env('ADMIN_EMAIL'),
+                'fromemail'=> $request->email,'fromname'=> $request->first_name.' '.$request->last_name ?? '',
+                'emailSubject'=>'Apply Now', 'type'=>'apply', 'attachment' => $filename,
+                'emailContent'=> $request->all()
+        );
+        // dd($data['emailContent']['first_name']);
+
+        
+        sendEmail($data);
+        // echo 'sdfsdf';
+        return back()->with('success', 'Your response successfully recorded!');
+
     }
 
 

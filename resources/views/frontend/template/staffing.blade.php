@@ -223,7 +223,7 @@ $pageContent->meta_description : meta_description() !!} @stop
 <div class="d-flex flex-d-c ">
   <div class="col-md-6 img-1">
 
-      <img src="assets/images/type-img.jpg" />
+      <img src="{!! $page_meta['staff_sec3_image'] ?? '' !!}" />
     </div>
   <!--  image left  -->
   <div class="container align-items-1">
@@ -259,10 +259,10 @@ $pageContent->meta_description : meta_description() !!} @stop
 			</div>	
 	</div>
 
-	<div class="col-md-6">
-		<div class="men">
-			<img src="assets/images/men.jpg" width="67%">
-		</div>
+	<div class="img-1 col-md-6">
+		
+			<img src="{!! $page_meta['staff_sec4_image'] ?? '' !!}" width="67%">
+		
 	</div>
 
 	</div>

@@ -401,6 +401,10 @@
                               
                                         <div class="field form-group">
                                             <label>Section 2</label>
+                                            
+                                            <input type="text"  id="thum-sec2" name="fac_sec2_image" value="{{ old('fac_sec2_image',(isset($page_meta['fac_sec2_image']) ? asset($page_meta['fac_sec2_image']) : '') )  }}" class="form-control form-control-lg" />
+                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm-fac-sec2" data-input="thum-sec2" data-preview="holder"></i>
+                                           
                                             <input type="text" value="{{ old('fac_sec2_heading',$page_meta['fac_sec2_heading'] ?? '') }}" name="fac_sec2_heading" placeholder="Heading..." class="form-control form-control-lg" />
                                             <textarea rows="5" name="fac_sec2_text" class="form-control form-control-lg my-editor">{{ old('fac_sec2_text',$page_meta['fac_sec2_text'] ?? '') }}</textarea>
                                         </div>
@@ -412,6 +416,8 @@
                               
                                         <div class="field form-group">
                                             <label>Section 3</label>
+                                            <input type="text"  id="thum-sec3" name="fac_sec3_image" value="{{ old('fac_sec3_image',(isset($page_meta['fac_sec3_image']) ? asset($page_meta['fac_sec3_image']) : '') )  }}" class="form-control form-control-lg" />
+                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm-fac-sec3" data-input="thum-sec3" data-preview="holder"></i>
                                             <textarea rows="5" name="fac_sec3_text" class="form-control form-control-lg my-editor">{{ old('fac_sec3_text',$page_meta['fac_sec3_text'] ?? '') }}</textarea>
                                         </div>
                                 
@@ -434,6 +440,7 @@
                                         <div class="field form-group">
                                         <label>Section 5</label>
                                         <input type="text" value="{{ old('fac_sec5_heading',$page_meta['fac_sec5_heading'] ?? '') }}" name="fac_sec5_heading" placeholder="Heading..." class="form-control form-control-lg" />
+                                        <textarea rows="5" name="fac_sec5_text" class="form-control form-control-lg my-editor">{{ old('fac_sec5_text',$page_meta['fac_sec5_text'] ?? '') }}</textarea>
                                 
                                         </div>
                                     </div>
@@ -488,6 +495,8 @@
                                         <h3>Section 2</h3>  
                                         <div class="field form-group">
                                             <label>Box 1</label>
+                                            <input type="text"  id="thumb-staff-sec2-bx1" name="staff_sec2_image_bx1" value="{{ old('staff_sec2_image_bx1',(isset($page_meta['staff_sec2_image_bx1']) ? asset($page_meta['staff_sec2_image_bx1']) : '') )  }}" class="form-control form-control-lg" />
+                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm-staff-sec2-bx1" data-input="thumb-staff-sec2-bx1" data-preview="holder"></i>
                                             <input type="text" value="{{ old('staff_sec2_bx1_heading',$page_meta['staff_sec2_bx1_heading'] ?? '') }}" name="staff_sec2_bx1_heading" placeholder="Heading..." class="form-control form-control-lg" />
                                             <textarea rows="5" name="staff_sec2_bx1_text" class="form-control form-control-lg my-editor">{{ old('staff_sec2_bx1_text',$page_meta['staff_sec2_bx1_text'] ?? '') }}</textarea>
                                         </div>
@@ -498,6 +507,8 @@
                               
                                         <div class="field form-group">
                                             <label>Box 2</label>
+                                            <input type="text"  id="thumb-staff-sec2-bx2" name="staff_sec2_image_bx2" value="{{ old('staff_sec2_image_bx2',(isset($page_meta['staff_sec2_image_bx2']) ? asset($page_meta['staff_sec2_image_bx2']) : '') )  }}" class="form-control form-control-lg" />
+                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm-staff-sec2-bx2" data-input="thumb-staff-sec2-bx2" data-preview="holder"></i>
                                             <input type="text" value="{{ old('staff_sec2_bx2_heading',$page_meta['staff_sec2_bx2_heading'] ?? '') }}" name="staff_sec2_bx2_heading" placeholder="Heading..." class="form-control form-control-lg" />
                                             <textarea rows="5" name="staff_sec2_bx2_text" class="form-control form-control-lg my-editor">{{ old('staff_sec2_bx2_text',$page_meta['staff_sec2_bx2_text'] ?? '') }}</textarea>
                                         </div>
@@ -507,7 +518,9 @@
                                     <div class="col-sm-12"> 
                                        
                                         <h3>Section 3</h3>  
-                                        <div class="field form-group">                                            
+                                        <div class="field form-group">  
+                                        <input type="text"  id="thumb-staff-sec3" name="staff_sec3_image" value="{{ old('staff_sec3_image',(isset($page_meta['staff_sec3_image']) ? asset($page_meta['staff_sec3_image']) : '') )  }}" class="form-control form-control-lg" />
+                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm-staff-sec3" data-input="thumb-staff-sec3" data-preview="holder"></i>                                          
                                             <textarea rows="5" name="staff_sec3_text" class="form-control form-control-lg my-editor">{{ old('staff_sec3_text',$page_meta['staff_sec3_text'] ?? '') }}</textarea>
                                         </div>
                                 
@@ -516,7 +529,9 @@
                                     <div class="col-sm-12"> 
                                        
                                         <h3>Section 4</h3>  
-                                        <div class="field form-group">                                            
+                                        <div class="field form-group">    
+                                            <input type="text"  id="thumb-staff-sec4" name="staff_sec4_image" value="{{ old('staff_sec4_image',(isset($page_meta['staff_sec4_image']) ? asset($page_meta['staff_sec4_image']) : '') )  }}" class="form-control form-control-lg" />
+                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm-staff-sec4" data-input="thumb-staff-sec4" data-preview="holder"></i>                                                       
                                             <textarea rows="5" name="staff_sec4_text" class="form-control form-control-lg my-editor">{{ old('staff_sec4_text',$page_meta['staff_sec4_text'] ?? '') }}</textarea>
                                         </div>
                                 
@@ -533,6 +548,10 @@
                                         <div class="field form-group">
                                             <label>Tag Line</label>
                                             <input type="text" value="{{ old('rd_sec1_tagline',$page_meta['rd_sec1_tagline'] ?? '') }}" name="rd_sec1_tagline" placeholder="Heading..." class="form-control form-control-lg" />
+                                        </div>                              
+                                        <div class="field form-group">
+                                            <input type="text"  id="thumb-rd-sec1" name="rd_sec1_image" value="{{ old('rd_sec1_image',(isset($page_meta['rd_sec1_image']) ? asset($page_meta['rd_sec1_image']) : '') )  }}" class="form-control form-control-lg" />
+                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm-rd-sec1" data-input="thumb-rd-sec1" data-preview="holder"></i> 
                                         </div>                              
                                         <div class="field form-group">
                                             <label>Heading</label>
@@ -613,6 +632,10 @@
                                             <label>Heading</label>
                                             <input type="text" value="{{ old('rd_sec3_heading',$page_meta['rd_sec3_heading'] ?? '') }}" name="rd_sec3_heading" placeholder="Heading..." class="form-control form-control-lg" />
                                         </div>
+                                        <div class="field form-group">
+                                            <input type="text"  id="thumb-rd-sec3" name="rd_sec3_image" value="{{ old('rd_sec3_image',(isset($page_meta['rd_sec3_image']) ? asset($page_meta['rd_sec3_image']) : '') )  }}" class="form-control form-control-lg" />
+                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm-rd-sec3" data-input="thumb-rd-sec3" data-preview="holder"></i> 
+                                        </div> 
                                         <div class="field form-group">
                                             <label>Sub Heading</label>
                                             <input type="text" value="{{ old('rd_sec3_subheading',$page_meta['rd_sec3_subheading'] ?? '') }}" name="rd_sec3_subheading" placeholder="Sub Heading..." class="form-control form-control-lg" />
@@ -706,6 +729,135 @@
                                 </div>
 
                                 <!-- contact end -->
+
+                                 <!-- Apply now -->
+
+                                 <div class="row apply-nowtemplate template_attributes">
+
+                                    <div class="col-sm-12">
+                                        <div class="row">              
+                                            <div class="col-sm-3">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_name',$page_meta['ap_name'] ?? '') }}" name="ap_name" class="form-control form-control-lg" />
+                                                </div>                              
+                                                                            
+                                            </div>
+
+                                            <div class="col-sm-3">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_first',$page_meta['ap_first'] ?? '') }}" name="ap_first" 
+                                                     class="form-control form-control-lg" />
+                                                </div>                              
+                                                                            
+                                            </div>
+
+                                            <div class="col-sm-3">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_last',$page_meta['ap_last'] ?? '') }}" name="ap_last" 
+                                                     class="form-control form-control-lg" />
+                                                </div>                              
+                                            </div>  
+                                            
+                                            <div class="col-sm-3">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_email',$page_meta['ap_email'] ?? '') }}" name="ap_email" 
+                                                     class="form-control form-control-lg" />
+                                                </div>                              
+                                            </div>  
+                                            <div class="col-sm-3">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_mobile',$page_meta['ap_mobile'] ?? '') }}" name="ap_mobile" 
+                                                     class="form-control form-control-lg" />
+                                                </div>                              
+                                            </div>  
+                                            <div class="col-sm-3">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_address',$page_meta['ap_address'] ?? '') }}" name="ap_address" 
+                                                     class="form-control form-control-lg" />
+                                                </div>                              
+                                            </div>  
+                                            <div class="col-sm-3">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_city',$page_meta['ap_city'] ?? '') }}" name="ap_city" 
+                                                     class="form-control form-control-lg" />
+                                                </div>                              
+                                            </div>  
+                                            <div class="col-sm-3">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_state',$page_meta['ap_state'] ?? '') }}" name="ap_state" 
+                                                     class="form-control form-control-lg" />
+                                                </div>                              
+                                            </div>  
+                                            <div class="col-sm-3">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_zip',$page_meta['ap_zip'] ?? '') }}" name="ap_zip" 
+                                                     class="form-control form-control-lg" />
+                                                </div>                              
+                                            </div>  
+                                            <div class="col-sm-3">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_country',$page_meta['ap_country'] ?? '') }}" name="ap_country" 
+                                                     class="form-control form-control-lg" />
+                                                </div>                              
+                                            </div>  
+                                            
+                                            
+                                            <div class="col-sm-3">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_upload',$page_meta['ap_upload'] ?? '') }}" name="ap_upload" 
+                                                     class="form-control form-control-lg" />
+                                                </div>                              
+                                            </div>  
+                                            <div class="col-sm-3">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_exp',$page_meta['ap_exp'] ?? '') }}" name="ap_exp" 
+                                                     class="form-control form-control-lg" />
+                                                </div>                              
+                                            </div>  
+                                            <div class="col-sm-3">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_ert',$page_meta['ap_ert'] ?? '') }}" name="ap_ert" 
+                                                     class="form-control form-control-lg" />
+                                                </div>                              
+                                            </div>  
+                                            <div class="col-sm-3">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_ertop1',$page_meta['ap_ertop1'] ?? '') }}" name="ap_ertop1" 
+                                                     class="form-control form-control-lg" />
+                                                </div>                              
+                                            </div>  
+                                            <div class="col-sm-3">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_ertop2',$page_meta['ap_ertop2'] ?? '') }}" name="ap_ertop2" 
+                                                     class="form-control form-control-lg" />
+                                                </div>                              
+                                            </div>  
+                                            <div class="col-sm-3">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_abtus',$page_meta['ap_abtus'] ?? '') }}" name="ap_abtus" 
+                                                     class="form-control form-control-lg" />
+                                                </div>                              
+                                            </div>                  
+                                                                        
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <div class="row">
+                                        <div class="col-sm-12">              
+                                                <div class="form-group">
+                                                    <input type="text" value="{{ old('ap_text',$page_meta['ap_text'] ?? '') }}" name="ap_text" 
+                                                     class="form-control form-control-lg" />
+                                                </div>                              
+                                            </div>  
+                                        </div>
+                                    </div>
+
+                                 
+                              
+                                </div>
+                                <!-- apply now end -->
 
                                 <!-- faqs -->
 

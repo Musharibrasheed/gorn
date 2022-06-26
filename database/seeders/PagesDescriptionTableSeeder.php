@@ -32,11 +32,11 @@ class PagesDescriptionTableSeeder extends Seeder
                 'meta_title' => NULL,
                 'meta_keywords' => NULL,
                 'meta_description' => NULL,
-                'page_video' => NULL,
-                'template_content' => 'a:11:{s:18:"about_gorn_heading";s:11:"About Go RN";s:15:"about_gorn_text";s:451:"<p>We are a company formed by nursing, healthcare, and technology professionals, who are constantly looking to improve the healthcare system<br />Staffing a hospital is a difficult and constant challenge. Finding the right staff at the last minute &ndash; and having them arrive in time for the shift &ndash; is a costly and time consuming process. Our platform reduces the uncertainty, cost, and time involved to get registry nurses on shift.</p>";s:16:"section2_heading";s:13:"Our Solutions";s:20:"section2_bx1_heading";s:9:"Solutions";s:17:"section2_bx1_text";s:86:"<p>Trading Est professional recruiting services, we take every measure to find the</p>";s:20:"section2_bx2_heading";s:24:"Healthcare Professionals";s:17:"section2_bx2_text";s:91:"<p>One strategy that can help you reduce cost and increase competitiveness in some area</p>";s:20:"section2_bx3_heading";s:10:"Facilities";s:17:"section2_bx3_text";s:91:"<p>One strategy that can help you reduce cost and increase competitiveness in some area</p>";s:16:"section3_heading";s:17:"Better For Nurses";s:13:"section3_text";s:451:"<p>We are a company formed by nursing, healthcare, and technology professionals, who are constantly looking to improve the healthcare system<br />Staffing a hospital is a difficult and constant challenge. Finding the right staff at the last minute &ndash; and having them arrive in time for the shift &ndash; is a costly and time consuming process. Our platform reduces the uncertainty, cost, and time involved to get registry nurses on shift.</p>";}',
+                'page_video' => '6xcG6ttMDVY',
+                'template_content' => 'a:20:{s:18:"about_gorn_heading";s:11:"About Go RN";s:15:"about_gorn_text";s:451:"<p>We are a company formed by nursing, healthcare, and technology professionals, who are constantly looking to improve the healthcare system<br />Staffing a hospital is a difficult and constant challenge. Finding the right staff at the last minute &ndash; and having them arrive in time for the shift &ndash; is a costly and time consuming process. Our platform reduces the uncertainty, cost, and time involved to get registry nurses on shift.</p>";s:16:"section2_heading";s:13:"Our Solutions";s:18:"section2_bx1_image";s:0:"";s:20:"section2_bx1_heading";s:9:"Solutions";s:17:"section2_bx1_text";s:86:"<p>Trading Est professional recruiting services, we take every measure to find the</p>";s:18:"section2_bx2_image";s:0:"";s:20:"section2_bx2_heading";s:24:"Healthcare Professionals";s:17:"section2_bx2_text";s:91:"<p>One strategy that can help you reduce cost and increase competitiveness in some area</p>";s:18:"section2_bx3_image";s:0:"";s:14:"section3_image";s:36:"storage/photos/Nurses-section-bg.png";s:17:"section2_bx3_text";s:91:"<p>One strategy that can help you reduce cost and increase competitiveness in some area</p>";s:20:"section2_bx3_heading";s:10:"Facilities";s:16:"section3_heading";s:17:"Better For Nurses";s:13:"section3_text";s:451:"<p>We are a company formed by nursing, healthcare, and technology professionals, who are constantly looking to improve the healthcare system<br />Staffing a hospital is a difficult and constant challenge. Finding the right staff at the last minute &ndash; and having them arrive in time for the shift &ndash; is a costly and time consuming process. Our platform reduces the uncertainty, cost, and time involved to get registry nurses on shift.</p>";s:13:"section_left1";s:51:"http://127.0.0.1:8000/storage/photos/Awards-img.png";s:14:"section_right1";s:47:"http://127.0.0.1:8000/storage/photos/stamp1.png";s:14:"section_right2";s:47:"http://127.0.0.1:8000/storage/photos/stamp2.png";s:14:"section_right3";s:47:"http://127.0.0.1:8000/storage/photos/stamp3.png";s:14:"section_right4";s:47:"http://127.0.0.1:8000/storage/photos/stamp4.png";}',
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => '2022-06-15 20:18:33',
+                'updated_at' => '2022-06-21 19:11:35',
             ),
             1 => 
             array (
@@ -187,9 +187,9 @@ class PagesDescriptionTableSeeder extends Seeder
                 'meta_description' => '',
                 'page_video' => '',
                 'template_content' => 'a:0:{}',
-                'deleted_at' => NULL,
+                'deleted_at' => '2022-06-19 12:16:29',
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2022-06-19 12:16:29',
             ),
             9 => 
             array (
@@ -243,10 +243,10 @@ class PagesDescriptionTableSeeder extends Seeder
                 'meta_keywords' => NULL,
                 'meta_description' => NULL,
                 'page_video' => NULL,
-                'template_content' => 'a:15:{s:15:"hc_sec1_heading";s:17:"Better For Nurses";s:12:"hc_sec1_text";s:146:"<p>With Go RN, take control of your life and income. Work where you want when you want with unlimited earning potential right from fingertips.</p>";s:15:"hc_sec2_tagline";s:18:"One-Click Solution";s:15:"hc_sec2_heading";s:67:"We Will Help You Connect With New Opportunities Both Local & Travel";s:12:"hc_sec2_text";s:151:"<p>Go RN\'s technology puts you ahead of the game by quickly connects you with hundreds of opportunities and landing jobs both on demand and travel.</p>";s:15:"hc_sec3_heading";s:20:"Featured Job Listing";s:12:"hc_sec3_text";s:146:"<p>With Go RN, take control of your life and income. Work where you want when you want with unlimited earning potential right from fingertips.</p>";s:15:"hc_sec4_heading";s:29:"All In The Palm Of Your Hands";s:15:"hc_sec4_tagline";s:53:"Our platform provides you all the tools you’ll need";s:19:"hc_sec4_bx1_heading";s:12:"Mobile First";s:16:"hc_sec4_bx1_text";s:69:"<p>Support for both iPhone and Android owners. We got you covered</p>";s:19:"hc_sec4_bx2_heading";s:33:"hover effect Scheduling Made Easy";s:16:"hc_sec4_bx2_text";s:65:"<p>Your calendar in the palm of your hand. You\'re in control.</p>";s:19:"hc_sec4_bx3_heading";s:15:"Get Paid Weekly";s:16:"hc_sec4_bx3_text";s:90:"<p>Leave the billing to us. We\'ll manage your shift to ensure you receive every penny.</p>";}',
+                'template_content' => 'a:17:{s:15:"hc_sec1_heading";s:17:"Better For Nurses";s:17:"hc_section1_image";s:21:"storage/photos/14.png";s:12:"hc_sec1_text";s:146:"<p>With Go RN, take control of your life and income. Work where you want when you want with unlimited earning potential right from fingertips.</p>";s:17:"hc_section2_image";s:29:"storage/photos/Awards-img.png";s:15:"hc_sec2_tagline";s:18:"One-Click Solution";s:15:"hc_sec2_heading";s:67:"We Will Help You Connect With New Opportunities Both Local & Travel";s:12:"hc_sec2_text";s:151:"<p>Go RN\'s technology puts you ahead of the game by quickly connects you with hundreds of opportunities and landing jobs both on demand and travel.</p>";s:15:"hc_sec3_heading";s:20:"Featured Job Listing";s:12:"hc_sec3_text";s:146:"<p>With Go RN, take control of your life and income. Work where you want when you want with unlimited earning potential right from fingertips.</p>";s:15:"hc_sec4_heading";s:29:"All In The Palm Of Your Hands";s:15:"hc_sec4_tagline";s:53:"Our platform provides you all the tools you’ll need";s:19:"hc_sec4_bx1_heading";s:12:"Mobile First";s:16:"hc_sec4_bx1_text";s:69:"<p>Support for both iPhone and Android owners. We got you covered</p>";s:19:"hc_sec4_bx2_heading";s:33:"hover effect Scheduling Made Easy";s:16:"hc_sec4_bx2_text";s:65:"<p>Your calendar in the palm of your hand. You\'re in control.</p>";s:19:"hc_sec4_bx3_heading";s:15:"Get Paid Weekly";s:16:"hc_sec4_bx3_text";s:90:"<p>Leave the billing to us. We\'ll manage your shift to ensure you receive every penny.</p>";}',
                 'deleted_at' => NULL,
                 'created_at' => '2022-06-15 18:19:13',
-                'updated_at' => '2022-06-15 19:50:52',
+                'updated_at' => '2022-06-26 13:30:50',
             ),
             12 => 
             array (
@@ -261,8 +261,8 @@ class PagesDescriptionTableSeeder extends Seeder
                 'meta_title' => NULL,
                 'meta_keywords' => NULL,
                 'meta_description' => NULL,
-                'page_video' => NULL,
-                'template_content' => 'a:20:{s:16:"fac_sec1_tagline";s:53:"Our platform provides you all the tools you’ll need";s:16:"fac_sec1_heading";s:11:"Float Pools";s:20:"fac_sec1_bx1_heading";s:7:"Dynamic";s:17:"fac_sec1_bx1_text";s:74:"<p>Staffing efficiency &amp; minimizing staffing agency usage per diem</p>";s:20:"fac_sec1_bx2_heading";s:46:"Covering Sister Facilities within your Network";s:17:"fac_sec1_bx2_text";s:65:"<p>Your calendar in the palm of your hand. You\'re in control.</p>";s:20:"fac_sec1_bx3_heading";s:21:"Various Float Options";s:17:"fac_sec1_bx3_text";s:133:"<p>Efficient tracking of cost center and budget Allow your staff to float within units in networks and across network facilities.</p>";s:20:"fac_sec1_bx4_heading";s:25:"Better internal workforce";s:17:"fac_sec1_bx4_text";s:159:"<p>Focus on internal workforce increasing patient satisfaction and a healthier work environment, resulting in a richer culture and decreased staffing cost.</p>";s:20:"fac_sec1_bx5_heading";s:36:"Cost effective-Meet your bottom line";s:17:"fac_sec1_bx5_text";s:84:"<p>Maximize your internal workforce and minimize your outsource staffing expense</p>";s:20:"fac_sec1_bx6_heading";s:20:"Seamless Integration";s:17:"fac_sec1_bx6_text";s:90:"<p>Leave the billing to us. We\'ll manage your shift to ensure you receive every penny.</p>";s:16:"fac_sec2_heading";s:18:"Get Started today!";s:13:"fac_sec2_text";s:64:"<p>Optimize staffing efficiency and improve your bottom line</p>";s:13:"fac_sec3_text";s:263:"<h1>Partnership</h1>
+                'page_video' => 'https://www.youtube.com/embed/tgbNymZ7vqY',
+                'template_content' => 'a:23:{s:16:"fac_sec1_tagline";s:53:"Our platform provides you all the tools you’ll need";s:16:"fac_sec1_heading";s:11:"Float Pools";s:20:"fac_sec1_bx1_heading";s:7:"Dynamic";s:17:"fac_sec1_bx1_text";s:74:"<p>Staffing efficiency &amp; minimizing staffing agency usage per diem</p>";s:20:"fac_sec1_bx2_heading";s:46:"Covering Sister Facilities within your Network";s:17:"fac_sec1_bx2_text";s:65:"<p>Your calendar in the palm of your hand. You\'re in control.</p>";s:20:"fac_sec1_bx3_heading";s:21:"Various Float Options";s:17:"fac_sec1_bx3_text";s:133:"<p>Efficient tracking of cost center and budget Allow your staff to float within units in networks and across network facilities.</p>";s:20:"fac_sec1_bx4_heading";s:25:"Better internal workforce";s:17:"fac_sec1_bx4_text";s:159:"<p>Focus on internal workforce increasing patient satisfaction and a healthier work environment, resulting in a richer culture and decreased staffing cost.</p>";s:20:"fac_sec1_bx5_heading";s:36:"Cost effective-Meet your bottom line";s:17:"fac_sec1_bx5_text";s:84:"<p>Maximize your internal workforce and minimize your outsource staffing expense</p>";s:20:"fac_sec1_bx6_heading";s:20:"Seamless Integration";s:17:"fac_sec1_bx6_text";s:90:"<p>Leave the billing to us. We\'ll manage your shift to ensure you receive every penny.</p>";s:14:"fac_sec2_image";s:47:"http://127.0.0.1:8000/storage/photos/get-bg.png";s:16:"fac_sec2_heading";s:18:"Get Started today!";s:13:"fac_sec2_text";s:64:"<p>Optimize staffing efficiency and improve your bottom line</p>";s:14:"fac_sec3_image";s:49:"http://127.0.0.1:8000/storage/photos/bottombg.png";s:13:"fac_sec3_text";s:263:"<h1>Partnership</h1>
 <ul>
 <li>SaaS/VMS/MSP</li>
 <li>Meeting Staff RatioRetention</li>
@@ -271,10 +271,13 @@ class PagesDescriptionTableSeeder extends Seeder
 <li>CMS/ Joint Commission</li>
 <li>Continuity of care</li>
 <li>Higher employee and patient satisfaction</li>
-</ul>";s:16:"fac_sec4_heading";s:13:"Cascade Model";s:13:"fac_sec4_text";s:255:"<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>";s:16:"fac_sec5_heading";s:18:"Get Started today!";}',
+</ul>";s:16:"fac_sec4_heading";s:13:"Cascade Model";s:13:"fac_sec4_text";s:255:"<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>";s:16:"fac_sec5_heading";s:10:"Learn More";s:13:"fac_sec5_text";s:409:"<h1>Video Part</h1>
+<ul>
+<li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</li>
+</ul>";}',
                 'deleted_at' => NULL,
                 'created_at' => '2022-06-15 21:10:09',
-                'updated_at' => '2022-06-16 17:34:30',
+                'updated_at' => '2022-06-26 15:08:17',
             ),
             13 => 
             array (
@@ -290,14 +293,14 @@ class PagesDescriptionTableSeeder extends Seeder
                 'meta_keywords' => NULL,
                 'meta_description' => NULL,
                 'page_video' => NULL,
-                'template_content' => 'a:13:{s:18:"staff_sec1_heading";s:17:"STAFFING SOLUTION";s:22:"staff_sec1_bx1_heading";s:6:"Step 1";s:19:"staff_sec1_bx1_text";s:33:"<p>Request a shift/Assignment</p>";s:22:"staff_sec1_bx2_heading";s:6:"Step 2";s:19:"staff_sec1_bx2_text";s:38:"<p>Available workforce at a glance</p>";s:22:"staff_sec1_bx3_heading";s:6:"Step 3";s:19:"staff_sec1_bx3_text";s:41:"<p>Fill a need at a click of a button</p>";s:22:"staff_sec2_bx1_heading";s:12:"BROADCASTING";s:19:"staff_sec2_bx1_text";s:255:"<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>";s:22:"staff_sec2_bx2_heading";s:22:"REAL TIME CONFIRMATION";s:19:"staff_sec2_bx2_text";s:255:"<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>";s:15:"staff_sec3_text";s:191:"<h1 class="display-3">MASTER BOOKING</h1>
+                'template_content' => 'a:17:{s:18:"staff_sec1_heading";s:17:"STAFFING SOLUTION";s:22:"staff_sec1_bx1_heading";s:6:"Step 1";s:19:"staff_sec1_bx1_text";s:33:"<p>Request a shift/Assignment</p>";s:22:"staff_sec1_bx2_heading";s:6:"Step 2";s:19:"staff_sec1_bx2_text";s:38:"<p>Available workforce at a glance</p>";s:22:"staff_sec1_bx3_heading";s:6:"Step 3";s:19:"staff_sec1_bx3_text";s:41:"<p>Fill a need at a click of a button</p>";s:20:"staff_sec2_image_bx1";s:23:"storage/photos/img1.jpg";s:22:"staff_sec2_bx1_heading";s:12:"BROADCASTING";s:19:"staff_sec2_bx1_text";s:255:"<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>";s:20:"staff_sec2_image_bx2";s:23:"storage/photos/img2.jpg";s:22:"staff_sec2_bx2_heading";s:22:"REAL TIME CONFIRMATION";s:19:"staff_sec2_bx2_text";s:255:"<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>";s:16:"staff_sec3_image";s:27:"storage/photos/type-img.jpg";s:15:"staff_sec3_text";s:191:"<h1 class="display-3">MASTER BOOKING</h1>
 <ul class="Scheduling">
 <li>Scheduling</li>
 <li>Rollovers</li>
 <li>Compliance</li>
 <li>Point commission profiles</li>
 <li>On demand</li>
-</ul>";s:15:"staff_sec4_text";s:752:"<h4>Analytics</h4>
+</ul>";s:16:"staff_sec4_image";s:22:"storage/photos/men.jpg";s:15:"staff_sec4_text";s:752:"<h4>Analytics</h4>
 <p class="lorem-last">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
 <ul class="Quality">
 <ul class="Quality">
@@ -317,7 +320,7 @@ class PagesDescriptionTableSeeder extends Seeder
 <p>&nbsp;</p>";}',
                 'deleted_at' => NULL,
                 'created_at' => '2022-06-16 18:05:35',
-                'updated_at' => '2022-06-16 19:37:56',
+                'updated_at' => '2022-06-26 16:36:30',
             ),
             14 => 
             array (
@@ -333,10 +336,10 @@ class PagesDescriptionTableSeeder extends Seeder
                 'meta_keywords' => NULL,
                 'meta_description' => NULL,
                 'page_video' => NULL,
-                'template_content' => 'a:21:{s:15:"rd_sec1_tagline";s:22:"Hire Faster & Smarter!";s:15:"rd_sec1_heading";s:65:"Spending too much on Travel and Per Diem Nursing/Allied Staffing?";s:12:"rd_sec1_text";s:272:"<p>No worries! We are here to help. Our platform will help you create and manage your own internal flow pool. We can also help you manage the compliance requirements for your core staff and float pool clinicians. So you can save more and leave the heavy lifting to us.</p>";s:15:"rd_sec2_heading";s:41:"Let us help you improve your bottom line!";s:19:"rd_sec2_bx1_heading";s:10:"Mobile App";s:19:"rd_sec2_bx2_heading";s:10:"Scheduling";s:19:"rd_sec2_bx3_heading";s:11:"Cloud based";s:19:"rd_sec2_bx4_heading";s:12:"24/7 Support";s:19:"rd_sec2_bx5_heading";s:13:"Amazing Tools";s:19:"rd_sec2_bx6_heading";s:14:"Build to scale";s:16:"rd_sec2_bx1_text";s:73:"<p>We are just an app away. Manage everything on your Android or iOS.</p>";s:16:"rd_sec2_bx2_text";s:78:"<p>Be smarter and manage the existing workforce and decrease agency spent.</p>";s:16:"rd_sec2_bx3_text";s:60:"<p>So you don&rsquo;t have to worry about moving around.</p>";s:16:"rd_sec2_bx4_text";s:109:"<p>You read that right, we give you a dedicated account manager so there is always help when you need it.</p>";s:16:"rd_sec2_bx5_text";s:104:"<p>Stuck with traditional tools that limit your productivity, we understand each client is different</p>";s:16:"rd_sec2_bx6_text";s:109:"<p>Hooked on Go RN, we don&rsquo;t blame you. We are addictive. Get our Enterprise solution and stand out</p>";s:15:"rd_sec3_heading";s:20:"We have you covered!";s:18:"rd_sec3_subheading";s:66:"Let Go RN assist you with maximizing your float pool & core staff.";s:12:"rd_sec3_text";s:247:"<p>No problem! Go RN&rsquo;s staffing platform can improve your bottom line by adding efficiencies that will help you form, manage, and efficiently staff your float pool and core staff, in turn decreasing your travel and per diem agency usage.</p>";s:15:"rd_sec4_tagline";s:28:"WE’RE ALWAYS HAPPY TO HELP";s:15:"rd_sec4_heading";s:26:"Schedule your demo today!!";}',
+                'template_content' => 'a:23:{s:13:"rd_sec1_image";s:50:"http://127.0.0.1:8000/storage/photos/Do-mobile.png";s:15:"rd_sec1_tagline";s:22:"Hire Faster & Smarter!";s:15:"rd_sec1_heading";s:65:"Spending too much on Travel and Per Diem Nursing/Allied Staffing?";s:12:"rd_sec1_text";s:272:"<p>No worries! We are here to help. Our platform will help you create and manage your own internal flow pool. We can also help you manage the compliance requirements for your core staff and float pool clinicians. So you can save more and leave the heavy lifting to us.</p>";s:15:"rd_sec2_heading";s:41:"Let us help you improve your bottom line!";s:19:"rd_sec2_bx1_heading";s:10:"Mobile App";s:19:"rd_sec2_bx2_heading";s:10:"Scheduling";s:19:"rd_sec2_bx3_heading";s:11:"Cloud based";s:19:"rd_sec2_bx4_heading";s:12:"24/7 Support";s:19:"rd_sec2_bx5_heading";s:13:"Amazing Tools";s:19:"rd_sec2_bx6_heading";s:14:"Build to scale";s:16:"rd_sec2_bx1_text";s:73:"<p>We are just an app away. Manage everything on your Android or iOS.</p>";s:16:"rd_sec2_bx2_text";s:78:"<p>Be smarter and manage the existing workforce and decrease agency spent.</p>";s:16:"rd_sec2_bx3_text";s:60:"<p>So you don&rsquo;t have to worry about moving around.</p>";s:16:"rd_sec2_bx4_text";s:109:"<p>You read that right, we give you a dedicated account manager so there is always help when you need it.</p>";s:16:"rd_sec2_bx5_text";s:104:"<p>Stuck with traditional tools that limit your productivity, we understand each client is different</p>";s:16:"rd_sec2_bx6_text";s:109:"<p>Hooked on Go RN, we don&rsquo;t blame you. We are addictive. Get our Enterprise solution and stand out</p>";s:13:"rd_sec3_image";s:58:"http://127.0.0.1:8000/storage/photos/cover-section-img.png";s:15:"rd_sec3_heading";s:20:"We have you covered!";s:18:"rd_sec3_subheading";s:66:"Let Go RN assist you with maximizing your float pool & core staff.";s:12:"rd_sec3_text";s:247:"<p>No problem! Go RN&rsquo;s staffing platform can improve your bottom line by adding efficiencies that will help you form, manage, and efficiently staff your float pool and core staff, in turn decreasing your travel and per diem agency usage.</p>";s:15:"rd_sec4_tagline";s:28:"WE’RE ALWAYS HAPPY TO HELP";s:15:"rd_sec4_heading";s:26:"Schedule your demo today!!";}',
                 'deleted_at' => NULL,
                 'created_at' => '2022-06-17 17:15:45',
-                'updated_at' => '2022-06-17 20:10:33',
+                'updated_at' => '2022-06-26 16:59:04',
             ),
             15 => 
             array (
@@ -353,10 +356,10 @@ class PagesDescriptionTableSeeder extends Seeder
                 'meta_keywords' => NULL,
                 'meta_description' => NULL,
                 'page_video' => NULL,
-                'template_content' => 'a:0:{}',
+            'template_content' => 'a:17:{s:7:"ap_name";s:4:"Name";s:8:"ap_first";s:5:"First";s:7:"ap_last";s:5:"State";s:8:"ap_email";s:5:"Email";s:9:"ap_mobile";s:13:"Mobile Number";s:10:"ap_address";s:7:"Address";s:7:"ap_city";s:4:"City";s:8:"ap_state";s:5:"State";s:6:"ap_zip";s:8:"Zip Code";s:6:"ap_exp";s:32:"How many years acute experience?";s:6:"ap_ert";s:29:"Emergency Response Team (ERT)";s:9:"ap_ertop1";s:37:"Add me to the Emergency Response Team";s:9:"ap_ertop2";s:33:"Add me for the Volunteer Position";s:8:"ap_abtus";s:28:"How Did You Hear About Go RN";s:10:"ap_country";s:7:"Country";s:9:"ap_upload";s:24:"Upload Resume (Optional)";s:7:"ap_text";s:267:"Emergency Department Patient Care Tech : ( EMT License 6 Months Previous PCT Experience Required)  Bridge Program : (Required completion of “Intro to Med Surg” clinical rotation or equivalent in Nursing School)  Safety Attendant : (BLS / CNA Certificate Required)";}',
                 'deleted_at' => NULL,
                 'created_at' => '2022-06-18 22:21:44',
-                'updated_at' => '2022-06-18 22:23:46',
+                'updated_at' => '2022-06-26 20:35:31',
             ),
             16 => 
             array (
@@ -376,6 +379,25 @@ class PagesDescriptionTableSeeder extends Seeder
                 'deleted_at' => NULL,
                 'created_at' => '2022-06-18 22:37:30',
                 'updated_at' => '2022-06-18 22:56:29',
+            ),
+            17 => 
+            array (
+                'id' => 18,
+                'page_id' => 19,
+                'language_id' => 1,
+                'template' => 'default',
+                'title' => 'ssdf sdsdfs',
+                'short_title' => 'sfsdsdsdfsd sd',
+                'content' => '<p>sdsdfd sdf sdf sd sdf</p>',
+                'short_content' => NULL,
+                'meta_title' => NULL,
+                'meta_keywords' => NULL,
+                'meta_description' => NULL,
+                'page_video' => NULL,
+                'template_content' => 'a:0:{}',
+                'deleted_at' => '2022-06-19 13:34:47',
+                'created_at' => '2022-06-19 13:27:43',
+                'updated_at' => '2022-06-19 13:34:47',
             ),
         ));
         

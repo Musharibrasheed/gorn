@@ -91,7 +91,7 @@ $pageContent->meta_description : meta_description() !!} @stop
                                                     </div>
                                                     <div class="for-icon-box-pera">
                                                         <p class="for-icon-box-p">
-                                                            {{ $page_meta['fac_sec1_bx1_text'] ? strip_tags($page_meta['fac_sec1_bx1_text']) : '' }}</p>
+                                                            {!! $page_meta['fac_sec1_bx1_text'] ? strip_tags($page_meta['fac_sec1_bx1_text']) : '' !!}</p>
                                                     </div>
                                                     <!-- <div class="for-icon-box-button btn">
                                                         <a class="for-icon-box-a" href="#">Read More</a>
@@ -179,7 +179,7 @@ $pageContent->meta_description : meta_description() !!} @stop
                                                         <h6 class="for-icon-box-h6">{{ $page_meta['fac_sec1_bx3_heading'] ?? '' }}</h6>
                                                     </div>
                                                     <div class="for-icon-box-pera">
-                                                        <p class="for-icon-box-p">{{ $page_meta['fac_sec1_bx3_text'] ? strip_tags($page_meta['fac_sec1_bx3_text']) : '' }}</p>
+                                                        <p class="for-icon-box-p">{!! $page_meta['fac_sec1_bx3_text'] ? strip_tags($page_meta['fac_sec1_bx3_text']) : '' !!}</p>
                                                     </div>
                                                     <!-- <div class="for-icon-box-button btn">
                                                         <a class="for-icon-box-a" href="#">Read More</a>
@@ -224,10 +224,10 @@ $pageContent->meta_description : meta_description() !!} @stop
 
                                                 <div class="contant-main-icon-box">
                                                     <div class="for-icon-box-heading">
-                                                        <h6 class="for-icon-box-h6">{{ $page_meta['fac_sec1_bx4_text'] ?? '' }}</h6>
+                                                        <h6 class="for-icon-box-h6">{{ $page_meta['fac_sec1_bx4_heading'] ?? '' }}</h6>
                                                     </div>
                                                     <div class="for-icon-box-pera">
-                                                        <p class="for-icon-box-p">{{ $page_meta['fac_sec1_bx4_text'] ? strip_tags($page_meta['fac_sec1_bx4_text']) : '' }}</p>
+                                                        <p class="for-icon-box-p">{!! $page_meta['fac_sec1_bx4_text'] ? strip_tags($page_meta['fac_sec1_bx4_text']) : '' !!}</p>
                                                     </div>
                                                     <!-- <div class="for-icon-box-button btn">
                                                         <a class="for-icon-box-a" href="#">Read More</a>
@@ -268,10 +268,10 @@ $pageContent->meta_description : meta_description() !!} @stop
 
                                                 <div class="contant-main-icon-box">
                                                     <div class="for-icon-box-heading">
-                                                        <h6 class="for-icon-box-h6">{{ $page_meta['fac_sec1_bx5_text'] ?? '' }}</h6>
+                                                        <h6 class="for-icon-box-h6">{{ $page_meta['fac_sec1_bx5_heading'] ?? '' }}</h6>
                                                     </div>
                                                     <div class="for-icon-box-pera">
-                                                        <p class="for-icon-box-p">{{ $page_meta['fac_sec1_bx5_text'] ? strip_tags($page_meta['fac_sec1_bx5_text']) : '' }}</p>
+                                                        <p class="for-icon-box-p">{!! $page_meta['fac_sec1_bx5_text'] ? strip_tags($page_meta['fac_sec1_bx5_text']) : '' !!}</p>
                                                     </div>
                                                     <!-- <div class="for-icon-box-button btn">
                                                         <a class="for-icon-box-a" href="#">Read More</a>
@@ -312,7 +312,7 @@ $pageContent->meta_description : meta_description() !!} @stop
 
                                                 <div class="contant-main-icon-box">
                                                     <div class="for-icon-box-heading">
-                                                        <h6 class="for-icon-box-h6">{{ $page_meta['fac_sec1_bx6_text'] ?? '' }}</h6>
+                                                        <h6 class="for-icon-box-h6">{{ $page_meta['fac_sec1_bx6_heading'] ?? '' }}</h6>
                                                     </div>
                                                     <div class="for-icon-box-pera">
                                                         <p class="for-icon-box-p">{{ $page_meta['fac_sec1_bx6_text'] ? strip_tags($page_meta['fac_sec1_bx6_text']) : '' }}</p>
@@ -346,7 +346,7 @@ $pageContent->meta_description : meta_description() !!} @stop
 
 
 
-	<div class="container-fluid get-section">
+	<div class="container-fluid get-section" style="background-image: url({{ $page_meta['fac_sec2_image'] }});">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -371,7 +371,7 @@ $pageContent->meta_description : meta_description() !!} @stop
 			<div class="row">
 				<div class="col-md-7">
 					<div class="partner-section-image">
-						<img src="assets/images/bottombg.png">
+						<img src="{!! asset($page_meta['fac_sec3_image']) !!}">
 					</div>
 				</div>
 
@@ -518,20 +518,24 @@ $pageContent->meta_description : meta_description() !!} @stop
 			<div class="row">
 				<div class="col-md-12">
 					<div class="learn-more-section">
-						<h1>Learn More</h1>
+						<h1>{{ $page_meta['fac_sec5_heading'] ?? '' }}</h1>
 					</div>
 				</div>
 
-				<div class="col-md-6">
+				<div class="col-md-6 video-bg-imager">
 					<div class="learn-more-image">
-						<img src="assets/images/round2.png">
+						<div class="">
+                            <div class="partner-section-content">
+                                {!! $page_meta['fac_sec5_text'] ?? '' !!}
+                            </div>
+                        </div>
 					</div>
 				</div>
 
-				<div class="col-md-6">
+				<div class="col-md-6 for-second-section-padding">
 					<div class="learn-more-video">
 
-						<iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+						<iframe width="420" height="345" src="{{ $pageContent->page_video ?? '' }}"></iframe>
 
 					</div>
 				</div>
@@ -548,88 +552,42 @@ $pageContent->meta_description : meta_description() !!} @stop
 			<div class="row">
 				<div class="col-md-12">
 					<div class="what-goingon-section">
-						<h1>{{ $page_meta['fac_sec5_heading'] ?? '' }}</h1>
+						<h1>What's Going On</h1>
 					</div>
 				</div>
-
+                <?php $first_article = (!empty($articles) && $articles->count() > 0 ) ? $articles->first() : '' ?>
+                @if( !empty($articles) && $articles->count() > 0)
 				<div class="col-md-6">
-					<div class="big-post">
-						<img src="assets/images/post1.png">
-						<ul>
-							<li><a href="#">April 10, 2022</a></li>
-							<li><a href="#">Education</a></li>
-							<li><a href="#">1 Comment</a></li>
-
-
-						</ul>
-						<h5>Attract Sales And Profits</h5>
-					</div>
+                    <div class="big-post">
+                            <img src="{{ $first_article->image ? asset($first_article->image) : '' }}" />
+                            <ul>
+                                <li><a href="javascript:;">{{ date('M d, Y', strtotime($first_article->created_at) ) }}</a></li>
+                                <!-- <li><a href="#">Education</a></li> -->
+                                <!-- <li><a href="#">1 Comment</a></li> -->
+                            </ul>
+                            <h5 class="h5-margin">{{ $first_article->title ?? ''}}</h5>
+                    </div>
 				</div>
-
+                @endif
 				<div class="col-md-6">
 					<div class="row">
-						<div class="col-md-6">
-							<div class="mini-post">
-								<img src="assets/images/post2.png">
-								<ul>
-									<li><a href="#">April 10, 2022</a></li>
-									<li><a href="#">Education</a></li>
-									<li><a href="#">1 Comment</a></li>
+                    @if( !empty($articles) && $articles->count() > 0)
+                        @foreach( $articles->skip(1) as $key => $article )
+                            <div class="col-md-6">
+                                <div class="mini-post">
+                                    <img src="{{ asset($article->image ?? '') }}" />
+                                    <ul>
+                                        <li><a href="#">{{ date('M d, Y', strtotime($article->created_at) ) }}</a></li>
+                                        <!-- <li><a href="#">Education</a></li> -->
+                                        <!-- <li><a href="#">1 Comment</a></li> -->
+                                    </ul>
+                                    <h5>{{ $article->title ?? ''}}</h5>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
 
 
-								</ul>
-								<h5>5 Tips For Job Interviews</h5>
-							</div>
-						</div>
-
-
-
-						<div class="col-md-6">
-							<div class="mini-post">
-								<img src="assets/images/post3.png">
-								<ul>
-									<li><a href="#">April 10, 2022</a></li>
-									<li><a href="#">Education</a></li>
-									<li><a href="#">1 Comment</a></li>
-
-
-								</ul>
-								<h5>The Evening of the Holiday</h5>
-							</div>
-						</div>
-
-
-
-						<div class="col-md-6">
-							<div class="mini-post">
-								<img src="assets/images/post4.png">
-								<ul>
-									<li><a href="#">April 10, 2022</a></li>
-									<li><a href="#">Education</a></li>
-									<li><a href="#">1 Comment</a></li>
-
-
-								</ul>
-								<h5>The Modern Art of Coffee</h5>
-							</div>
-						</div>
-
-
-
-
-						<div class="col-md-6">
-							<div class="mini-post">
-								<img src="assets/images/post5.png">
-								<ul>
-									<li><a href="#">April 10, 2022</a></li>
-									<li><a href="#">Education</a></li>
-									<li><a href="#">1 Comment</a></li>
-
-
-								</ul>
-								<h5>HTML, CSS, JS Developer</h5>
-							</div>
-						</div>
 					</div>
 				</div>
 

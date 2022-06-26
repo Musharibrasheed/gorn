@@ -88,6 +88,8 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['roles']], fun
 Route::group(['namespace' => 'App\Http\Controllers', /*'prefix' => 'admin','middleware' => 'roles'*/ ], function() {
     Route::get('/', 'FrontEnd\PageController@index')->name('home_page');
     Route::get('/{name?}', 'FrontEnd\PageController@page')->name('page_view');
+    Route::post('/demo/request/', 'FrontEnd\PageController@demoRequest')->name('demo_request');
+    Route::post('/apply', 'FrontEnd\PageController@applyNow')->name('apply_now');
 });
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['roles']], function () {

@@ -73,9 +73,7 @@ $pageContent->meta_description : meta_description() !!} @stop
 @endpush
 @section('content')
 
-
-
-<div class="for-hero-section-bg">
+<div class="for-hero-section-bg" style="background-image: url({{ isset($pageContent->image) ? asset($pageContent->image) : '' }});">
                 <div class="container-fluid">
                     <div class="container">
                         <div class="row">
@@ -140,7 +138,7 @@ $pageContent->meta_description : meta_description() !!} @stop
                         <div class="col-md-6">
                             <div class="for-About-GORN-section-video">
                                 <div class="for-video-popup-image-secion">
-                                    <img src="assets/images/Do-mobile.png" alt="">
+                                    <img src="{{ isset($page_meta['rd_sec1_image']) ? asset($page_meta['rd_sec1_image']) : '' }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -466,7 +464,7 @@ $pageContent->meta_description : meta_description() !!} @stop
 
                         <div class="col-md-6">
                             <div class="for-Nurses-image-section">
-                                <img src="assets/images/cover-section-img.png" alt="">
+                                <img src="{{ isset($page_meta['rd_sec3_image']) ? asset($page_meta['rd_sec3_image']) : '' }}" alt="">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -526,62 +524,92 @@ $pageContent->meta_description : meta_description() !!} @stop
 
                                             <!-- shadule form start -->
 
+                                            @if (count($errors) > 0)
+                                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                    <div class="error">
+                                                        <ul>
+                                                            @foreach ($errors->all() as $error)
+                                                                <li>{{ $error }}</li>
+                                                            @endforeach
+                                                        </ul>
+                                                    </div>
+                                                 
+                                                </div>
+                                            @endif
+
+                                            @if(session()->has('success'))
+                                                <div class="alert alert-success alert-dismissable custom-success-box" style="margin: 15px;">
+                                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                                    @if(is_array(session()->get('success')))
+                                                        <ul>
+                                                            @foreach (session()->get('success') as $message)
+                                                                <li>{{ $message }}</li>
+                                                            @endforeach
+                                                        </ul>
+                                                    @else
+                                                        {{ session()->get('success') }}
+                                                    @endif
+                                                </div>
+                                            @endif
+
+                                            <form action="{{ route('demo_request') }}" method="post"> 
+                                                @csrf
                                             <div class="center">
                                                 <div class="form-container">
 
                                                     <div class="form form__1">
                                                         <label for="name" class="form__label">First name</label>
-                                                        <input type="text" class="form__input" placeholder=""
-                                                            id="name" required>
+                                                        <input type="text" name="first_name" class="form__input" placeholder=""
+                                                            id="name" >
                                                     </div>
 
                                                     <div class="form form__1">
                                                         <label for="name" class="form__label">Last name</label>
-                                                        <input type="text" class="form__input" placeholder=""
-                                                            id="name" required>
+                                                        <input type="text" name="last_name" class="form__input" placeholder=""
+                                                            id="name" >
                                                     </div>
 
                                                     <div class="form form__3">
                                                         <label for="phone" class="form__label">Phone</label>
-                                                        <input type="tel" class="form__input" placeholder=""
-                                                            id="phone" required
-                                                            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                                                        <input type="tel" name="phone" class="form__input" placeholder=""
+                                                            id="phone" 
+                                                            >
                                                     </div>
 
                                                     <div class="form form__1">
                                                         <label for="name" class="form__label">Facility Name</label>
-                                                        <input type="text" class="form__input" placeholder=""
-                                                            id="name" required>
+                                                        <input type="text" name="facility_name" class="form__input" placeholder=""
+                                                            id="name" >
                                                     </div>
 
                                                     <div class="form form__1">
                                                         <label for="name" class="form__label">Facility
                                                             Address</label>
-                                                        <input type="text" class="form__input" placeholder=""
-                                                            id="name" required>
+                                                        <input type="text" class="form__input" name="facility_add" placeholder=""
+                                                            id="name" >
                                                     </div>
 
                                                     <div class="form form__2">
                                                         <label for="email" class="form__label">Email address</label>
-                                                        <input type="email" class="form__input" placeholder=""
-                                                            id="email" required>
+                                                        <input type="email" name="email" class="form__input" placeholder=""
+                                                            id="email" >
                                                     </div>
 
                                                     <!-- recapcha -->
 
                                                     <!--you can put this line anywhere in the site-->
 
-                                                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                                                    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 
                                                     <!--NOTE THE ACTION IS POINTING TO form-data.com-->
-                                                    <form action="https://api.form-data.com/f/bqtxth46icif4r4ot1p5qn"
+                                                    <!-- <form action="https://api.form-data.com/f/bqtxth46icif4r4ot1p5qn"
                                                         method="post">
 
                                                         <div class="g-recaptcha"
                                                             data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR">
                                                         </div>
 
-                                                    </form>
+                                                    </form> -->
 
                                                     <!-- recapcha end -->
 
@@ -595,7 +623,7 @@ $pageContent->meta_description : meta_description() !!} @stop
 
                                                 </div>
                                             </div>
-
+                                                    </form>
                                             <!-- shadule form start end -->
 
                                         </div>
