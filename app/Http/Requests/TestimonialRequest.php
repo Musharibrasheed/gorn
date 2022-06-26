@@ -28,7 +28,7 @@ class TestimonialRequest extends FormRequest
         $validate_rules['client_name']          =   'required';
         $validate_rules['client_profession']    =   'required';
         $validate_rules['client_comments']      =   'required';
-        $validate_rules['status']               =   'required';
+        // $validate_rules['status']               =   'required';
 
         return $validate_rules;
 

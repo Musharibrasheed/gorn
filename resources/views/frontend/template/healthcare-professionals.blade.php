@@ -57,9 +57,11 @@ $pageContent->meta_description : meta_description() !!} @stop
     <div class="container">
         <div class="row-sec2">
             <div class="column1-sec2">
+                @if( !empty($page_meta['hc_section1_image']) )
                 <div class="col-1-image-sec2">
-                    <img src="assets/images/mobile-sec2.png" alt="" />
+                    <img src="{{ asset($page_meta['hc_section1_image']) }}" alt="" />
                 </div>
+                @endif
                 <div class="col-1-icons sec2">
                     <div class="google-icon-col-1">
                         <a href="#">
@@ -115,9 +117,11 @@ $pageContent->meta_description : meta_description() !!} @stop
                     </div>
 
                     <div class="col-md-6">
+                    @if( !empty($page_meta['hc_section2_image']) )
                         <div class="for-slider-image">
-                            <img src="assets/images/sec3img.png" />
+                            <img src="{{ asset($page_meta['hc_section2_image']) }}" alt="" />
                         </div>
+                    @endif
                     </div>
                 </div>
             </div>
@@ -357,64 +361,32 @@ $pageContent->meta_description : meta_description() !!} @stop
 <!-- section 5 start -->
 
 <div class="section-5-hcare">
-    <div class="container">
-        <div class="content-slider">
-            <h1>Testimonials From Our Clients</h1>
-            <p class="plorem">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing
-            </p>
-            <div class="slider single-item">
-                <div class="slider-1">
-                    <div class="slider-inner">
-                        <h5>Great Quality!</h5>
-                        <p>
+                <div class="container">
+                    <div class="content-slider">
+                        <h1>Testimonials From Our Clients</h1>
+                        <p class="plorem">
                             Lorem ipsum dolor sit amet, consectetuer adipiscing
-                            elit, sed diam nonummy nibh euismod tincidunt ut
-                            laoreet dolore magna aliquam erat volutpat.
                         </p>
-                        <div class="image-avatar">
-                            <img src="assets/images/avatar.png" alt="" />
+                        <div class="slider single-item">
+                            @if( !empty($testimonials) && $testimonials->count() > 0 )
+                                @foreach( $testimonials as $key => $testimonial )
+                                    <div class="slider-1">
+                                        <div class="slider-inner">
+                                            <h5>{{ $testimonial->title ?? '' }}</h5>
+                                            {!! $testimonial->client_comments ?? '' !!}
+                                            <div class="image-avatar">
+                                                <img src="{{ !empty($testimonial->image) ? asset($testimonial->image) : '' }}" alt="" />
+                                            </div>
+                                            <h5>{{ $testimonial->client_name ?? '' }}</h5>
+                                            <p>{{ $testimonial->client_profession ?? '' }}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @endif
                         </div>
-                        <h5>James Nolan</h5>
-                        <p>Consultant</p>
-                    </div>
-                </div>
-
-                <div class="slider-1">
-                    <div class="slider-inner">
-                        <h5>Great Quality!</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing
-                            elit, sed diam nonummy nibh euismod tincidunt ut
-                            laoreet dolore magna aliquam erat volutpat.
-                        </p>
-                        <div class="image-avatar">
-                            <img src="assets/images/avatar.png" alt="" />
-                        </div>
-                        <h5>James Nolan</h5>
-                        <p>Consultant</p>
-                    </div>
-                </div>
-
-                <div class="slider-1">
-                    <div class="slider-inner">
-                        <h5>Great Quality!</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing
-                            elit, sed diam nonummy nibh euismod tincidunt ut
-                            laoreet dolore magna aliquam erat volutpat.
-                        </p>
-                        <div class="image-avatar">
-                            <img src="assets/images/avatar.png" alt="" />
-                        </div>
-                        <h5>James Nolan</h5>
-                        <p>Consultant</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
 
 <!-- section 5 end -->
 
@@ -651,73 +623,43 @@ $pageContent->meta_description : meta_description() !!} @stop
                 </div>
             </div>
             <div class="flx-s7">
+                <?php $first_article = $articles->first(); ?>
+                @if( !empty($articles) && $articles->count() > 0)
                 <div class="content-bx-1">
                     <div class="col-md-6 bx-1">
                         <div class="big-post">
-                            <img src="assets/images/post1.png" />
+                            <img src="{{ $first_article->image ? asset($first_article->image) : '' }}" />
                             <ul>
-                                <li><a href="#">April 10, 2022</a></li>
-                                <li><a href="#">Education</a></li>
-                                <li><a href="#">1 Comment</a></li>
+                                <li><a href="javascript:;">{{ date('M d, Y', strtotime($first_article->created_at) ) }}</a></li>
+                                <!-- <li><a href="#">Education</a></li> -->
+                                <!-- <li><a href="#">1 Comment</a></li> -->
                             </ul>
-                            <h5 class="h5-margin">Attract Sales And Profits</h5>
+                            <h5 class="h5-margin">{{ $first_article->title ?? ''}}</h5>
                         </div>
                     </div>
                 </div>
-
+                @endif
+                @if( !empty($articles) && $articles->count() > 0)
                 <div class="content-bx-2">
                     <div class="col-md-6 bx-3">
                         <div class="row">
+                            @foreach( $articles->skip(1) as $key => $article )
                             <div class="col-md-6">
                                 <div class="mini-post">
-                                    <img src="assets/images/post2.png" />
+                                    <img src="{{ asset($article->image ?? '') }}" />
                                     <ul>
-                                        <li><a href="#">April 10, 2022</a></li>
-                                        <li><a href="#">Education</a></li>
-                                        <li><a href="#">1 Comment</a></li>
+                                        <li><a href="#">{{ date('M d, Y', strtotime($article->created_at) ) }}</a></li>
+                                        <!-- <li><a href="#">Education</a></li> -->
+                                        <!-- <li><a href="#">1 Comment</a></li> -->
                                     </ul>
-                                    <h5>5 Tips For Job Interviews</h5>
+                                    <h5>{{ $article->title ?? ''}}</h5>
                                 </div>
                             </div>
-
-                            <div class="col-md-6">
-                                <div class="mini-post">
-                                    <img src="assets/images/post3.png" />
-                                    <ul>
-                                        <li><a href="#">April 10, 2022</a></li>
-                                        <li><a href="#">Education</a></li>
-                                        <li><a href="#">1 Comment</a></li>
-                                    </ul>
-                                    <h5>The Evening of the Holiday</h5>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="mini-post">
-                                    <img src="assets/images/post4.png" />
-                                    <ul>
-                                        <li><a href="#">April 10, 2022</a></li>
-                                        <li><a href="#">Education</a></li>
-                                        <li><a href="#">1 Comment</a></li>
-                                    </ul>
-                                    <h5>The Modern Art of Coffee</h5>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="mini-post">
-                                    <img src="assets/images/post5.png" />
-                                    <ul>
-                                        <li><a href="#">April 10, 2022</a></li>
-                                        <li><a href="#">Education</a></li>
-                                        <li><a href="#">1 Comment</a></li>
-                                    </ul>
-                                    <h5>HTML, CSS, JS Developer</h5>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
+                @endif
             </div>
             <div class="btn-col-2-sec2 s6-btn">
                 <a href="#">View More</a>

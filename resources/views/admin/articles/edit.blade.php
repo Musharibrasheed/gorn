@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="styled-head">
-                            <h2>@lang('admin/testimonial.update') @lang('admin/testimonial.title')</h2>
+                            <h2>Update Article</h2>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                             @endif
 
 
-                            <form action="{{ route('admin_edit_testimonial_post',['id'=>$testimonial->id ?? 0]) }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('admin_edit_article_post',['id'=>$article->id ?? 0]) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                             <div class="col-sm-8"><!-- col-xl-8 -->
@@ -73,25 +73,7 @@
                                     <div class="col-sm-12">
                                         <div class="field">
                                             <label>Title</label>
-                                            <input type="text" value="{{ old('title',$testimonial->title ?? '') }}" name="title" placeholder="Title" class="form-control form-control-lg" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row form-group">
-                                    <div class="col-sm-12">
-                                        <div class="field">
-                                            <label>@lang('admin/testimonial.name')</label>
-                                            <input type="text" value="{{ old('client_name',$testimonial->client_name ?? '') }}" name="client_name" placeholder="Name here... (Eg: Mark Manson)" class="form-control form-control-lg" />
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="row custom_url form-group" >
-                                    <div class="col-sm-12">
-                                        <div class="field">
-                                            <label>@lang('admin/testimonial.profession')</label>
-                                            <input type="text" value="{{ old('client_profession',$testimonial->client_profession ?? '') }}" name="client_profession" placeholder="Profession here... (Eg: Student)" class="form-control form-control-lg" />
+                                            <input type="text" value="{{ old('title',$article->title ?? '') }}" name="title" placeholder="Title" class="form-control form-control-lg" />
                                         </div>
                                     </div>
                                 </div>
@@ -99,8 +81,8 @@
                                 <div class="row pages form-group" >
                                     <div class="col-sm-12">
                                         <div class="field">
-                                            <label>@lang('admin/testimonial.comments')</label>
-                                            <textarea rows="10" name="client_comments" class="form-control form-control-lg my-editor">{{ old('client_comments',$testimonial->client_comments ?? '') }}</textarea>
+                                            <label>Text</label>
+                                            <textarea rows="10" name="text" class="form-control form-control-lg my-editor">{{ old('text',$article->text ?? '') }}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -109,31 +91,18 @@
                                     <div class="col-sm-12">
                                         <div class="field">
                                             <label>Image</label>
-                                            <input type="text"  id="image" name="image" value="{{ old('image',(isset($testimonial->image) ? asset($testimonial->image) : '') )  }}" class="form-control form-control-lg" />
+                                            <input type="text"  id="image" name="image" value="{{ old('image',(isset($article->image) ? asset($article->image) : '') )  }}" class="form-control form-control-lg" />
                                                 <i class="fa fa-image" aria-hidden="true" id="lfm-image" data-input="image" data-preview="holder"></i>
                                         </div>
                                     </div>
                                 </div>
                                  
-
-                                <!-- <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="field">
-                                            <label>@lang('admin/testimonial.status')</label>
-                                            <select name="status" class="form-control form-control-lg">
-                                                <option value="Active" @if( $testimonial->status == "Active" ) selected="selected" @endif>@lang('admin/testimonial.active')</option>
-                                                <option value="Inactive" @if( $testimonial->status == "Inactive" ) selected="selected" @endif>@lang('admin/testimonial.inactive')</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div> -->
-
                                 <div class="row field form-group">
                                     <div class="col-sm-3">
-                                        <a href="{{ route('admin_testimonials') }}" class="btn btn-block btn-primary">@lang('admin/testimonial.cancel')</a>
+                                        <a href="{{ route('admin_articles') }}" class="btn btn-block btn-primary">Cancel</a>
                                     </div>
                                     <div class="col-sm-3">
-                                       <input type="submit" class="btn btn-block btn-primary" value="@lang('admin/testimonial.update')">
+                                       <input type="submit" class="btn btn-block btn-primary" value="Update">
                                     </div>
                                 </div>
                             </div>

@@ -1,15 +1,15 @@
 @extends('admin.master')
 
 @section('page-title')
-    {!! isset($pageContent->meta_title) ? $pageContent->meta_title : meta_title() !!}
+    {!! isset($pageContent->meta_title) ? $pageContent->meta_title : 'Link Meeting' !!}
 @stop
 
 @section('meta-keywords')
-    {!! isset($pageContent->meta_keywords) ? $pageContent->meta_keywords : meta_keywords() !!}
+    {!! isset($pageContent->meta_keywords) ? $pageContent->meta_keywords : 'Link Meeting' !!}
 @stop
 
 @section('meta-description')
-    {!! isset($pageContent->meta_description) ? $pageContent->meta_description : meta_description() !!}
+    {!! isset($pageContent->meta_description) ? $pageContent->meta_description : 'Link Meeting' !!}
 @stop
 @section('header-scripts')
     <link href="{{ asset('tinymce/skins/lightgray/skin.min.css') }}" type="text/css" rel="stylesheet" />
@@ -68,6 +68,15 @@
                             @csrf
                             <div class="row">
                             <div class="col-sm-8"><!-- col-xl-8 -->
+                                
+                                <div class="row form-group">
+                                    <div class="col-sm-12">
+                                        <div class="field">
+                                            <label>Title</label>
+                                            <input type="text" value="{{ old('title') }}" name="title" placeholder="Title" class="form-control form-control-lg" />
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <div class="row form-group">
                                     <div class="col-sm-12">
@@ -95,9 +104,19 @@
                                         </div>
                                     </div>
                                 </div>
+                                
+                                <div class="row pages form-group" >
+                                    <div class="col-sm-12">
+                                        <div class="field">
+                                            <label>Image</label>
+                                            <input type="text"  id="image" name="image" value="{{ old('image')  }}" class="form-control form-control-lg" />
+                                                <i class="fa fa-image" aria-hidden="true" id="lfm-image" data-input="image" data-preview="holder"></i>
+                                        </div>
+                                    </div>
+                                </div>
                                  
 
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-sm-12">
                                         <div class="field">
                                             <label>@lang('admin/testimonial.comments')</label>
@@ -107,7 +126,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="row field form-group">
                                     <div class="col-sm-3">
@@ -194,36 +213,8 @@
     <script>
         var route_prefix = "{{ url('laravel-filemanager') }}";
         
-        $('#lfm').filemanager('image', {prefix: route_prefix});
+        $('#lfm-image').filemanager('image', {prefix: route_prefix});
 
-        $(document).ready(function(){
-            $('.template_attributes').hide();
-            var check_template = $('.template_trigger').val();
-            if(check_template)
-            {
-                var template_class          = '.'+check_template + 'template';
-                var template_attributes     = $( template_class ).length;
-                if(template_attributes)
-                {
-                    $(template_class).show();
-                }
-            }
-
-            $('.template_trigger').on('change',function(){
-
-                var template                = $(this).val();
-                var template_class          = '.'+template + 'template';
-                var template_attributes     = $( template_class ).length;
-
-                $('.template_attributes').hide();
-
-                if(template_attributes)
-                {
-                    $(template_class).show();
-                }
-
-            })
-        })
     </script>
 @endsection
 

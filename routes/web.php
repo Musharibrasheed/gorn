@@ -56,6 +56,24 @@ Route::group(['namespace' => 'App\Http\Controllers','prefix' => 'admin','middlew
     Route::get('/manage/user/edit/{id}', 'Admin\UserManagementController@edit')->name('admin_edit_user');
     Route::post('/manage/user/edit/{id}', 'Admin\UserManagementController@update')->name('admin_post_edit_user');
 
+    /* Testimonials*/
+    Route::get('/testimonials/', 'Admin\TestimonialsController@index')->name('admin_testimonials');
+    Route::get('/testimonials/create/', 'Admin\TestimonialsController@add')->name('admin_add_testimonial');
+    Route::post('/testimonials/create/', 'Admin\TestimonialsController@addProcess')->name('admin_add_testimonial_post');
+    Route::get('/testimonials/edit/{id}', 'Admin\TestimonialsController@edit')->name('admin_edit_testimonial');
+    Route::post('/testimonials/{id}', 'Admin\TestimonialsController@editProcess')->name('admin_edit_testimonial_post');
+    Route::get('/testimonials/delete/{id}', 'Admin\TestimonialsController@delete')->name('admin_testimonial_delete');
+    Route::get('/testimonials/data/', 'Admin\TestimonialsController@getData')->name('admin_testimonials_data');
+
+    /* Articles */
+    Route::get('/articles/', 'Admin\ArticlesController@index')->name('admin_articles');
+    Route::get('/articles/create/', 'Admin\ArticlesController@add')->name('admin_add_article');
+    Route::post('/articles/create/', 'Admin\ArticlesController@addProcess')->name('admin_add_article_post');
+    Route::get('/articles/edit/{id}', 'Admin\ArticlesController@edit')->name('admin_edit_article');
+    Route::post('/articles/{id}', 'Admin\ArticlesController@editProcess')->name('admin_edit_article_post');
+    Route::get('/articles/delete/{id}', 'Admin\ArticlesController@delete')->name('admin_article_delete');
+    Route::get('/articles/data/', 'Admin\ArticlesController@getData')->name('admin_articles_data');
+
 });
 
 //AccessForbidden Page

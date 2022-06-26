@@ -203,8 +203,10 @@ class PageRepository  extends AbstractRepository
         if($data->template == 'healthcare-professionals')
         {
             $template_content['hc_sec1_heading'] = $data->hc_sec1_heading;
+            $template_content['hc_section1_image'] = str_replace( env('APP_URL').'/','',$data->hc_section1_image);
             $template_content['hc_sec1_text']    = $data->hc_sec1_text;
             
+            $template_content['hc_section2_image'] = str_replace( env('APP_URL').'/','',$data->hc_section2_image);;
             $template_content['hc_sec2_tagline'] = $data->hc_sec2_tagline;
             $template_content['hc_sec2_heading']    = $data->hc_sec2_heading;
             $template_content['hc_sec2_text']    = $data->hc_sec2_text;

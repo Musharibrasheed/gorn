@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\PageRequest;
 use App\Models\Repositories\PageRepository;
+use App\Models\Repositories\TestimonialsRepository;
+use App\Models\Repositories\ArticlesRepository;
 use Illuminate\Support\Str;
 use Yajra\DataTables\DataTables;
 
@@ -13,12 +15,18 @@ use Yajra\DataTables\DataTables;
 class PageController extends Controller
 {
     protected $page;
+    protected $testimonials;
+    protected $articles;
    
     public function __construct(
-        PageRepository          $page
+        PageRepository  $page,
+        TestimonialsRepository  $testimonials,
+        ArticlesRepository  $articles
         )
     {
         $this->page         = $page;
+        $this->testimonials = $testimonials;
+        $this->articles     = $articles;
     }
 
     /**
@@ -26,15 +34,18 @@ class PageController extends Controller
      *
      * @return View
      */
-    public function index()
+    public function index(TestimonialsRepository $testimonials, ArticlesRepository $articles)
         {
             $language_id    =   1;
             $home_page      =   $this->page->getByCol('home','slug');
             $page_meta      =   '';
-
+            $testimonials      =   '';
+            
             if($home_page)
             {
                 $pageContent    =   $this->page->getFrontPageBySlug($home_page->slug);
+                $testimonials    =   $this->testimonials->all();
+                // dd($testimonials->toArray());
                 // $page_meta      =   $pageContent->template_content ? unserialize( $pageContent->template_content) : '';
                 if( !empty($pageContent->template_content) ) {
                     $page_meta = $pageContent->template_content = preg_replace_callback('!s:\d+:"(.*?)";!s', 
@@ -47,7 +58,7 @@ class PageController extends Controller
  
                 if($pageContent)
                 {
-                    return view('frontend.template.'.$home_page->slug,compact('pageContent','page_meta'));
+                    return view('frontend.template.'.$home_page->slug,compact('pageContent','page_meta','testimonials'));
                 }
                 else
                     return page_404();
@@ -56,14 +67,18 @@ class PageController extends Controller
                 return page_404();
         }
 
-    public function page($slug)
+    public function page(TestimonialsRepository $testimonials, ArticlesRepository $articles, $slug)
     {
         $data       =   array();
         $template   =   'default';
         $page_meta  =   '';
+        $testimonials      =   '';
+        $articles     =   '';
         $pageContent    =   $this->page->getFrontPageBySlug($slug);
         // $page_meta      =   $pageContent->template_content ? unserialize( urldecode($pageContent->template_content)) : '';
         if( !empty($pageContent->template_content) ) {
+            $testimonials    =   $this->testimonials->all();
+            $articles       =   $this->articles->all();
             $page_meta = $pageContent->template_content = preg_replace_callback('!s:\d+:"(.*?)";!s', 
                 function($m) {
                     return "s:" . strlen($m[1]) . ':"'.$m[1].'";'; 
@@ -75,7 +90,7 @@ class PageController extends Controller
         if( $pageContent )
         {
             $template = $pageContent->template;
-            return view('frontend.template.'.$template,compact('pageContent','page_meta'));
+            return view('frontend.template.'.$template,compact('pageContent','page_meta','testimonials','articles'));
         } else {
             return page_404();
         }

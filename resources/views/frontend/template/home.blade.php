@@ -338,53 +338,21 @@
                             Lorem ipsum dolor sit amet, consectetuer adipiscing
                         </p>
                         <div class="slider single-item">
-                            <div class="slider-1">
-                                <div class="slider-inner">
-                                    <h5>Great Quality!</h5>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                        aliquam erat volutpat.
-                                    </p>
-                                    <div class="image-avatar">
-                                        <img src="assets/images/avatar.png" alt="" />
+                            @if( !empty($testimonials) && $testimonials->count() > 0 )
+                                @foreach( $testimonials as $key => $testimonial )
+                                    <div class="slider-1">
+                                        <div class="slider-inner">
+                                            <h5>{{ $testimonial->title ?? '' }}</h5>
+                                            {!! $testimonial->client_comments ?? '' !!}
+                                            <div class="image-avatar">
+                                                <img src="{{ !empty($testimonial->image) ? asset($testimonial->image) : '' }}" alt="" />
+                                            </div>
+                                            <h5>{{ $testimonial->client_name ?? '' }}</h5>
+                                            <p>{{ $testimonial->client_profession ?? '' }}</p>
+                                        </div>
                                     </div>
-                                    <h5>James Nolan</h5>
-                                    <p>Consultant</p>
-                                </div>
-                            </div>
-
-                            <div class="slider-1">
-                                <div class="slider-inner">
-                                    <h5>Great Quality!</h5>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                        aliquam erat volutpat.
-                                    </p>
-                                    <div class="image-avatar">
-                                        <img src="assets/images/avatar.png" alt="" />
-                                    </div>
-                                    <h5>James Nolan</h5>
-                                    <p>Consultant</p>
-                                </div>
-                            </div>
-
-                            <div class="slider-1">
-                                <div class="slider-inner">
-                                    <h5>Great Quality!</h5>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                                        aliquam erat volutpat.
-                                    </p>
-                                    <div class="image-avatar">
-                                        <img src="assets/images/avatar.png" alt="" />
-                                    </div>
-                                    <h5>James Nolan</h5>
-                                    <p>Consultant</p>
-                                </div>
-                            </div>
+                                @endforeach
+                            @endif
                         </div>
                     </div>
                 </div>

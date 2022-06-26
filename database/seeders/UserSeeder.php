@@ -29,7 +29,26 @@ class UserSeeder extends Seeder
             //users
             'admin_edit_user'  => true,
             'admin_post_edit_user'  => true,
-        
+
+            //testimonials
+            'admin_testimonials'  => true,
+            'admin_add_testimonial'  => true,
+            'admin_add_testimonial_post'  => true,
+            'admin_edit_testimonial'  => true,
+            'admin_edit_testimonial_post'  => true,
+            'admin_testimonial_delete'  => true,
+            'admin_testimonials_data'  => true,
+
+            //articles
+            'admin_articles'  => true,
+            'admin_add_article'  => true,
+            'admin_add_article_post'  => true,
+            'admin_edit_article'  => true,
+            'admin_edit_article_post'  => true,
+            'admin_article_delete'  => true,
+            'admin_articles_data'  => true,
+
+
             //filemanager
             'unisharp.lfm.*'        => true,
         );

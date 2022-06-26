@@ -230,8 +230,15 @@
 
                                 <!-- healthcare professionals -->
                                 <div class="row healthcare-professionalstemplate template_attributes">
+
+                                
                                     <div class="col-sm-12 form-group">
                                         <h3>Section 1</h3>
+                                        <div class="field form-group">
+                                            <label>Image</label>
+                                            <input type="text"  id="thum-section1" name="hc_section1_image" value="{{ old('hc_section1_image',(isset($page_meta['hc_section1_image']) ? asset($page_meta['hc_section1_image']) : '') )  }}" class="form-control form-control-lg" />
+                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm-sec1" data-input="thum-section1" data-preview="holder"></i>
+                                        </div>
                                         <div class="field form-group">
                                             <input type="text" value="{{ old('hc_sec1_heading',$page_meta['hc_sec1_heading'] ?? '') }}" name="hc_sec1_heading" placeholder="Heading..." class="form-control form-control-lg" />
                                         </div>
@@ -245,6 +252,11 @@
 
                                     <div class="col-sm-12 form-group">
                                         <h3>Section 2</h3>                        
+                                        <div class="field form-group">
+                                            <label>Image</label>
+                                            <input type="text"  id="thumbnail-sec2" name="hc_section2_image" value="{{ old('hc_section2_image',(isset($page_meta['hc_section2_image']) ? asset($page_meta['hc_section2_image']) : '') )  }}" class="form-control form-control-lg" />
+                                                <i class="fa fa-image lfm" aria-hidden="true" id="lfm-sec2" data-input="thumbnail-sec2" data-preview="holder"></i>
+                                        </div>                              
                                         <div class="field form-group">
                                             <label>Tag Line</label>
                                             <input type="text" value="{{ old('hc_sec2_tagline',$page_meta['hc_sec2_tagline'] ?? '') }}" name="hc_sec2_tagline" placeholder="Heading..." class="form-control form-control-lg" />
