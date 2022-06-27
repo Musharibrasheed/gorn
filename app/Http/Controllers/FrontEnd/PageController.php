@@ -131,6 +131,7 @@ class PageController extends Controller
 
     public function demoRequest(DemoRequest $request)
     {
+     
         $data = array(
                 'toemail'=> env('ADMIN_EMAIL'),'toname'=> env('ADMIN_EMAIL'),
                 'fromemail'=> $request->email,'fromname'=> $request->first_name.' '.$request->last_name ?? '',
@@ -146,9 +147,14 @@ class PageController extends Controller
 
     public function applyNow(ApplyNowRequest $request)
     {
+        // echo '1111';
+        // echo env('ADMIN_EMAIL');
+        // echo '2222';
+        // exit;
         $path = public_path('uploads/files');
         $attachment = $request->file('filename');
-
+        $filename = '';
+        if( !empty($attachment) ) {
         // dd($request->all());
         $name = time().'.'.$attachment->getClientOriginalExtension();;
 
@@ -159,6 +165,7 @@ class PageController extends Controller
         $attachment->move($path, $name);
 
         $filename = $path.'/'.$name;
+        }
 
         $data = array(
                 'toemail'=> env('ADMIN_EMAIL'),'toname'=> env('ADMIN_EMAIL'),

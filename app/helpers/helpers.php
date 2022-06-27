@@ -256,14 +256,15 @@ if (!function_exists('sendEmail')) {
         $fromname = $emaildata['fromname'];
         $emailSubject = $emaildata['emailSubject'];
         $emailContent = $emaildata['emailContent'];
-        $file = $emaildata['attachment'];
+        $file = !empty($emaildata['attachment']) ? $emaildata['attachment'] : '' ;
         $emailContent['type'] = $emaildata['type'];
         // echo 'this';dd($emailContent);
       Mail::send('emails.emailbase', ['emailContent' => $emailContent], function ($m) use ($toemail, $toname, $fromemail, $emailSubject, $fromname, $file) {
             $m->to($toemail, $toname);
             $m->from($fromemail, $fromname);
             $m->subject($emailSubject);
-            $m->attach($file);
+            if( !empty($file) )
+                $m->attach($file);
         });
     }
 
