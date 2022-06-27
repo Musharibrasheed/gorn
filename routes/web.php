@@ -53,6 +53,8 @@ Route::group(['namespace' => 'App\Http\Controllers','prefix' => 'admin','middlew
     Route::get('page/edit/{id}', 'Admin\PageController@edit')->name('admin_page_update');
     Route::post('page/{id}', 'Admin\PageController@editProcess')->name('admin_page_update_post');
     Route::get('page/delete/{id}', 'Admin\PageController@delete')->name('admin_page_delete');
+    Route::get('/apply-now/', 'Admin\PageController@applyNow')->name('admin_apply_now');
+    Route::get('/apply-now/data', 'Admin\PageController@getApplyNowData')->name('admin_apply_now_data');
 
 
 

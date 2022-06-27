@@ -32,6 +32,8 @@ class UserSeeder extends Seeder
             'admin_post_update'       => true,
             'admin_post_update_post'       => true,
             'admin_post_delete'       => true,
+            'admin_apply_now'       => true,
+            'admin_apply_now_data'       => true,
 
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\PageRequest;
+use App\Models\ApplyNow;
 use App\Models\Repositories\PageRepository;
 use Illuminate\Support\Str;
 use File;
@@ -142,5 +143,29 @@ class PageController extends Controller
         {
             back()->withInput()->with('error','Ops Something went wrong!');
         }
+    }
+
+    public function applyNow()
+    {
+        return View('admin.page.apply-now');
+    }
+
+    public function getApplyNowData()
+    {
+        $pages = ApplyNow::all();
+        return Datatables::of($pages)
+            // ->editColumn('first_name','<a target="_blank" href="{{ URL::to( ($slug == "home") ? "/" : $slug ) }}">{{ URL::to( ($slug == "home") ? "/" : $slug ) }}</a>')
+            // ->editColumn('status','@if($status == "Active")
+                                // Enable
+                            // @else
+                                // Disable
+                            // @endif')
+            // ->editColumn('created_at','{{ date("M d Y",strtotime($created_at)) }}')
+            // ->addColumn('actions',function($pages){
+            //     return '<a class="tab-btn edit" href="'. route("admin_page_update", ["id"=>$pages->id]) .'"><i class="fa fa-edit" aria-hidden="true"></i></a>
+            //                         <a class="trigger_popup_fricc tab-btn delete" href="javascript:;" data-href="'. route("admin_page_delete", ["id"=>$pages->id]) .'"><i class="fa fa-trash" aria-hidden="true"></i></a>';
+            // })
+            // ->rawColumns(['slug','actions'])
+            ->make(true);
     }
 }

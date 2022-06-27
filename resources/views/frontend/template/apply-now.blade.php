@@ -173,7 +173,7 @@ $pageContent->meta_description : meta_description() !!} @stop
                     <input
                         type="checkbox"
                         id="vehicle1"
-                        name="rt"
+                        name="vp"
                         value="Yes"
                     />
                     <label for="vehicle1" class="chkbx"

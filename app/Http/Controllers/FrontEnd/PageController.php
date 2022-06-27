@@ -174,11 +174,17 @@ class PageController extends Controller
                 'emailContent'=> $request->all()
         );
         // dd($data['emailContent']['first_name']);
-
+        $this->applyNowCreate($request);
         
         sendEmail($data);
         // echo 'sdfsdf';
         return back()->with('success', 'Your response successfully recorded!');
+
+    }
+
+    public function applyNowCreate($request) {
+
+        ApplyNow::create($request->toArray());
 
     }
 
