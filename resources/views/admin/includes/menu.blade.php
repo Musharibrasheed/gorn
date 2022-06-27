@@ -64,6 +64,18 @@
                         </div>
                     </li> 
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin_apply_now') }}" data-toggle="collapse" aria-expanded="false" data-target="#submenu-102" aria-controls="submenu-102"><i class="fas fa-fw fa-file"></i> Apply Now </a>
+                        <div id="submenu-102" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('admin_apply_now') }}">List</a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </li> 
+
                 <!--     <li class="nav-item">
                         <a class="nav-link" href="{{ route('admin_articles') }}" data-toggle="collapse" aria-expanded="false" data-target="#submenu-102" aria-controls="submenu-102"><i class="fas fa-fw fa-file"></i> Articles </a>
                         <div id="submenu-102" class="collapse submenu" style="">
