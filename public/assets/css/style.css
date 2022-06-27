@@ -987,7 +987,18 @@ a.hvr-sweep-to-bottom {
   padding: 218px 0px;
   margin-top: -100px;
 }
-
+.all-nav li {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 0px !important;
+    color: #fff;
+}
+.all-nav-two li {
+    list-style: none;
+    margin-left: 0 !important;
+    margin-top: 0px !important;
+    color: #fff;
+}
 .for-hero-section-content {
   text-align: center;
   color: #fff;

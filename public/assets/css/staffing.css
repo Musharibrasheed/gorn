@@ -40,6 +40,10 @@ i.fa-solid.fa-hand-pointer {
     font-size: 50px;
     
 }
+.Healthcare-suffering {
+    margin: 0 auto;
+    width: 70%;
+}
 
 .suffering-solution h1
 {
@@ -1690,17 +1694,17 @@ ul.all-nav li a {
 }
 
 .all-nav li {
-  list-style: none;
-  margin-left: 0;
-  margin-top: 15px;
-  color: #fff;
+    list-style: none;
+    margin-left: 0;
+    margin-top: 0;
+    color: #fff;
 }
 
 .all-nav-two li {
-  list-style: none;
-  margin-left: -30px;
-  margin-top: 13px;
-  color: #fff;
+    list-style: none;
+    margin-left: 0;
+    margin-top: 22px;
+    color: #fff;
 }
 
 ul.all-nav-two {
@@ -2141,7 +2145,7 @@ a.for-icon-box-a {
 @media (max-width: 767px){
   .hover-1 img {
   width: 100%;
-  position: absolute;
+  position: absolute; 
   top: 0;
   left: 0;
   transition: all 0.3s;

@@ -623,12 +623,28 @@ $pageContent->meta_description : meta_description() !!} @stop
                 </div>
             </div>
             <div class="flx-s7">
-                <?php $first_article = $articles->first(); ?>
-                @if( !empty($articles) && $articles->count() > 0)
+                <?php 
+
+                $first_article = $posts->first(); 
+      
+                   
+                   $first_post_image="";     
+
+                foreach($posts as $key => $first_post)
+                {
+
+                    $first_post_image= $first_post->page_video;
+                    break;
+                }
+
+                ?>
+                @if( !empty($posts) && $posts->count() > 0)
                 <div class="content-bx-1">
                     <div class="col-md-6 bx-1">
                         <div class="big-post">
-                            <img src="{{ $first_article->image ? asset($first_article->image) : '' }}" />
+                            <a href="https://dev.appearls.com/appear/public/article/{{ $first_article->slug  }}">
+                            <img src="{{ $first_post_image ? asset($first_post_image) : '' }}" />
+                        </a>
                             <ul>
                                 <li><a href="javascript:;">{{ date('M d, Y', strtotime($first_article->created_at) ) }}</a></li>
                                 <!-- <li><a href="#">Education</a></li> -->
@@ -639,16 +655,16 @@ $pageContent->meta_description : meta_description() !!} @stop
                     </div>
                 </div>
                 @endif
-                @if( !empty($articles) && $articles->count() > 0)
+                @if( !empty($posts) && $posts->count() > 0)
                 <div class="content-bx-2">
                     <div class="col-md-6 bx-3">
                         <div class="row">
-                            @foreach( $articles->skip(1) as $key => $article )
+                            @foreach( $posts->skip(1) as $key => $article )
                             <div class="col-md-6">
                                 <div class="mini-post">
-                                    <img src="{{ asset($article->image ?? '') }}" />
+                                    <a href="https://dev.appearls.com/appear/public/article/{{ $article->slug  }}"><img src="{{ asset($article->page_video ?? '') }}" /></a>
                                     <ul>
-                                        <li><a href="#">{{ date('M d, Y', strtotime($article->created_at) ) }}</a></li>
+                                        <li><a href="https://dev.appearls.com/appear/public/article/{{ $article->slug  }}">{{ date('M d, Y', strtotime($article->created_at) ) }}</a></li>
                                         <!-- <li><a href="#">Education</a></li> -->
                                         <!-- <li><a href="#">1 Comment</a></li> -->
                                     </ul>
@@ -662,7 +678,7 @@ $pageContent->meta_description : meta_description() !!} @stop
                 @endif
             </div>
             <div class="btn-col-2-sec2 s6-btn">
-                <a href="#">View More</a>
+                <a href="https://dev.appearls.com/appear/public/showarticles">View More</a>
             </div>
         </div>
     </div>

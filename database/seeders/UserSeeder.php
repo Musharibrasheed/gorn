@@ -23,6 +23,19 @@ class UserSeeder extends Seeder
             'admin_page_update'       => true,
             'admin_page_update_post'       => true,
             'admin_page_delete'       => true,
+
+
+            'admin_posts'       => true,
+            'admin_posts_data'       => true,
+            'admin_post_add'       => true,
+            'admin_post_add_post'       => true,
+            'admin_post_update'       => true,
+            'admin_post_update_post'       => true,
+            'admin_post_delete'       => true,
+
+
+
+
             'admin_dashboard'       => true,
             'site_settings'         => true,
             'site_settings_update'  => true,

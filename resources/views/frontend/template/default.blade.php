@@ -41,6 +41,25 @@ $pageContent->meta_description : meta_description() !!} @stop
 </div>
 
 
+<section class="hero-second-sec2">
+    <div class="container">
+        <div class="row mission-sec">
+          
+
+            <div class="col-md-6">
+                <div class="about-gorn-sec">
+          
+
+                    <?php echo $pageContent->content; ?>
+                    
+                 
+
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 @section('footer_script')

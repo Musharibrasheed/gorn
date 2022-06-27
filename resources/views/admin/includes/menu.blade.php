@@ -30,6 +30,26 @@
                         </div>
                     </li> 
 
+
+
+                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin_posts') }}" data-toggle="collapse" aria-expanded="false" data-target="#submenu-103" aria-controls="submenu-1"><i class="fas fa-fw fa-file"></i> Posts </a>
+                        <div id="submenu-103" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('admin_posts') }}">List</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('admin_post_add') }}">Add New</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li> 
+
+
+
+
+
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('admin_testimonials') }}" data-toggle="collapse" aria-expanded="false" data-target="#submenu-101" aria-controls="submenu-101"><i class="fas fa-fw fa-file"></i> Testimonials </a>
                         <div id="submenu-101" class="collapse submenu" style="">
@@ -44,7 +64,7 @@
                         </div>
                     </li> 
 
-                    <li class="nav-item">
+                <!--     <li class="nav-item">
                         <a class="nav-link" href="{{ route('admin_articles') }}" data-toggle="collapse" aria-expanded="false" data-target="#submenu-102" aria-controls="submenu-102"><i class="fas fa-fw fa-file"></i> Articles </a>
                         <div id="submenu-102" class="collapse submenu" style="">
                             <ul class="nav flex-column">
@@ -56,7 +76,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </li> 
+                    </li>  -->
 
                    
 

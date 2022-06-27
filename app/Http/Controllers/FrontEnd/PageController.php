@@ -8,6 +8,8 @@ use App\Http\Requests\PageRequest;
 use App\Http\Requests\DemoRequest;
 use App\Http\Requests\ApplyNowRequest;
 use App\Models\Repositories\PageRepository;
+use App\Models\Repositories\PostRepository;
+use App\Models\PostDescription;
 use App\Models\Repositories\TestimonialsRepository;
 use App\Models\Repositories\ArticlesRepository;
 use Illuminate\Support\Str;
@@ -19,16 +21,20 @@ class PageController extends Controller
     protected $page;
     protected $testimonials;
     protected $articles;
+    protected $posts;
    
     public function __construct(
         PageRepository  $page,
         TestimonialsRepository  $testimonials,
-        ArticlesRepository  $articles
+        ArticlesRepository  $articles,
+        PostRepository  $posts
+
         )
     {
         $this->page         = $page;
         $this->testimonials = $testimonials;
         $this->articles     = $articles;
+        $this->posts     = $posts;
     }
 
     /**
@@ -76,11 +82,13 @@ class PageController extends Controller
         $page_meta  =   '';
         $testimonials      =   '';
         $articles     =   '';
+        $posts     =   '';
         $pageContent    =   $this->page->getFrontPageBySlug($slug);
         // $page_meta      =   $pageContent->template_content ? unserialize( urldecode($pageContent->template_content)) : '';
         if( !empty($pageContent->template_content) ) {
             $testimonials    =   $this->testimonials->all();
             $articles       =   $this->articles->all();
+            $posts       =   $this->posts->all();
             $page_meta = $pageContent->template_content = preg_replace_callback('!s:\d+:"(.*?)";!s', 
                 function($m) {
                     return "s:" . strlen($m[1]) . ':"'.$m[1].'";'; 
@@ -89,10 +97,13 @@ class PageController extends Controller
             $page_meta = $pageContent->template_content ? unserialize( $page_meta ) : '';
         }
         
+
+
+
         if( $pageContent )
         {
             $template = $pageContent->template;
-            return view('frontend.template.'.$template,compact('pageContent','page_meta','testimonials','articles'));
+            return view('frontend.template.'.$template,compact('pageContent','page_meta','testimonials','articles','posts'));
         } else {
             return page_404();
         }

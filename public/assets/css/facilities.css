@@ -1129,10 +1129,10 @@ ul {
     padding: 0px;
 }
 
-ul.all-nav li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 14px;
+ul.all-nav {
+    padding: 0;
+    margin: 0;
+
 }
 
 .all-nav li {
@@ -1314,9 +1314,8 @@ a.hvr-sweep-to-bottom {
 }
 
 .container-fuild.bg-color .logo img {
-    width: 42%;
+    width: 95%;
 }
-
 .logo {
     color: #fff;
     font-size: 1.5rem;

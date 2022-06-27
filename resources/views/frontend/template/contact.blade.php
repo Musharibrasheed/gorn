@@ -39,6 +39,7 @@ $pageContent->meta_description : meta_description() !!} @stop
 </div>
 
 <div class="container-fluid">
+  <div class="container">
 	<div class="row">
 		<div class="col-md-5 purple">
 			<div class="contact-info">
@@ -93,6 +94,7 @@ $pageContent->meta_description : meta_description() !!} @stop
 </ul>
 </div>
 </form>
+</div>
 </div>
 </div>
 </div>

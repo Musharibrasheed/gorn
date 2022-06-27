@@ -68,7 +68,7 @@ $pageContent->meta_description : meta_description() !!} @stop
 
                                                 <div class="contant-main-icon-box">
                                                     <div class="for-icon-box-heading">
-                                                        <h6 class="for-icon-box-h6">>{{ $page_meta['staff_sec1_bx1_heading'] ?? '' }}</h6>
+                                                        <h6 class="for-icon-box-h6">{{ $page_meta['staff_sec1_bx1_heading'] ?? '' }}</h6>
                                                     </div>
                                                     <div class="for-icon-box-pera">
                                                         <p class="for-icon-box-p">{{ $page_meta['staff_sec1_bx1_text'] ? strip_tags($page_meta['staff_sec1_bx1_text']) : '' }}</p>
@@ -112,7 +112,7 @@ $pageContent->meta_description : meta_description() !!} @stop
 
                                                 <div class="contant-main-icon-box">
                                                     <div class="for-icon-box-heading">
-                                                        <h6 class="for-icon-box-h6">>{{ $page_meta['staff_sec1_bx2_heading'] ?? '' }}</h6>
+                                                        <h6 class="for-icon-box-h6">{{ $page_meta['staff_sec1_bx2_heading'] ?? '' }}</h6>
                                                     </div>
                                                     <div class="for-icon-box-pera">
                                                         <p class="for-icon-box-p">{{ $page_meta['staff_sec1_bx2_text'] ? strip_tags($page_meta['staff_sec1_bx2_text']) : '' }}</p>
@@ -247,10 +247,10 @@ $pageContent->meta_description : meta_description() !!} @stop
 
 <!-- Analytics -->
 
-<div class="container-fuild bg-last">
+<div class="container-fuild d-flex">
 	
 	<div class="container">
-		<div class="row" style="align-items: center;">
+		<div class="row" >
 		<div class="col-md-6">
 			<div class="main-analytics">
 			<div class="analytics">

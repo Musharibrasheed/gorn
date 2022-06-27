@@ -25,7 +25,18 @@
     color: #fff;
     padding: 150px 0;
 }
-
+.for-hero-section-content {
+    text-align: center;
+    color: #fff;
+    width: 70%;
+    margin: 0 auto;
+}
+p.for-hero-section-p {
+    font-size: 17px;
+    font-weight: normal;
+    width: 100%;
+    margin: auto;
+}
 .content-hcare-1 h1 {
     font-size: 60px;
     font-weight: 600;
@@ -75,7 +86,8 @@
 }
 
 .col-1-image-sec2 img {
-    width: 100%;
+    width: 97%;
+    height: 75%;
 }
 
 .column2-sec2 {
@@ -1333,7 +1345,7 @@ li.nav-item select {
 }
 
 .footer-logo img {
-    width: 38%;
+    width: 95%;
 }
 
 a.nav-link:hover {

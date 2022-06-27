@@ -31,6 +31,8 @@ Route::get('login', 'App\Http\Controllers\AuthController@getSignin')->name('logi
 Route::get('logout', 'App\Http\Controllers\AuthController@logout')->name('logout');
 Route::post('login', 'App\Http\Controllers\AuthController@postSignin')->name('login_post');
 
+Route::get('/showarticles/', 'App\Http\Controllers\FrontEnd\PostController@showarticles')->name('show_articles');
+
 Route::group(['namespace' => 'App\Http\Controllers'], function() {
     Route::post('/add/user', 'FrontEnd\RegistrationController@addUser')->name('add_user');
 });
@@ -51,6 +53,26 @@ Route::group(['namespace' => 'App\Http\Controllers','prefix' => 'admin','middlew
     Route::get('page/edit/{id}', 'Admin\PageController@edit')->name('admin_page_update');
     Route::post('page/{id}', 'Admin\PageController@editProcess')->name('admin_page_update_post');
     Route::get('page/delete/{id}', 'Admin\PageController@delete')->name('admin_page_delete');
+
+
+
+
+
+
+    //Post Route
+
+        /* Page Routes */
+    Route::get('posts', 'Admin\PostController@index')->name('admin_posts');
+    Route::get('posts/data', 'Admin\PostController@getData')->name('admin_posts_data');
+    Route::get('posts/create', 'Admin\PostController@add')->name('admin_post_add');
+    Route::post('posts/create', 'Admin\PostController@addProcess')->name('admin_post_add_post');
+    Route::get('posts/edit/{id}', 'Admin\PostController@edit')->name('admin_post_update');
+    Route::post('posts/{id}', 'Admin\PostController@editProcess')->name('admin_post_update_post');
+    Route::get('posts/delete/{id}', 'Admin\PostController@delete')->name('admin_post_delete');
+
+
+
+ 
 
     /*users*/
     Route::get('/manage/user/edit/{id}', 'Admin\UserManagementController@edit')->name('admin_edit_user');
@@ -88,9 +110,18 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['roles']], fun
 Route::group(['namespace' => 'App\Http\Controllers', /*'prefix' => 'admin','middleware' => 'roles'*/ ], function() {
     Route::get('/', 'FrontEnd\PageController@index')->name('home_page');
     Route::get('/{name?}', 'FrontEnd\PageController@page')->name('page_view');
+
+
+    Route::get('/article/{name?}', 'FrontEnd\PostController@page')->name('post_view');
+
+   
+
+
     Route::post('/demo/request/', 'FrontEnd\PageController@demoRequest')->name('demo_request');
     Route::post('/apply', 'FrontEnd\PageController@applyNow')->name('apply_now');
 });
+ 
+
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['roles']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
