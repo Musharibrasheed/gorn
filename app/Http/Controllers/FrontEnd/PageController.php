@@ -9,7 +9,7 @@ use App\Http\Requests\DemoRequest;
 use App\Http\Requests\ApplyNowRequest;
 use App\Models\Repositories\PageRepository;
 use App\Models\Repositories\PostRepository;
-use App\Models\applyNow;
+use App\Models\ApplyNow;
 use App\Models\PostDescription;
 use App\Models\Repositories\TestimonialsRepository;
 use App\Models\Repositories\ArticlesRepository;

@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="styled-head">
-                            <h2>List</h2>
+                            <h2>View</h2>
                         </div>
                     </div>
                 </div>
