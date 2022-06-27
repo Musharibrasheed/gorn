@@ -9,6 +9,7 @@ use App\Http\Requests\DemoRequest;
 use App\Http\Requests\ApplyNowRequest;
 use App\Models\Repositories\PageRepository;
 use App\Models\Repositories\PostRepository;
+use App\Models\applyNow;
 use App\Models\PostDescription;
 use App\Models\Repositories\TestimonialsRepository;
 use App\Models\Repositories\ArticlesRepository;
@@ -174,7 +175,7 @@ class PageController extends Controller
                 'emailContent'=> $request->all()
         );
         // dd($data['emailContent']['first_name']);
-        $this->applyNowCreate($request);
+        $this->applyNowCreate($request,$name);
         
         sendEmail($data);
         // echo 'sdfsdf';
@@ -182,10 +183,13 @@ class PageController extends Controller
 
     }
 
-    public function applyNowCreate($request) {
-
-        ApplyNow::create($request->toArray());
-
+    public function applyNowCreate($request, $name) {
+        $filename = '/uploads/files/'.$name;
+        $request->filename = $filename;
+        $result = ApplyNow::create($request->toArray());
+        $an = ApplyNow::find($result->id);
+        $an->filename = $filename;
+        $an->save();
     }
 
 

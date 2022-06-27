@@ -150,6 +150,12 @@ class PageController extends Controller
         return View('admin.page.apply-now');
     }
 
+    public function viewApplyNow($id)
+    {
+        $data = ApplyNow::find($id);
+        return View('admin.page.apply-now-view', compact('data'));
+    }
+
     public function getApplyNowData()
     {
         $pages = ApplyNow::all();
@@ -161,11 +167,11 @@ class PageController extends Controller
                                 // Disable
                             // @endif')
             // ->editColumn('created_at','{{ date("M d Y",strtotime($created_at)) }}')
-            // ->addColumn('actions',function($pages){
-            //     return '<a class="tab-btn edit" href="'. route("admin_page_update", ["id"=>$pages->id]) .'"><i class="fa fa-edit" aria-hidden="true"></i></a>
-            //                         <a class="trigger_popup_fricc tab-btn delete" href="javascript:;" data-href="'. route("admin_page_delete", ["id"=>$pages->id]) .'"><i class="fa fa-trash" aria-hidden="true"></i></a>';
-            // })
-            // ->rawColumns(['slug','actions'])
+            ->addColumn('actions',function($pages){
+                return '<a class="tab-btn view" href="'. route("admin_applynow_view", ["id"=>$pages->id]) .'"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    ';
+            })
+            ->rawColumns(['actions'])
             ->make(true);
     }
 }

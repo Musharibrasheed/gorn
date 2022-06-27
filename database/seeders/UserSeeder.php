@@ -34,6 +34,7 @@ class UserSeeder extends Seeder
             'admin_post_delete'       => true,
             'admin_apply_now'       => true,
             'admin_apply_now_data'       => true,
+            'admin_applynow_view'       => true,
 
 
 

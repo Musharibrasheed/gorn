@@ -110,7 +110,8 @@
                                                 <th>Last Name</th>
                                                 <th>Email</th>
                                                 
-                                                
+                                                <!-- <th>@lang('admin/page.created_at')</th> -->
+                                                <th>@lang('admin/page.action')</th>
                                             </tr>
                                         </thead>
                                         
@@ -161,7 +162,7 @@
                         { data: 'email', name: 'email', searchable: true },
  
                         // { data: 'created_at', name: 'created_at' },
-                       
+                        { data: 'actions', name: 'actions', orderable: false, searchable: false }
                     ],
                     searching: true,
                     lengthChange: false,
